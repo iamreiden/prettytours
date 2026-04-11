@@ -217,9 +217,9 @@ class SiteHeader extends HTMLElement {
         waText: 'Bonjour%20Pretty,%20je%20souhaite%20d%C3%A9couvrir%20vos%20excursions',
         links: [
           { href: '/fr/', label: 'Accueil' },
+          { href: '/fr/mon-histoire/', label: 'Mon Histoire' },
           { href: '/fr/excursions/', label: 'Excursions' },
           { href: '/fr/services/', label: 'Services' },
-          { href: '/fr/mon-histoire/', label: 'Mon Histoire' },
           { href: '/fr/contact/', label: 'Contact' }
         ],
         langBtns: [
@@ -237,9 +237,9 @@ class SiteHeader extends HTMLElement {
         waText: 'Hello%20Pretty,%20I%27d%20like%20to%20discover%20your%20excursions',
         links: [
           { href: '/en/', label: 'Home' },
+          { href: '/en/my-story/', label: 'My Story' },
           { href: '/en/excursions/', label: 'Excursions' },
           { href: '/en/services/', label: 'Services' },
-          { href: '/en/my-story/', label: 'My Story' },
           { href: '/en/contact/', label: 'Contact' }
         ],
         langBtns: [
@@ -257,9 +257,9 @@ class SiteHeader extends HTMLElement {
         waText: 'Bonzour%20Pretty,%20mo%20anvi%20dekouver%20vot%20excursions',
         links: [
           { href: '/mau/', label: 'Akey' },
+          { href: '/mau/mo-listwar/', label: 'Mo Listwar' },
           { href: '/mau/excursions/', label: 'Exkirsion' },
           { href: '/mau/services/', label: 'Servis' },
-          { href: '/mau/mo-listwar/', label: 'Mo Listwar' },
           { href: '/mau/contact/', label: 'Kontak' }
         ],
         langBtns: [
