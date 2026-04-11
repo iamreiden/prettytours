@@ -76,8 +76,17 @@
     .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
     .container { max-width: var(--container-max); margin: 0 auto; padding: 0 var(--space-md); }
 
-    .excursions-hero { background: linear-gradient(135deg, var(--color-turquoise) 0%, var(--color-ocean) 100%); padding: var(--space-xxxl) 0 var(--space-xxl); text-align: center; position: relative; overflow: hidden; }
-    .excursions-hero::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cdefs%3E%3CradialGradient id='g' cx='50%25' cy='50%25' r='70%25'%3E%3Cstop offset='0%25' stop-color='%2300CED1' stop-opacity='0.15'/%3E%3Cstop offset='100%25' stop-color='transparent'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23g)'/%3E%3C/svg%3E") center/cover; pointer-events: none; }
+    .excursions-hero { position: relative; height: 85vh; min-height: 600px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+    .hero-carousel { position: absolute; inset: 0; z-index: 1; }
+    .carousel-slide { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0; transition: opacity 0.8s ease-in-out; }
+    .carousel-slide.active { opacity: 1; }
+    .hero-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.42); z-index: 2; }
+    .excursions-hero .container { position: relative; z-index: 3; text-align: center; }
+    .carousel-nav { position: absolute; top: 50%; transform: translateY(-50%); z-index: 4; background: rgba(255,255,255,0.2); border: 2px solid rgba(255,255,255,0.5); color: var(--color-white); width: 50px; height: 50px; border-radius: 50%; font-size: 2rem; cursor: pointer; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); transition: all 0.3s var(--ease); display: flex; align-items: center; justify-content: center; line-height: 1; }
+    .carousel-nav:hover { background: rgba(255,255,255,0.4); transform: translateY(-50%) scale(1.1); }
+    .carousel-nav.prev { left: 2rem; }
+    .carousel-nav.next { right: 2rem; }
+    @media (max-width: 768px) { .excursions-hero { height: 70vh; min-height: 500px; } .carousel-nav { width: 40px; height: 40px; font-size: 1.5rem; } .carousel-nav.prev { left: 1rem; } .carousel-nav.next { right: 1rem; } }
     .excursions-hero__breadcrumb { display: flex; align-items: center; justify-content: center; gap: var(--space-xs); margin-bottom: var(--space-lg); font-size: 0.875rem; color: rgba(255,255,255,0.75); }
     .excursions-hero__breadcrumb a { color: rgba(255,255,255,0.75); transition: color var(--transition-fast); }
     .excursions-hero__breadcrumb a:hover { color: var(--color-white); }
@@ -203,6 +212,17 @@
 
   <main>
     <section class="excursions-hero" aria-labelledby="excursions-hero-title">
+      <div class="hero-carousel" aria-hidden="true">
+        <div class="carousel-slide active" style="background-image: url('/assets/images/hero/maurice1.jpg')"></div>
+        <div class="carousel-slide" style="background-image: url('/assets/images/hero/maurice2.jpg')"></div>
+        <div class="carousel-slide" style="background-image: url('/assets/images/hero/maurice3.webp')"></div>
+        <div class="carousel-slide" style="background-image: url('/assets/images/hero/seven-colored-earth.jpg')"></div>
+        <div class="carousel-slide" style="background-image: url('/assets/images/hero/maurice5.jpg')"></div>
+        <div class="carousel-slide" style="background-image: url('/assets/images/hero/maurice6.webp')"></div>
+      </div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <button class="carousel-nav prev" aria-label="Imaz avan">‹</button>
+      <button class="carousel-nav next" aria-label="Imaz apretan">›</button>
       <div class="container">
         <nav aria-label="Fil d'Ariane" class="excursions-hero__breadcrumb">
           <a href="/mau/">Lakaz</a>
@@ -689,6 +709,36 @@
       }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
       animEls.forEach(function(el) { observer.observe(el); });
     } else { animEls.forEach(function(el) { el.classList.add('visible'); }); }
+  })();
+  </script>
+
+  <script>
+  // Hero carousel
+  (function() {
+    var slides = document.querySelectorAll('.carousel-slide');
+    var prevBtn = document.querySelector('.carousel-nav.prev');
+    var nextBtn = document.querySelector('.carousel-nav.next');
+    if (!slides.length || !prevBtn || !nextBtn) return;
+    var current = 0;
+    var timer;
+
+    function show(i) {
+      slides[current].classList.remove('active');
+      current = (i + slides.length) % slides.length;
+      slides[current].classList.add('active');
+    }
+    function startAuto() { timer = setInterval(function() { show(current + 1); }, 5000); }
+    function stopAuto() { clearInterval(timer); }
+
+    nextBtn.addEventListener('click', function() { stopAuto(); show(current + 1); startAuto(); });
+    prevBtn.addEventListener('click', function() { stopAuto(); show(current - 1); startAuto(); });
+
+    var hero = document.querySelector('.excursions-hero');
+    if (hero) {
+      hero.addEventListener('mouseenter', stopAuto);
+      hero.addEventListener('mouseleave', startAuto);
+    }
+    startAuto();
   })();
   </script>
 </body>

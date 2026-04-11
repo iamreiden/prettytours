@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Premium Services — Event Planning in Mauritius | Pretty Tours</title>
+  <meta name="description" content="Weddings, birthdays, romantic beach dinners and tailor-made travel in Mauritius. Pretty coordinates every detail so you only experience the emotion.">
+  <meta name="keywords" content="wedding planner mauritius, birthday mauritius, romantic beach dinner mauritius, tailor-made travel mauritius, event planning mauritius, pretty tours">
+
+  <link rel="canonical" href="https://pretty-tours.com/en/services/">
+  <link rel="alternate" hreflang="fr" href="https://pretty-tours.com/fr/services/">
+  <link rel="alternate" hreflang="en" href="https://pretty-tours.com/en/services/">
+  <link rel="alternate" hreflang="mau" href="https://pretty-tours.com/mau/services/">
+  <link rel="alternate" hreflang="x-default" href="https://pretty-tours.com/fr/services/">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/footer.css">
+  <link rel="stylesheet" href="/assets/css/cookie-banner.css">
+
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://pretty-tours.com/en/" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://pretty-tours.com/en/services/" }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Pretty Tours",
+      "description": "Wedding planning, birthdays, romantic beach dinners and tailor-made travel in Mauritius.",
+      "telephone": "+230-5904-2969",
+      "email": "prettytours@outlook.com",
+      "url": "https://pretty-tours.com",
+      "address": { "@type": "PostalAddress", "addressCountry": "MU", "streetAddress": "Avenue Cacatoes", "addressLocality": "Flic En Flac", "postalCode": "1905-04" },
+      "geo": { "@type": "GeoCoordinates", "latitude": "-20.2833", "longitude": "57.3667" },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Pretty Tours Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Wedding Planning" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Personalized Birthday" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Romantic Beach Dinner" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tailor-Made Travel" } }
+        ]
+      }
+    }
+  ]
+  </script>
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --color-turquoise: #00CED1;
+      --color-coral: #FF6B6B;
+      --color-sand: #FAFAFA;
+      --color-ocean: #1A2B3C;
+      --color-gold: #FFD700;
+      --color-whatsapp: #25D366;
+      --color-white: #ffffff;
+      --color-text-muted: #5a6a7a;
+      --font-heading: 'Playfair Display', serif;
+      --font-body: 'Inter', sans-serif;
+      --ease: cubic-bezier(0.4, 0, 0.2, 1);
+      --space-xs: 8px; --space-sm: 16px; --space-md: 24px; --space-lg: 32px;
+      --space-xl: 48px; --space-xxl: 64px; --space-xxxl: 96px;
+      --radius-sm: 8px; --radius-md: 16px; --radius-lg: 24px;
+      --shadow-card: 0 8px 32px rgba(26,43,60,0.12);
+      --shadow-card-hover: 0 24px 64px rgba(26,43,60,0.2);
+      --shadow-whatsapp: 0 12px 40px rgba(37,211,102,0.4);
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--color-ocean); background: var(--color-sand); overflow-x: hidden; line-height: 1.7; }
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; }
+    .container { max-width: 1240px; margin: 0 auto; padding: 0 var(--space-md); }
+
+    /* ── HERO ──────────────────────────────── */
+    .services-hero {
+      position: relative;
+      height: 85vh;
+      min-height: 600px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero-carousel { position: absolute; inset: 0; z-index: 1; }
+    .carousel-slide { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0; transition: opacity 0.8s ease-in-out; }
+    .carousel-slide.active { opacity: 1; }
+    .hero-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.42); z-index: 2; }
+    .services-hero .container { position: relative; z-index: 3; padding-top: var(--space-xl); }
+    .carousel-nav { position: absolute; top: 50%; transform: translateY(-50%); z-index: 4; background: rgba(255,255,255,0.2); border: 2px solid rgba(255,255,255,0.5); color: var(--color-white); width: 50px; height: 50px; border-radius: 50%; font-size: 2rem; cursor: pointer; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); transition: all 0.3s var(--ease); display: flex; align-items: center; justify-content: center; }
+    .carousel-nav:hover { background: rgba(255,255,255,0.35); }
+    .carousel-nav.prev { left: 2rem; }
+    .carousel-nav.next { right: 2rem; }
+    .services-hero__breadcrumb {
+      display: flex; align-items: center; justify-content: center;
+      gap: var(--space-xs); margin-bottom: var(--space-xl);
+      font-size: 0.875rem; color: rgba(255,255,255,0.7);
+    }
+    .services-hero__breadcrumb a { color: rgba(255,255,255,0.7); transition: color 0.3s var(--ease); }
+    .services-hero__breadcrumb a:hover { color: var(--color-white); }
+    .services-hero__breadcrumb-sep { opacity: 0.5; }
+    .services-hero__eyebrow {
+      font-size: 0.8rem; font-weight: 700; letter-spacing: 0.22em;
+      text-transform: uppercase; color: var(--color-turquoise);
+      margin-bottom: var(--space-sm);
+    }
+    .services-hero__title {
+      font-family: var(--font-heading);
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 700;
+      color: var(--color-white);
+      line-height: 1.15;
+      margin-bottom: var(--space-md);
+      text-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    }
+    .services-hero__title em { font-style: italic; color: var(--color-turquoise); }
+    .services-hero__subtitle {
+      font-size: clamp(1.05rem, 2.5vw, 1.3rem);
+      color: rgba(255,255,255,0.85);
+      font-weight: 300;
+      max-width: 680px;
+      margin: 0 auto var(--space-md);
+      line-height: 1.75;
+    }
+    .services-hero__tagline {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--color-turquoise);
+      letter-spacing: 0.08em;
+    }
+    .services-hero__tagline span { opacity: 0.5; margin: 0 12px; }
+
+    /* ── SERVICE BLOCKS ─────────────────────── */
+    .service-block {
+      padding: var(--space-xxxl) 0;
+      background: var(--color-white);
+    }
+    .service-block--alt { background: var(--color-sand); }
+
+    .service-block__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 var(--space-md);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-xxl);
+      align-items: center;
+    }
+    .service-block--reverse .service-block__image { order: 2; }
+    .service-block--reverse .service-block__content { order: 1; }
+
+    .service-block__image {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      transition: box-shadow 0.5s var(--ease);
+    }
+    .service-block__image:hover { box-shadow: var(--shadow-card-hover); }
+    .service-block__image img {
+      width: 100%;
+      height: 460px;
+      object-fit: cover;
+      transition: transform 0.7s var(--ease);
+      display: block;
+    }
+    .service-block__image:hover img { transform: scale(1.05); }
+
+    .service-block__number {
+      font-family: var(--font-heading);
+      font-size: 5rem;
+      font-weight: 700;
+      color: rgba(0,206,209,0.12);
+      line-height: 1;
+      margin-bottom: var(--space-xs);
+      user-select: none;
+    }
+    .service-block__label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-turquoise);
+      margin-bottom: var(--space-sm);
+    }
+    .service-block__title {
+      font-family: var(--font-heading);
+      font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+      font-weight: 700;
+      color: var(--color-ocean);
+      line-height: 1.25;
+      margin-bottom: var(--space-sm);
+    }
+    .service-block__hook {
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--color-turquoise);
+      font-weight: 500;
+      margin-bottom: var(--space-md);
+      line-height: 1.5;
+    }
+    .service-block__desc {
+      font-size: 1rem;
+      line-height: 1.85;
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-lg);
+    }
+    .service-block__stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-lg);
+    }
+    .stat-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 12px var(--space-sm);
+      background: rgba(0,206,209,0.05);
+      border-left: 3px solid var(--color-turquoise);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    }
+    .stat-item__check {
+      color: var(--color-turquoise);
+      font-weight: 700;
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .stat-item__text {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--color-ocean);
+      line-height: 1.45;
+    }
+    .service-block__cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px var(--space-lg);
+      background: var(--color-whatsapp);
+      color: var(--color-white);
+      border-radius: 50px;
+      font-family: var(--font-body);
+      font-size: 0.9375rem;
+      font-weight: 700;
+      transition: all 0.3s var(--ease);
+      box-shadow: 0 6px 24px rgba(37,211,102,0.3);
+    }
+    .service-block__cta:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 36px rgba(37,211,102,0.45);
+    }
+    .service-block__cta svg { width: 20px; height: 20px; flex-shrink: 0; }
+
+    /* ── WHY PRETTY ─────────────────────────── */
+    .why-pretty {
+      background: linear-gradient(135deg, var(--color-turquoise) 0%, #008fa0 100%);
+      padding: var(--space-xxxl) 0;
+      text-align: center;
+      color: var(--color-white);
+    }
+    .why-pretty__eyebrow {
+      font-size: 0.8rem; font-weight: 700; letter-spacing: 0.22em;
+      text-transform: uppercase; color: rgba(255,255,255,0.7);
+      margin-bottom: var(--space-sm);
+    }
+    .why-pretty__title {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 4.5vw, 3.25rem);
+      font-weight: 700;
+      margin-bottom: var(--space-xxxl);
+      line-height: 1.2;
+    }
+    .why-pretty__title em { font-style: italic; color: var(--color-gold); }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-xl);
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .why-item {
+      padding: var(--space-lg);
+      background: rgba(255,255,255,0.1);
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(255,255,255,0.15);
+      transition: background 0.3s var(--ease);
+    }
+    .why-item:hover { background: rgba(255,255,255,0.18); }
+    .why-item__number {
+      font-family: var(--font-heading);
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: var(--color-gold);
+      line-height: 1;
+      margin-bottom: var(--space-sm);
+    }
+    .why-item__title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: var(--space-xs);
+      color: var(--color-white);
+    }
+    .why-item__desc {
+      font-size: 0.9rem;
+      opacity: 0.85;
+      line-height: 1.6;
+    }
+
+    /* ── CTA FINAL ───────────────────────────── */
+    .cta-final {
+      padding: var(--space-xxxl) 0;
+      background: var(--color-white);
+      text-align: center;
+    }
+    .cta-final__eyebrow {
+      font-size: 0.8rem; font-weight: 700; letter-spacing: 0.22em;
+      text-transform: uppercase; color: var(--color-turquoise);
+      margin-bottom: var(--space-sm);
+    }
+    .cta-final__title {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: var(--color-ocean);
+      margin-bottom: var(--space-md);
+      line-height: 1.25;
+    }
+    .cta-final__title em { font-style: italic; color: var(--color-turquoise); }
+    .cta-final__subtitle {
+      font-size: 1.1rem;
+      color: var(--color-text-muted);
+      max-width: 560px;
+      margin: 0 auto var(--space-xl);
+      line-height: 1.7;
+    }
+    .cta-final__btn {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-sm);
+      padding: 22px 52px;
+      background: linear-gradient(135deg, var(--color-whatsapp), #20ba5a);
+      color: var(--color-white);
+      border-radius: 60px;
+      font-size: 1.2rem;
+      font-weight: 700;
+      box-shadow: var(--shadow-whatsapp);
+      transition: all 0.4s var(--ease);
+    }
+    .cta-final__btn:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 18px 56px rgba(37,211,102,0.5);
+    }
+    .cta-final__btn svg { width: 30px; height: 30px; flex-shrink: 0; }
+    .cta-final__note {
+      margin-top: var(--space-md);
+      font-size: 0.875rem;
+      color: var(--color-text-muted);
+    }
+
+    /* ── WHATSAPP FLOAT ─────────────────────── */
+    .whatsapp-float {
+      position: fixed; bottom: 28px; right: 28px;
+      width: 62px; height: 62px;
+      background: var(--color-whatsapp);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      z-index: 9000;
+      box-shadow: 0 6px 24px rgba(37,211,102,0.4);
+      animation: pulseWa 2.5s ease-in-out infinite;
+      transition: transform 0.3s var(--ease);
+    }
+    .whatsapp-float:hover { animation: none; transform: scale(1.15); }
+    .whatsapp-float__tooltip {
+      position: absolute; right: 72px;
+      background: var(--color-ocean); color: var(--color-white);
+      font-size: 0.8125rem; font-weight: 600;
+      white-space: nowrap; padding: 8px 14px; border-radius: 8px;
+      opacity: 0; pointer-events: none; transition: opacity 0.3s;
+    }
+    .whatsapp-float__tooltip::after {
+      content: ''; position: absolute; left: 100%; top: 50%; transform: translateY(-50%);
+      border: 6px solid transparent; border-left-color: var(--color-ocean);
+    }
+    .whatsapp-float:hover .whatsapp-float__tooltip { opacity: 1; }
+    @keyframes pulseWa { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.08); } }
+
+    /* ── ANIMATIONS ─────────────────────────── */
+    .anim { opacity: 0; transform: translateY(28px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }
+    .anim.visible { opacity: 1; transform: translateY(0); }
+    .anim-delay-1 { transition-delay: 0.1s; }
+    .anim-delay-2 { transition-delay: 0.2s; }
+    .anim-delay-3 { transition-delay: 0.3s; }
+    .anim-delay-4 { transition-delay: 0.4s; }
+
+    /* ── RESPONSIVE ─────────────────────────── */
+    @media (max-width: 968px) {
+      .service-block__inner { grid-template-columns: 1fr; gap: var(--space-xl); }
+      .service-block--reverse .service-block__image { order: 0; }
+      .service-block--reverse .service-block__content { order: 0; }
+      .service-block__image img { height: 320px; }
+      .why-grid { grid-template-columns: 1fr; gap: var(--space-lg); max-width: 480px; }
+    }
+    @media (max-width: 768px) {
+      .services-hero { height: 70vh; min-height: 500px; }
+      .carousel-nav { width: 40px; height: 40px; font-size: 1.5rem; }
+      .carousel-nav.prev { left: 1rem; }
+      .carousel-nav.next { right: 1rem; }
+    }
+    @media (max-width: 600px) {
+      .service-block__stats { grid-template-columns: 1fr; }
+      .cta-final__btn { padding: 18px 32px; font-size: 1.05rem; width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <site-header lang="en"></site-header>
+  <cookie-consent lang="en"></cookie-consent>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="services-hero">
+      <div class="hero-carousel" aria-hidden="true">
+        <div class="carousel-slide active" style="background-image: url('/assets/images/hero/service-1.jpg')"></div>
+        <div class="carousel-slide" style="background-image: url('/assets/images/hero/service-2.jpg')"></div>
+        <div class="carousel-slide" style="background-image: url('/assets/images/hero/service-3.jpg')"></div>
+        <div class="carousel-slide" style="background-image: url('/assets/images/hero/service-4.jpg')"></div>
+        <div class="carousel-slide" style="background-image: url('/assets/images/hero/service-5.jpg')"></div>
+      </div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <button class="carousel-nav prev" aria-label="Previous image">&#8249;</button>
+      <button class="carousel-nav next" aria-label="Next image">&#8250;</button>
+      <div class="container">
+        <nav class="services-hero__breadcrumb" aria-label="Breadcrumb">
+          <a href="/en/">Home</a>
+          <span class="services-hero__breadcrumb-sep" aria-hidden="true">›</span>
+          <span aria-current="page">Services</span>
+        </nav>
+        <p class="services-hero__eyebrow anim">Premium Services</p>
+        <h1 class="services-hero__title anim anim-delay-1">
+          Your precious moments,<br><em>magnified</em> by Pretty
+        </h1>
+        <p class="services-hero__subtitle anim anim-delay-2">
+          From intimate to grand, I transform every celebration into an unforgettable memory. Perfect coordination, premium network, total passion.
+        </p>
+        <p class="services-hero__tagline anim anim-delay-3">
+          Expertise <span>·</span> Premium Network <span>·</span> Perfect Coordination
+        </p>
+      </div>
+    </section>
+
+    <!-- SERVICE 1 : WEDDING -->
+    <section class="service-block" aria-labelledby="service-wedding">
+      <div class="service-block__inner">
+        <div class="service-block__image anim">
+          <img
+            src="https://images.unsplash.com/photo-1519741497674-611481863552?w=900&q=80"
+            alt="Wedding planning on the beach in Mauritius — Pretty Tours"
+            width="900" height="460" loading="lazy">
+        </div>
+        <div class="service-block__content anim anim-delay-1">
+          <div class="service-block__number">01</div>
+          <p class="service-block__label">Luxury service</p>
+          <h2 id="service-wedding" class="service-block__title">Wedding Planning</h2>
+          <p class="service-block__hook">Your perfect day, orchestrated in every detail</p>
+          <p class="service-block__desc">
+            I've coordinated over 150 weddings in Mauritius. From intimate barefoot ceremonies on the sand to grand receptions under the stars, I turn your vision into reality. Full vendor coordination (caterer, photographer, decoration, transport), minute-by-minute planning, weather contingency plans. You enjoy — I handle everything. The result: zero stress, pure emotion.
+          </p>
+          <div class="service-block__stats">
+            <div class="stat-item">
+              <span class="stat-item__check">✓</span>
+              <span class="stat-item__text">150+ weddings coordinated</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-item__check">✓</span>
+              <span class="stat-item__text">Network of 40+ trusted vendors</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-item__check">✓</span>
+              <span class="stat-item__text">Full day-of coordination A to Z</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-item__check">✓</span>
+              <span class="stat-item__text">Systematic weather backup plans</span>
+            </div>
+          </div>
+          <a href="https://wa.me/23059042969?text=Hello%20Pretty%2C%20I'd%20like%20to%20plan%20my%20wedding%20in%20Mauritius%20%F0%9F%92%8D"
+             class="service-block__cta" target="_blank" rel="noopener noreferrer"
+             aria-label="Contact Pretty to plan your wedding in Mauritius">
+            <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Let's talk about your wedding
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE 2 : BIRTHDAY -->
+    <section class="service-block service-block--alt service-block--reverse" aria-labelledby="service-birthday">
+      <div class="service-block__inner">
+        <div class="service-block__image anim">
+          <img
+            src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=900&q=80"
+            alt="Personalized birthday celebration in Mauritius — Pretty Tours"
+            width="900" height="460" loading="lazy">
+        </div>
+        <div class="service-block__content anim anim-delay-1">
+          <div class="service-block__number">02</div>
+          <p class="service-block__label">Tailored & personalized</p>
+          <h2 id="service-birthday" class="service-block__title">Personalized Birthday</h2>
+          <p class="service-block__hook">A birthday that will live in memory forever</p>
+          <p class="service-block__desc">
+            Whether it's your 30th, 50th, or your child's special day, I create bespoke celebrations that truly reflect who you are. Original themes (tropical chic, vintage Mauritian, starlit evening…), unique venues (private estates, secret beaches, chartered catamarans), surprise entertainment, full logistical coordination. Every detail tells your story.
+          </p>
+          <div class="service-block__stats">
+            <div class="stat-item">
+              <span class="stat-item__check">✓</span>
+              <span class="stat-item__text">Events from 10 to 100+ guests</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-item__check">✓</span>
+              <span class="stat-item__text">100% personalized themes</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-item__check">✓</span>
+              <span class="stat-item__text">Access to exclusive venues</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-item__check">✓</span>
+              <span class="stat-item__text">Catering, décor & entertainment</span>
+            </div>
+          </div>
+          <a href="https://wa.me/23059042969?text=Hello%20Pretty%2C%20I'd%20like%20to%20organize%20a%20birthday%20in%20Mauritius%20%F0%9F%8E%82"
+             class="service-block__cta" target="_blank" rel="noopener noreferrer"
+             aria-label="Contact Pretty for a birthday celebration in Mauritius">
+            <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Plan my birthday
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE 3 : ROMANTIC DINNER -->
+    <section class="service-block" aria-labelledby="service-dinner">
+      <div class="service-block__inner">
+        <div class="service-block__image anim">
+          <img
+            src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80"
+            alt="Romantic beach dinner at sunset in Mauritius — Pretty Tours"
+            width="900" height="460" loading="lazy">
+        </div>
+        <div class="service-block__content anim anim-delay-1">
+          <div class="service-block__number">03</div>
+          <p class="service-block__label">Exclusive experience</p>
+          <h2 id="service-dinner" class="service-block__title">Romantic Beach Dinner</h2>
+          <p class="service-block__hook">An unforgettable evening — just the two of you and the ocean</p>
+          <p class="service-block__desc">
+            A table set at sunset, feet in the warm sand, a private beach reserved for you alone. I coordinate everything: private chef (Creole-fusion gastronomic menu), candlelight and lantern décor, live musician (optional), discreet and attentive service. Perfect for a marriage proposal, a couple's anniversary, or simply celebrating your love.
+          </p>
+          <div class="service-block__stats">
+            <div class="stat-item">
+              <span class="stat-item__check">✓</span>
+              <span class="stat-item__text">Private beach (secret spots)</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-item__check">✓</span>
+              <span class="stat-item__text">Private chef & custom menu</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-item__check">✓</span>
+              <span class="stat-item__text">Premium romantic decoration</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-item__check">✓</span>
+              <span class="stat-item__text">Photos of the moment included (option)</span>
+            </div>
+          </div>
+          <a href="https://wa.me/23059042969?text=Hello%20Pretty%2C%20I'd%20like%20to%20book%20a%20romantic%20beach%20dinner%20%F0%9F%8C%85"
+             class="service-block__cta" target="_blank" rel="noopener noreferrer"
+             aria-label="Book a romantic beach dinner in Mauritius">
+            <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Book this experience
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICE 4 : TAILOR-MADE TRAVEL -->
+    <section class="service-block service-block--alt service-block--reverse" aria-labelledby="service-travel">
+      <div class="service-block__inner">
+        <div class="service-block__image anim">
+          <img
+            src="https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?w=900&q=80"
+            alt="Tailor-made travel in Mauritius with Pretty Tours — local guide"
+            width="900" height="460" loading="lazy">
+        </div>
+        <div class="service-block__content anim anim-delay-1">
+          <div class="service-block__number">04</div>
+          <p class="service-block__label">Your unique itinerary</p>
+          <h2 id="service-travel" class="service-block__title">Tailor-Made Travel</h2>
+          <p class="service-block__hook">Your ideal Mauritius, designed entirely for you</p>
+          <p class="service-block__desc">
+            Forget cookie-cutter itineraries. I design your unique journey based on your desires: adventure, relaxation, gastronomy, culture, off-the-beaten-path discoveries. After an in-depth consultation, I structure your stay day by day. Total flexibility, real-time adjustments. Like having a local friend who knows every secret this island holds.
+          </p>
+          <div class="service-block__stats">
+            <div class="stat-item">
+              <span class="stat-item__check">✓</span>
+              <span class="stat-item__text">100% personalized itineraries</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-item__check">✓</span>
+              <span class="stat-item__text">Access to confidential locations</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-item__check">✓</span>
+              <span class="stat-item__text">WhatsApp support 7 days/week</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-item__check">✓</span>
+              <span class="stat-item__text">Real-time adjustments on the go</span>
+            </div>
+          </div>
+          <a href="https://wa.me/23059042969?text=Hello%20Pretty%2C%20I'd%20love%20a%20tailor-made%20trip%20to%20Mauritius%20%F0%9F%8C%B4"
+             class="service-block__cta" target="_blank" rel="noopener noreferrer"
+             aria-label="Contact Pretty for a tailor-made trip to Mauritius">
+            <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Design my journey
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY PRETTY -->
+    <section class="why-pretty" aria-labelledby="why-pretty-title">
+      <div class="container">
+        <p class="why-pretty__eyebrow anim">The Pretty Tours difference</p>
+        <h2 id="why-pretty-title" class="why-pretty__title anim anim-delay-1">
+          Why <em>trust</em> me?
+        </h2>
+        <div class="why-grid">
+          <div class="why-item anim anim-delay-1">
+            <div class="why-item__number">150+</div>
+            <div class="why-item__title">Successful events</div>
+            <p class="why-item__desc">Organized since 2019, every project treated with the same passion and dedication</p>
+          </div>
+          <div class="why-item anim anim-delay-2">
+            <div class="why-item__number">40+</div>
+            <div class="why-item__title">Trusted vendors</div>
+            <p class="why-item__desc">My premium network, hand-selected for quality, reliability and excellence</p>
+          </div>
+          <div class="why-item anim anim-delay-3">
+            <div class="why-item__number">100%</div>
+            <div class="why-item__title">Clients who recommend</div>
+            <p class="why-item__desc">Word of mouth is my only advertising — the greatest proof of quality there is</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-final" aria-labelledby="cta-title">
+      <div class="container">
+        <p class="cta-final__eyebrow anim">Let's create something together</p>
+        <h2 id="cta-title" class="cta-final__title anim anim-delay-1">
+          Ready to create an<br><em>unforgettable</em> moment?
+        </h2>
+        <p class="cta-final__subtitle anim anim-delay-2">
+          Tell me about your project on WhatsApp. I'll personally reply within 2 hours with concrete ideas tailored just for you.
+        </p>
+        <a href="https://wa.me/23059042969?text=Hello%20Pretty%2C%20I'd%20like%20to%20know%20more%20about%20your%20services%20%F0%9F%8C%B4"
+           class="cta-final__btn anim anim-delay-3"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Contact Pretty Tours on WhatsApp to discuss your project">
+          <svg fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Talk about your project
+        </a>
+        <p class="cta-final__note anim anim-delay-4">📱 Reply within 2 hours &nbsp;·&nbsp; Free & no commitment</p>
+      </div>
+    </section>
+
+  </main>
+
+  <site-footer lang="en"></site-footer>
+
+  <!-- WhatsApp floating button -->
+  <a href="https://wa.me/23059042969?text=Hello%20Pretty%2C%20I'd%20like%20to%20know%20more%20about%20your%20services"
+     class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+     aria-label="Contact Pretty Tours on WhatsApp">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="whatsapp-float__tooltip">Talk about your project</span>
+  </a>
+
+  <script src="/assets/js/components/cookie-consent.js"></script>
+  <script src="/assets/js/components/site-header.js"></script>
+  <script src="/assets/js/components/site-footer.js"></script>
+
+  <script>
+  (function() {
+    var slides = document.querySelectorAll('.carousel-slide');
+    var prevBtn = document.querySelector('.carousel-nav.prev');
+    var nextBtn = document.querySelector('.carousel-nav.next');
+    if (!slides.length || !prevBtn || !nextBtn) return;
+    var current = 0;
+    var timer;
+    function show(i) {
+      slides[current].classList.remove('active');
+      current = (i + slides.length) % slides.length;
+      slides[current].classList.add('active');
+    }
+    function startAuto() { timer = setInterval(function() { show(current + 1); }, 5000); }
+    function stopAuto() { clearInterval(timer); }
+    nextBtn.addEventListener('click', function() { stopAuto(); show(current + 1); startAuto(); });
+    prevBtn.addEventListener('click', function() { stopAuto(); show(current - 1); startAuto(); });
+    var hero = document.querySelector('.services-hero');
+    if (hero) { hero.addEventListener('mouseenter', stopAuto); hero.addEventListener('mouseleave', startAuto); }
+    startAuto();
+  })();
+  (function() {
+    var animEls = document.querySelectorAll('.anim');
+    if (animEls.length && 'IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+          if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+      animEls.forEach(function(el) { observer.observe(el); });
+    } else {
+      animEls.forEach(function(el) { el.classList.add('visible'); });
+    }
+  })();
+  </script>
+</body>
+</html>

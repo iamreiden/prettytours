@@ -100,40 +100,6 @@
     .why-card__text { font-size: 0.9375rem; line-height: 1.75; color: #4a5a6a; }
     .why-card__text strong { color: var(--color-ocean); }
 
-    .excursions { padding: 96px 0; background: var(--color-ocean); }
-    .excursions .section-eyebrow { color: rgba(255,255,255,0.6); }
-    .excursions .section-h2 { color: #fff; }
-    .excursions .section-subtitle { color: rgba(255,255,255,0.65); }
-    .excursions__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; align-items: start; }
-    .exc-card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.18); display: flex; flex-direction: column; transition: all 0.4s var(--ease); }
-    .exc-card:hover { transform: translateY(-12px); }
-    .exc-card--featured { border: 3px solid var(--color-gold); transform: scale(1.02); }
-    .exc-card--featured:hover { transform: scale(1.02) translateY(-12px); }
-    .exc-card__img-wrap { position: relative; height: 240px; overflow: hidden; }
-    .exc-card__img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
-    .exc-card:hover .exc-card__img { transform: scale(1.08); }
-    .exc-card__badges { position: absolute; top: 14px; left: 14px; display: flex; gap: 8px; }
-    .badge { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; padding: 5px 12px; border-radius: 20px; }
-    .badge--green { background: #2ECC71; color: #fff; }
-    .badge--coral { background: var(--color-coral); color: #fff; }
-    .badge--gold { background: var(--color-gold); color: var(--color-ocean); }
-    .exc-card__duration { position: absolute; top: 14px; right: 14px; background: rgba(0,0,0,0.65); color: #fff; font-size: 0.8125rem; font-weight: 600; padding: 5px 12px; border-radius: 20px; }
-    .exc-card__featured-tag { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(90deg, var(--color-gold), #FFA500); color: var(--color-ocean); text-align: center; font-size: 0.8125rem; font-weight: 700; padding: 6px; text-transform: uppercase; }
-    .exc-card__body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
-    .exc-card__title { font-family: var(--font-heading); font-size: 1.375rem; font-weight: 700; color: var(--color-ocean); margin-bottom: 10px; }
-    .exc-card__desc { font-size: 0.9375rem; line-height: 1.7; color: #5a6a7a; margin-bottom: 20px; flex: 1; }
-    .exc-card__meta { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
-    .meta-item { font-size: 0.875rem; color: #6a7a8a; }
-    .meta-price { margin-left: auto; font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--color-ocean); }
-    .meta-price span { font-family: var(--font-body); font-size: 0.875rem; color: #8a9aaa; }
-    .btn-outline-light { display: inline-block; font-size: 0.9375rem; font-weight: 600; color: var(--color-turquoise); border: 2px solid var(--color-turquoise); padding: 12px 24px; border-radius: 50px; text-align: center; transition: all 0.3s; }
-    .btn-outline-light:hover { background: var(--color-turquoise); color: #fff; }
-    .btn-primary-cta { display: inline-block; font-size: 0.9375rem; font-weight: 600; color: #fff; background: var(--color-turquoise); padding: 13px 24px; border-radius: 50px; text-align: center; transition: all 0.3s; }
-    .btn-primary-cta:hover { background: #00b5b8; }
-    .excursions__see-all { text-align: center; margin-top: 56px; }
-    .btn-outline-white { display: inline-flex; align-items: center; gap: 10px; font-size: 1rem; font-weight: 600; color: #fff; border: 2px solid rgba(255,255,255,0.5); padding: 16px 36px; border-radius: 50px; transition: all 0.3s; }
-    .btn-outline-white:hover { background: rgba(255,255,255,0.12); border-color: #fff; }
-
     .testimonials { padding: 96px 0; background: var(--color-sand); }
     .testimonials__track { display: flex; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 16px 4px 32px; scrollbar-width: none; }
     .testimonials__track::-webkit-scrollbar { display: none; }
@@ -194,8 +160,7 @@
     @media (max-width: 1024px) {
       .about__grid { grid-template-columns: 1fr; } .about__photo-wrap { position: relative; order: -1; }
       .about__photo { aspect-ratio: 16/9; } .why__grid { grid-template-columns: repeat(2, 1fr); }
-      .excursions__grid { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
-      .exc-card--featured { transform: none; } .footer__grid { grid-template-columns: 1fr 1fr; }
+      .footer__grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 768px) {
       .why__grid { grid-template-columns: 1fr; }
@@ -297,58 +262,6 @@
           <article class="why-card anim anim-delay-2"><span class="why-card__icon">🤝</span><h3 class="why-card__title">Rezo lokal otantik</h3><p class="why-card__text">Mo kouzen plant vaniy Chamarel. Mo kamarad Raj fer sa mie samousa lor zil. <strong>To pou rankontre bann Morisyen, pa bann vandiyer.</strong></p></article>
           <article class="why-card anim anim-delay-3"><span class="why-card__icon">❤️</span><h3 class="why-card__title">Pasion kontagye</h3><p class="why-card__text">Kan mo koz lor mo zil, mo lizie bril. Mo kliyan souvan dir mwa : "Pretty, nou trouve ki to RENM to pei." <strong>Ek sa pasion la, mo pou transmit li ar twa.</strong></p></article>
         </div>
-      </div>
-    </section>
-
-    <section class="excursions">
-      <div class="container">
-        <header class="section-header">
-          <p class="section-eyebrow anim">Mo excursions</p>
-          <h2 class="section-h2 anim anim-delay-1">Mo bann excursions koudker</h2>
-          <p class="section-subtitle anim anim-delay-2">Trwa experyans ki rezime tou lamazinn Moris</p>
-        </header>
-        <div class="excursions__grid">
-          <article class="exc-card anim">
-            <div class="exc-card__img-wrap">
-              <img class="exc-card__img" src="https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?w=800&q=80" alt="Mahebourg vilaz ek Domenn Saint-Aubin, sid otantik Moris" width="800" height="240" loading="lazy">
-              <div class="exc-card__badges"><span class="badge badge--green">Later</span></div>
-              <span class="exc-card__duration">⏱ 6h</span>
-            </div>
-            <div class="exc-card__body">
-              <h3 class="exc-card__title">Mahébourg + Domenn Saint-Aubin</h3>
-              <p class="exc-card__desc">Sid otantik, lakaz kolonyal, rom artizanal ek dezer kreol dan domenn. Listwar naval Moris rakonte dan bann riyel Mahébourg.</p>
-              <div class="exc-card__meta"><span class="meta-item">👥 Max 8 dimoun</span><span class="meta-price">40€ <span>/group</span></span></div>
-              <a href="/mau/excursions/mahebourg-domaine-saint-aubin/" class="btn-outline-light">Dekouver →</a>
-            </div>
-          </article>
-          <article class="exc-card exc-card--featured anim anim-delay-1">
-            <div class="exc-card__img-wrap">
-              <img class="exc-card__img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" alt="Dine romantik Flic-en-Flac, soleys kouse Moris" width="800" height="240" loading="lazy">
-              <div class="exc-card__badges"><span class="badge badge--coral">Prestasiyon</span></div>
-              <span class="exc-card__duration">⏱ 3h</span>
-              <div class="exc-card__featured-tag">⭐ Koudker</div>
-            </div>
-            <div class="exc-card__body">
-              <h3 class="exc-card__title">Dine Romantik Flic-en-Flac</h3>
-              <p class="exc-card__desc">Tab prive lor plaz, lipye dan sab, soleys kouse. Meni gastronomik 4 pla, sampann, fotografer inkli.</p>
-              <div class="exc-card__meta"><span class="meta-item">🥂 2 dimoun</span><span class="meta-price">120€ <span>/dimoun</span></span></div>
-              <a href="https://wa.me/23059042969?text=Bonzour%20Pretty,%20mo%20anvi%20rezerv%20Dine%20Romantik%20Flic-en-Flac" class="btn-primary-cta" target="_blank" rel="noopener noreferrer">Rezerv sa experyans →</a>
-            </div>
-          </article>
-          <article class="exc-card anim anim-delay-2">
-            <div class="exc-card__img-wrap">
-              <img class="exc-card__img" src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80" alt="Organiz maryaz Moris, seremoni lor plaz" width="800" height="240" loading="lazy">
-              <div class="exc-card__badges"><span class="badge badge--coral">Prestasiyon</span><span class="badge badge--gold">Sur-mezir</span></div>
-            </div>
-            <div class="exc-card__body">
-              <h3 class="exc-card__title">Wedding Planner Moris</h3>
-              <p class="exc-card__desc">Organiz konple to maryaz drev lor Moris. Swazi landrwa, koordine prestetater, swivi personalize. To zur parfet, kle an main.</p>
-              <div class="exc-card__meta"><span class="meta-item">💍 Ziska 100 dimoun</span><span class="meta-price">Lor devis</span></div>
-              <a href="/mau/excursions/wedding-planner-moris/" class="btn-outline-light">Plis info →</a>
-            </div>
-          </article>
-        </div>
-        <div class="excursions__see-all"><a href="/mau/excursions/" class="btn-outline-white anim">Get tou mo excursions →</a></div>
       </div>
     </section>
 

@@ -107,7 +107,7 @@ class SiteFooter extends HTMLElement {
     <div class="footer-bottom-container">
       <div class="footer-legal-info">
         <p><strong>Pretty Tours Ltd</strong> | BRN : C20171385 | <span>${data.licensed}</span> (10/09/2024)</p>
-        <p class="footer-address">Appt 24 Le Tamier, Avenue Cacatoes, Flic En Flac 1905-04, Mauritius</p>
+        <p class="footer-address">Avenue Cacatoes, Flic En Flac 1905-04, Mauritius</p>
       </div>
       <div class="footer-copyright">
         <p>© 2026 Pretty Tours Ltd. ${data.rights}</p>
