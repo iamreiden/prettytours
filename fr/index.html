@@ -1,0 +1,1751 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pretty Tours — Guide Touristique Locale à Maurice | Découvrez l'Île Authentique</title>
+  <meta name="description" content="Découvrez l'île Maurice avec Pretty, guide mauricienne passionnée née sur l'île. Excursions personnalisées, petits groupes (max 8), expériences authentiques. Réservez sur WhatsApp.">
+  <meta name="keywords" content="guide touristique maurice, excursions maurice, pretty tours, guide local mauricien, visiter maurice, tourisme authentique, mahebourg, flic en flac, chamarel">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pretty-tours.com/fr/">
+  <meta property="og:title" content="Pretty Tours — Guide Touristique Locale à Maurice">
+  <meta property="og:description" content="Découvrez Maurice avec une fille du pays. Excursions intimes, personnalisées, racontées avec passion.">
+  <meta property="og:image" content="https://pretty-tours.com/assets/images/og-image-fr.jpg">
+  <meta property="og:locale" content="fr_FR">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pretty Tours — Guide Touristique Locale à Maurice">
+  <meta name="twitter:description" content="Découvrez Maurice avec une fille du pays.">
+  <meta name="twitter:image" content="https://pretty-tours.com/assets/images/og-image-fr.jpg">
+
+  <link rel="canonical" href="https://pretty-tours.com/fr/">
+  <link rel="alternate" hreflang="fr" href="https://pretty-tours.com/fr/">
+  <link rel="alternate" hreflang="en" href="https://pretty-tours.com/en/">
+  <link rel="alternate" hreflang="mau" href="https://pretty-tours.com/mau/">
+  <link rel="alternate" hreflang="x-default" href="https://pretty-tours.com/fr/">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600;700&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/footer.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Pretty Tours",
+    "description": "Guide touristique locale mauricienne — Excursions personnalisées à Maurice",
+    "telephone": "+230-5904-2969",
+    "email": "prettytours@outlook.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "MU",
+      "addressLocality": "Île Maurice"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "-20.1609",
+      "longitude": "57.5012"
+    },
+    "url": "https://pretty-tours.com",
+    "sameAs": ["https://wa.me/23059042969"],
+    "priceRange": "€€",
+    "founder": {
+      "@type": "Person",
+      "name": "Pretty",
+      "jobTitle": "Guide Touristique",
+      "birthPlace": "Île Maurice"
+    }
+  }
+  </script>
+
+  <style>
+    /* ============================================
+       RESET & BASE
+    ============================================ */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --color-turquoise: #00CED1;
+      --color-coral: #FF6B6B;
+      --color-sand: #FAFAFA;
+      --color-ocean: #1A2B3C;
+      --color-gold: #FFD700;
+      --color-whatsapp: #25D366;
+      --font-heading: 'Playfair Display', serif;
+      --font-body: 'Inter', sans-serif;
+      --ease: cubic-bezier(0.4, 0, 0.2, 1);
+      --container-max: 1280px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--color-ocean);
+      background: var(--color-sand);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ============================================
+       ANIMATION D'ENTRÉE
+    ============================================ */
+    #welcomeAnimation {
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #000;
+      overflow: hidden;
+    }
+
+    #welcomeAnimation.hidden { display: none; }
+
+    .wa-ocean {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, #00CED1 0%, #0099A8 40%, #1A2B3C 100%);
+      opacity: 0;
+    }
+
+    .wa-waves {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 200px;
+      opacity: 0;
+    }
+
+    .wa-logo {
+      position: relative;
+      z-index: 2;
+      opacity: 0;
+      transform: scale(0.8);
+      text-align: center;
+    }
+
+    .wa-logo-text {
+      font-family: var(--font-heading);
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.05em;
+    }
+
+    .wa-logo-sub {
+      font-family: var(--font-body);
+      font-size: clamp(0.875rem, 2vw, 1rem);
+      color: var(--color-turquoise);
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin-top: 8px;
+    }
+
+    .wa-tagline {
+      position: relative;
+      z-index: 2;
+      font-family: var(--font-heading);
+      font-size: clamp(1.125rem, 3vw, 1.5rem);
+      font-style: italic;
+      color: rgba(255,255,255,0.9);
+      margin-top: 24px;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    #skipIntro {
+      position: fixed;
+      top: 24px;
+      right: 24px;
+      z-index: 10001;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: #fff;
+      font-family: var(--font-body);
+      font-size: 14px;
+      padding: 8px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.3s var(--ease);
+      backdrop-filter: blur(8px);
+    }
+
+    #skipIntro:hover {
+      background: rgba(255,255,255,0.25);
+      transform: scale(1.05);
+    }
+
+    /* ============================================
+       HERO
+    ============================================ */
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero__bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('../assets/le-morne-aerial.jpg');
+      background-size: cover;
+      background-position: center;
+      transform: scale(1.05);
+      transition: transform 8s ease;
+    }
+
+    .hero__bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(26, 43, 60, 0.75) 0%,
+        rgba(26, 43, 60, 0.35) 50%,
+        rgba(0, 0, 0, 0.15) 100%
+      );
+    }
+
+    .hero__content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 0 24px;
+      max-width: 900px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s var(--ease);
+    }
+
+    .hero__content.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero__trust {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 40px;
+      padding: 10px 20px;
+      margin-bottom: 28px;
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.95);
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .hero__trust-sep { opacity: 0.4; }
+
+    .hero__h1 {
+      font-family: var(--font-heading);
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .hero__h1-main {
+      display: block;
+      font-size: clamp(2.5rem, 5.5vw, 4.25rem);
+      font-weight: 700;
+    }
+
+    .hero__h1-sub {
+      display: block;
+      font-size: clamp(2rem, 4.5vw, 3.5rem);
+      font-weight: 400;
+      font-style: italic;
+      color: var(--color-turquoise);
+    }
+
+    .hero__subtitle {
+      font-size: clamp(1rem, 2.2vw, 1.25rem);
+      color: rgba(255,255,255,0.88);
+      max-width: 600px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+
+    .btn-whatsapp-hero {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--color-whatsapp);
+      color: #fff;
+      font-family: var(--font-body);
+      font-size: 1.0625rem;
+      font-weight: 600;
+      padding: 18px 36px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      animation: pulse-btn 2.5s ease-in-out infinite;
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-decoration: none;
+    }
+
+    .btn-whatsapp-hero:hover {
+      animation: none;
+      transform: scale(1.08);
+      box-shadow: 0 12px 40px rgba(37,211,102,0.5);
+    }
+
+    @keyframes pulse-btn {
+      0%, 100% { transform: scale(1); box-shadow: 0 6px 25px rgba(37,211,102,0.35); }
+      50% { transform: scale(1.04); box-shadow: 0 10px 35px rgba(37,211,102,0.5); }
+    }
+
+    .hero__reassurance {
+      margin-top: 16px;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.7);
+      letter-spacing: 0.02em;
+    }
+
+    .hero__scroll {
+      position: absolute;
+      bottom: 36px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.7);
+      font-size: 0.8125rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .hero__scroll-arrow {
+      animation: bounce-arrow 1.8s ease-in-out infinite;
+    }
+
+    @keyframes bounce-arrow {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
+
+    /* ============================================
+       SECTION : QUI EST PRETTY
+    ============================================ */
+    .about {
+      padding: 96px 0;
+      background: #fff;
+    }
+
+    .about__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .about__eyebrow {
+      font-family: var(--font-body);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--color-turquoise);
+      margin-bottom: 16px;
+    }
+
+    .about__h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: var(--color-ocean);
+      line-height: 1.25;
+      margin-bottom: 32px;
+    }
+
+    .about__h2 em {
+      color: var(--color-coral);
+      font-style: italic;
+    }
+
+    .about__text p {
+      font-size: 1.0625rem;
+      line-height: 1.85;
+      color: #3a4a5a;
+      margin-bottom: 20px;
+    }
+
+    .about__text p strong { color: var(--color-ocean); font-weight: 600; }
+
+    .about__quote {
+      border-left: 4px solid var(--color-turquoise);
+      background: rgba(0,206,209,0.05);
+      padding: 20px 24px;
+      margin: 28px 0;
+      border-radius: 0 8px 8px 0;
+      font-family: var(--font-heading);
+      font-size: 1.1875rem;
+      font-style: italic;
+      line-height: 1.7;
+      color: var(--color-ocean);
+    }
+
+    .about__signature {
+      font-size: 1.0625rem;
+      line-height: 1.7;
+      color: var(--color-ocean);
+      margin-bottom: 32px;
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-body);
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--color-turquoise);
+      border: 2px solid var(--color-turquoise);
+      padding: 14px 28px;
+      border-radius: 50px;
+      transition: all 0.3s var(--ease);
+    }
+
+    .btn-secondary:hover {
+      background: var(--color-turquoise);
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0,206,209,0.3);
+    }
+
+    .about__photo-wrap {
+      position: sticky;
+      top: 100px;
+    }
+
+    .about__photo {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.15);
+    }
+
+    .about__badges {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .about__badge {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 12px 16px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--color-ocean);
+    }
+
+    .about__badge-icon { font-size: 1.25rem; }
+
+    /* ============================================
+       SECTION : POURQUOI PRETTY TOURS
+    ============================================ */
+    .why {
+      padding: 96px 0;
+      background: linear-gradient(135deg, #FAFAFA 0%, #EEF8FF 100%);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 64px;
+    }
+
+    .section-eyebrow {
+      font-size: 0.8125rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--color-turquoise);
+      margin-bottom: 12px;
+    }
+
+    .section-h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: var(--color-ocean);
+      margin-bottom: 16px;
+      line-height: 1.25;
+    }
+
+    .section-subtitle {
+      font-size: 1.0625rem;
+      color: #5a6a7a;
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .why__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .why-card {
+      background: #fff;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      border: 2px solid transparent;
+      transition: all 0.35s var(--ease);
+    }
+
+    .why-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 40px rgba(0,206,209,0.15);
+      border-color: var(--color-turquoise);
+    }
+
+    .why-card__icon {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .why-card__title {
+      font-family: var(--font-heading);
+      font-size: 1.375rem;
+      font-weight: 700;
+      color: var(--color-ocean);
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .why-card__text {
+      font-size: 0.9375rem;
+      line-height: 1.75;
+      color: #4a5a6a;
+    }
+
+    .why-card__text strong { color: var(--color-ocean); }
+
+    /* ============================================
+       SECTION : EXCURSIONS
+    ============================================ */
+    .excursions {
+      padding: 96px 0;
+      background: var(--color-ocean);
+    }
+
+    .excursions .section-h2,
+    .excursions .section-eyebrow { color: rgba(255,255,255,0.6); }
+    .excursions .section-h2 { color: #fff; }
+    .excursions .section-subtitle { color: rgba(255,255,255,0.65); }
+
+    .excursions__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      align-items: start;
+    }
+
+    .exc-card {
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+      display: flex;
+      flex-direction: column;
+      transition: all 0.4s var(--ease);
+    }
+
+    .exc-card:hover { transform: translateY(-12px); box-shadow: 0 24px 60px rgba(0,206,209,0.25); }
+
+    .exc-card--featured {
+      border: 3px solid var(--color-gold);
+      transform: scale(1.02);
+    }
+
+    .exc-card--featured:hover { transform: scale(1.02) translateY(-12px); }
+
+    .exc-card__img-wrap {
+      position: relative;
+      height: 240px;
+      overflow: hidden;
+    }
+
+    .exc-card__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s var(--ease);
+    }
+
+    .exc-card:hover .exc-card__img { transform: scale(1.08); }
+
+    .exc-card__badges {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 5px 12px;
+      border-radius: 20px;
+    }
+
+    .badge--green { background: #2ECC71; color: #fff; }
+    .badge--coral { background: var(--color-coral); color: #fff; }
+    .badge--gold { background: var(--color-gold); color: var(--color-ocean); }
+
+    .exc-card__duration {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: rgba(0,0,0,0.65);
+      color: #fff;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 20px;
+      backdrop-filter: blur(4px);
+    }
+
+    .exc-card__featured-tag {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(90deg, var(--color-gold), #FFA500);
+      color: var(--color-ocean);
+      text-align: center;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      padding: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .exc-card__body {
+      padding: 24px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .exc-card__title {
+      font-family: var(--font-heading);
+      font-size: 1.375rem;
+      font-weight: 700;
+      color: var(--color-ocean);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .exc-card__desc {
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      color: #5a6a7a;
+      margin-bottom: 20px;
+      flex: 1;
+    }
+
+    .exc-card__meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.875rem;
+      color: #6a7a8a;
+    }
+
+    .meta-price {
+      margin-left: auto;
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--color-ocean);
+    }
+
+    .meta-price span {
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      font-weight: 400;
+      color: #8a9aaa;
+    }
+
+    .btn-outline-light {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--color-turquoise);
+      border: 2px solid var(--color-turquoise);
+      padding: 12px 24px;
+      border-radius: 50px;
+      text-align: center;
+      transition: all 0.3s var(--ease);
+    }
+
+    .btn-outline-light:hover {
+      background: var(--color-turquoise);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .btn-primary-cta {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: #fff;
+      background: var(--color-turquoise);
+      padding: 13px 24px;
+      border-radius: 50px;
+      text-align: center;
+      transition: all 0.3s var(--ease);
+    }
+
+    .btn-primary-cta:hover {
+      background: #00b5b8;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0,206,209,0.4);
+    }
+
+    .excursions__see-all {
+      text-align: center;
+      margin-top: 56px;
+    }
+
+    .btn-outline-white {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+      border: 2px solid rgba(255,255,255,0.5);
+      padding: 16px 36px;
+      border-radius: 50px;
+      transition: all 0.3s var(--ease);
+    }
+
+    .btn-outline-white:hover {
+      background: rgba(255,255,255,0.12);
+      border-color: #fff;
+      transform: translateY(-2px);
+    }
+
+    /* ============================================
+       SECTION : TÉMOIGNAGES
+    ============================================ */
+    .testimonials {
+      padding: 96px 0;
+      background: var(--color-sand);
+    }
+
+    .testimonials__track {
+      display: flex;
+      gap: 24px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      padding: 16px 4px 32px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .testimonials__track::-webkit-scrollbar { display: none; }
+
+    .testimonial-card {
+      min-width: 380px;
+      max-width: 420px;
+      background: #fff;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+      scroll-snap-align: center;
+      flex-shrink: 0;
+      transition: transform 0.3s var(--ease);
+    }
+
+    .testimonial-card:hover { transform: translateY(-6px); }
+
+    .tc-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .tc-avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .tc-avatar-placeholder {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--color-turquoise), var(--color-coral));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+      flex-shrink: 0;
+    }
+
+    .tc-name {
+      font-weight: 700;
+      color: var(--color-ocean);
+      font-size: 1rem;
+    }
+
+    .tc-origin {
+      font-size: 0.875rem;
+      color: #8a9aaa;
+    }
+
+    .tc-stars { color: #FFB800; font-size: 0.875rem; margin-top: 2px; }
+
+    .tc-quote {
+      font-size: 0.9875rem;
+      line-height: 1.8;
+      color: #3a4a5a;
+      font-style: italic;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .tc-quote::before {
+      content: '\201C';
+      position: absolute;
+      left: -4px;
+      top: -10px;
+      font-family: var(--font-heading);
+      font-size: 4rem;
+      color: var(--color-turquoise);
+      opacity: 0.2;
+      line-height: 1;
+    }
+
+    .tc-excursion {
+      margin-top: 16px;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--color-turquoise);
+    }
+
+    /* Carte WhatsApp */
+    .testimonial-card--wa {
+      background: #ECF9E7;
+      border: 1px solid #d4efca;
+    }
+
+    .wa-icon-wrap {
+      width: 52px;
+      height: 52px;
+      background: var(--color-whatsapp);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .wa-bubble {
+      background: #fff;
+      border-radius: 12px 12px 12px 2px;
+      padding: 14px 16px;
+      font-size: 0.9875rem;
+      line-height: 1.7;
+      color: var(--color-ocean);
+      position: relative;
+      margin-top: 4px;
+    }
+
+    .wa-time {
+      text-align: right;
+      font-size: 0.75rem;
+      color: #8a9aaa;
+      margin-top: 8px;
+    }
+
+    .testimonials__nav {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .carousel-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 2px solid var(--color-turquoise);
+      background: transparent;
+      color: var(--color-turquoise);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s var(--ease);
+      font-size: 1.25rem;
+    }
+
+    .carousel-btn:hover {
+      background: var(--color-turquoise);
+      color: #fff;
+    }
+
+    /* ============================================
+       CTA FINAL
+    ============================================ */
+    .cta-final {
+      padding: 120px 0;
+      background:
+        linear-gradient(rgba(0, 206, 209, 0.82), rgba(26, 43, 60, 0.92)),
+        url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1920&q=80') center/cover;
+      text-align: center;
+      color: #fff;
+    }
+
+    .cta-final__h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(2.25rem, 5vw, 3.75rem);
+      font-weight: 700;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .cta-final__sub {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: rgba(255,255,255,0.85);
+      max-width: 580px;
+      margin: 0 auto 40px;
+      line-height: 1.75;
+    }
+
+    .btn-whatsapp-large {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--color-whatsapp);
+      color: #fff;
+      font-family: var(--font-body);
+      font-size: 1.125rem;
+      font-weight: 700;
+      padding: 20px 44px;
+      border-radius: 50px;
+      transition: all 0.3s var(--ease);
+      box-shadow: 0 8px 30px rgba(37,211,102,0.4);
+    }
+
+    .btn-whatsapp-large:hover {
+      transform: scale(1.06) translateY(-3px);
+      box-shadow: 0 16px 50px rgba(37,211,102,0.55);
+    }
+
+    .cta-final__reassurance {
+      margin-top: 20px;
+      font-size: 0.9375rem;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .cta-final__stats {
+      display: flex;
+      justify-content: center;
+      gap: 64px;
+      margin-top: 64px;
+      flex-wrap: wrap;
+    }
+
+    .stat-item__number {
+      display: block;
+      font-family: var(--font-heading);
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-weight: 700;
+      color: var(--color-gold);
+      line-height: 1;
+    }
+
+    .stat-item__label {
+      display: block;
+      font-size: 0.9375rem;
+      color: rgba(255,255,255,0.75);
+      margin-top: 8px;
+    }
+
+    /* ============================================
+       FOOTER
+    ============================================ */
+    footer {
+      background: var(--color-ocean);
+      color: rgba(255,255,255,0.75);
+      padding: 64px 0 32px;
+    }
+
+    .footer__grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer__logo {
+      font-family: var(--font-heading);
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    .footer__tagline {
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .footer__contact a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9375rem;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 10px;
+      transition: color 0.3s;
+    }
+
+    .footer__contact a:hover { color: var(--color-turquoise); }
+
+    .footer__heading {
+      font-family: var(--font-body);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-turquoise);
+      margin-bottom: 16px;
+    }
+
+    .footer__links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer__links a {
+      font-size: 0.9375rem;
+      color: rgba(255,255,255,0.65);
+      transition: color 0.3s;
+    }
+
+    .footer__links a:hover { color: #fff; }
+
+    .footer__bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.875rem;
+    }
+
+    .footer__langs {
+      display: flex;
+      gap: 16px;
+    }
+
+    .footer__langs a {
+      color: rgba(255,255,255,0.5);
+      transition: color 0.3s;
+    }
+
+    .footer__langs a:hover { color: var(--color-turquoise); }
+
+    /* ============================================
+       WHATSAPP FLOAT
+    ============================================ */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 62px;
+      height: 62px;
+      background: var(--color-whatsapp);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9000;
+      box-shadow: 0 6px 24px rgba(37,211,102,0.4);
+      animation: pulse-wa 2.5s ease-in-out infinite;
+      transition: transform 0.3s;
+    }
+
+    .whatsapp-float:hover {
+      animation: none;
+      transform: scale(1.15);
+      box-shadow: 0 10px 35px rgba(37,211,102,0.55);
+    }
+
+    .whatsapp-float__tooltip {
+      position: absolute;
+      right: 72px;
+      background: var(--color-ocean);
+      color: #fff;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      white-space: nowrap;
+      padding: 8px 14px;
+      border-radius: 8px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+
+    .whatsapp-float__tooltip::after {
+      content: '';
+      position: absolute;
+      left: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      border: 6px solid transparent;
+      border-left-color: var(--color-ocean);
+    }
+
+    .whatsapp-float:hover .whatsapp-float__tooltip { opacity: 1; }
+
+    @keyframes pulse-wa {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+    }
+
+    /* ============================================
+       SCROLL ANIMATIONS
+    ============================================ */
+    .anim {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+    }
+
+    .anim.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .anim-delay-1 { transition-delay: 0.1s; }
+    .anim-delay-2 { transition-delay: 0.2s; }
+    .anim-delay-3 { transition-delay: 0.3s; }
+    .anim-delay-4 { transition-delay: 0.4s; }
+    .anim-delay-5 { transition-delay: 0.5s; }
+
+    /* ============================================
+       RESPONSIVE
+    ============================================ */
+    @media (max-width: 1024px) {
+      .about__grid { grid-template-columns: 1fr; gap: 48px; }
+      .about__photo-wrap { position: relative; top: 0; order: -1; }
+      .about__photo { aspect-ratio: 16/9; }
+      .about__badges { flex-direction: row; flex-wrap: wrap; }
+      .why__grid { grid-template-columns: repeat(2, 1fr); }
+      .excursions__grid { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
+      .exc-card--featured { transform: none; }
+      .footer__grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .why__grid { grid-template-columns: 1fr; }
+      .cta-final__stats { gap: 32px; }
+      .footer__grid { grid-template-columns: 1fr; gap: 32px; }
+      .testimonial-card { min-width: 300px; }
+      .footer__bottom { flex-direction: column; text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      .hero__trust { font-size: 0.75rem; gap: 8px; }
+      .hero__trust-sep { display: none; }
+      .container { padding: 0 16px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ANIMATION D'ENTRÉE -->
+  <div id="welcomeAnimation">
+    <div class="wa-ocean" id="waOcean"></div>
+    <svg class="wa-waves" viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path id="wavePath1" d="M0,100 C360,160 720,40 1080,100 C1260,130 1380,80 1440,100 L1440,200 L0,200 Z" fill="rgba(255,255,255,0.08)"/>
+      <path id="wavePath2" d="M0,130 C240,90 480,170 720,130 C960,90 1200,150 1440,130 L1440,200 L0,200 Z" fill="rgba(255,255,255,0.05)"/>
+    </svg>
+    <div class="wa-logo" id="waLogo">
+      <div class="wa-logo-text">Pretty Tours</div>
+      <div class="wa-logo-sub">Île Maurice</div>
+    </div>
+    <p class="wa-tagline" id="waTagline">Bienvenue dans mon île...</p>
+    <button id="skipIntro" aria-label="Passer l'animation d'introduction">Passer l'intro</button>
+  </div>
+
+  <site-header lang="fr"></site-header>
+  <cookie-consent lang="fr"></cookie-consent>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Présentation Pretty Tours">
+      <div class="hero__bg" id="heroBg"></div>
+      <div class="hero__content" id="heroContent">
+        <div class="hero__trust" aria-label="Preuves sociales">
+          <span>⭐⭐⭐⭐⭐ 5/5 sur WhatsApp</span>
+          <span class="hero__trust-sep">•</span>
+          <span>+150 voyageurs conquis depuis 2019</span>
+        </div>
+        <h1 class="hero__h1">
+          <span class="hero__h1-main">Découvrez Maurice autrement</span>
+          <span class="hero__h1-sub">avec une fille du pays</span>
+        </h1>
+        <p class="hero__subtitle">
+          Excursions intimes, personnalisées, racontées avec passion.<br>
+          Pas de tourisme de masse — juste vous et les secrets de mon île.
+        </p>
+        <a href="https://wa.me/23059042969?text=Bonjour%20Pretty,%20je%20veux%20d%C3%A9couvrir%20Maurice%20avec%20vous"
+           class="btn-whatsapp-hero"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Contacter Pretty sur WhatsApp pour planifier votre voyage">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+          Discutons de votre voyage
+        </a>
+        <p class="hero__reassurance">📱 Réponse sous 2h &nbsp;•&nbsp; 🇫🇷 Français &nbsp;•&nbsp; 🇬🇧 English &nbsp;•&nbsp; 🇲🇺 Kreol</p>
+      </div>
+      <div class="hero__scroll" id="heroScroll" role="button" tabindex="0" aria-label="Défiler vers le bas">
+        <span>Découvrez mon histoire</span>
+        <svg class="hero__scroll-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 5v14M5 12l7 7 7-7"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- QUI EST PRETTY -->
+    <section class="about" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about__grid">
+
+          <div class="about__content">
+            <p class="about__eyebrow anim">Qui suis-je ?</p>
+            <h2 class="about__h2 anim anim-delay-1" id="about-heading">
+              Je m'appelle Pretty, et Maurice,
+              <em>c'est toute ma vie.</em>
+            </h2>
+            <div class="about__text">
+              <p class="anim anim-delay-2">
+                <strong>Née ici en 1980, fille d'un guide-taxi,</strong> j'ai grandi entre les récifs de Mahébourg et les champs de canne à sucre de Chamarel. Mon père me racontait l'histoire de chaque pierre, de chaque arbre. À 6 ans, je connaissais déjà les courants des lagons mieux que mes tables de multiplication.
+              </p>
+              <p class="anim anim-delay-2">
+                Après des années à travailler dans l'hôtellerie de luxe, j'ai réalisé quelque chose : <strong>les touristes ne voulaient pas juste "visiter" Maurice. Ils voulaient la RESSENTIR.</strong> Comprendre pourquoi on dit "mo pays" avec autant de fierté. Pourquoi le séga fait vibrer nos âmes.
+              </p>
+              <p class="anim anim-delay-3">
+                En 2019, j'ai fondé <strong>Pretty Tours</strong>. Pas une agence. Pas un business. <strong>Une invitation à découvrir mon île à travers mes yeux.</strong>
+              </p>
+              <blockquote class="about__quote anim anim-delay-3">
+                "Avec moi, vous ne serez jamais un numéro dans un bus climatisé à 40 places. Vous serez mon invité. Je vous raconterai les légendes que ma grand-mère me chuchotait. Je vous emmènerai là où les guides officiels ne vont jamais."
+              </blockquote>
+              <p class="about__signature anim anim-delay-4">
+                <strong>Maurice n'est pas juste une destination. C'est une émotion.</strong><br>
+                Et je veux la partager avec vous.
+              </p>
+              <a href="/fr/mon-histoire/" class="btn-secondary anim anim-delay-4">
+                Lisez mon histoire complète →
+              </a>
+            </div>
+          </div>
+
+          <div class="about__photo-wrap anim anim-delay-1">
+            <picture>
+              <source srcset="../assets/guide.webp" type="image/webp">
+              <img
+                class="about__photo"
+                src="../assets/guide.jpg"
+                alt="Pretty, guide touristique mauricienne passionnée, native de l'île Maurice"
+                width="600"
+                height="800"
+                loading="lazy">
+            </picture>
+            <div class="about__badges">
+              <div class="about__badge">
+                <span class="about__badge-icon">🏝️</span>
+                <span>100% mauricienne de naissance</span>
+              </div>
+              <div class="about__badge">
+                <span class="about__badge-icon">👥</span>
+                <span>Petits groupes — max 8 personnes</span>
+              </div>
+              <div class="about__badge">
+                <span class="about__badge-icon">💚</span>
+                <span>90% de clients par recommandations</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- POURQUOI PRETTY TOURS -->
+    <section class="why" aria-labelledby="why-heading">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-eyebrow anim">La différence Pretty</p>
+          <h2 class="section-h2 anim anim-delay-1" id="why-heading">Pourquoi choisir Pretty Tours ?</h2>
+          <p class="section-subtitle anim anim-delay-2">Parce que Maurice mérite mieux que du tourisme industriel</p>
+        </header>
+        <div class="why__grid">
+          <article class="why-card anim">
+            <span class="why-card__icon" aria-hidden="true">🏝️</span>
+            <h3 class="why-card__title">100% locale, 100% authentique</h3>
+            <p class="why-card__text">Je suis née ici. Mes racines sont dans cette terre rouge. Je ne vous montre pas Maurice — <strong>je vous partage MA Maurice</strong> : celle de mon enfance, de mes souvenirs, de mon cœur.</p>
+          </article>
+          <article class="why-card anim anim-delay-1">
+            <span class="why-card__icon" aria-hidden="true">👥</span>
+            <h3 class="why-card__title">Petits groupes intimistes</h3>
+            <p class="why-card__text">Maximum 8 personnes. Jamais plus. Parce que <strong>je veux connaître votre prénom, votre histoire, vos envies.</strong> Vous n'êtes pas un touriste. Vous êtes mon invité.</p>
+          </article>
+          <article class="why-card anim anim-delay-2">
+            <span class="why-card__icon" aria-hidden="true">✨</span>
+            <h3 class="why-card__title">Sur-mesure et flexible</h3>
+            <p class="why-card__text">Vous aimez vous lever tôt ? Vous préférez prendre votre temps ? <strong>Je m'adapte à VOUS.</strong> Chaque excursion est unique comme chaque voyageur.</p>
+          </article>
+          <article class="why-card anim anim-delay-1">
+            <span class="why-card__icon" aria-hidden="true">📖</span>
+            <h3 class="why-card__title">Histoires et légendes locales</h3>
+            <p class="why-card__text">Pourquoi cette montagne s'appelle "Le Pouce" ? Quelle est la légende du pirate La Buse ? <strong>Je raconte Maurice comme un roman.</strong></p>
+          </article>
+          <article class="why-card anim anim-delay-2">
+            <span class="why-card__icon" aria-hidden="true">🤝</span>
+            <h3 class="why-card__title">Réseau local authentique</h3>
+            <p class="why-card__text">Mon cousin cultive la vanille à Chamarel. Mon ami Raj fait les meilleurs samoussas de l'île. <strong>Vous rencontrerez des Mauriciens, pas des vendeurs.</strong></p>
+          </article>
+          <article class="why-card anim anim-delay-3">
+            <span class="why-card__icon" aria-hidden="true">❤️</span>
+            <h3 class="why-card__title">Passion contagieuse</h3>
+            <p class="why-card__text">Quand je parle de mon île, mes yeux brillent. Mes clients me disent souvent : "Pretty, on voit que tu AIMES ton pays". <strong>Et cette passion, je vais vous la transmettre.</strong></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXCURSIONS -->
+    <section class="excursions" aria-labelledby="exc-heading">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-eyebrow anim">Mes excursions</p>
+          <h2 class="section-h2 anim anim-delay-1" id="exc-heading">Mes excursions coup de cœur</h2>
+          <p class="section-subtitle anim anim-delay-2">Trois expériences qui résument toute la magie de Maurice</p>
+        </header>
+        <div class="excursions__grid">
+
+          <article class="exc-card anim">
+            <div class="exc-card__img-wrap">
+              <picture>
+                <img class="exc-card__img"
+                  src="https://images.unsplash.com/photo-1544551763-77ef2d0cfc6c?w=800&q=80"
+                  alt="Village de Mahebourg et Domaine Saint-Aubin, sud authentique de Maurice"
+                  width="800" height="240" loading="lazy">
+              </picture>
+              <div class="exc-card__badges">
+                <span class="badge badge--green">Terrestre</span>
+              </div>
+              <span class="exc-card__duration">⏱ 6h</span>
+            </div>
+            <div class="exc-card__body">
+              <h3 class="exc-card__title">Mahébourg + Domaine Saint-Aubin</h3>
+              <p class="exc-card__desc">Sud authentique, maison coloniale, rhum artisanal et déjeuner créole. L'histoire navale de Maurice racontée dans les ruelles de Mahébourg.</p>
+              <div class="exc-card__meta">
+                <span class="meta-item">👥 Max 8 pers.</span>
+                <span class="meta-price">40€ <span>/groupe</span></span>
+              </div>
+              <a href="/fr/excursions/mahebourg-domaine-saint-aubin/"
+                 class="btn-outline-light"
+                 aria-label="Découvrir l'excursion Mahebourg et Domaine Saint-Aubin">
+                Découvrir cette excursion →
+              </a>
+            </div>
+          </article>
+
+          <article class="exc-card exc-card--featured anim anim-delay-1">
+            <div class="exc-card__img-wrap">
+              <picture>
+                <img class="exc-card__img"
+                  src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80"
+                  alt="Dîner romantique pieds dans le sable à Flic-en-Flac, coucher de soleil Maurice"
+                  width="800" height="240" loading="lazy">
+              </picture>
+              <div class="exc-card__badges">
+                <span class="badge badge--coral">Prestation</span>
+              </div>
+              <span class="exc-card__duration">⏱ 3h</span>
+              <div class="exc-card__featured-tag">⭐ Coup de cœur</div>
+            </div>
+            <div class="exc-card__body">
+              <h3 class="exc-card__title">Dîner Romantique Flic-en-Flac</h3>
+              <p class="exc-card__desc">Table privée sur la plage, pieds dans le sable, coucher de soleil. Menu gastronomique 4 plats, champagne, photographe inclus.</p>
+              <div class="exc-card__meta">
+                <span class="meta-item">🥂 2 personnes</span>
+                <span class="meta-price">120€ <span>/pers.</span></span>
+              </div>
+              <a href="https://wa.me/23059042969?text=Bonjour%20Pretty,%20je%20souhaite%20r%C3%A9server%20le%20D%C3%AEner%20Romantique%20Flic-en-Flac"
+                 class="btn-primary-cta"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 aria-label="Réserver le dîner romantique sur WhatsApp">
+                Réserver cette expérience →
+              </a>
+            </div>
+          </article>
+
+          <article class="exc-card anim anim-delay-2">
+            <div class="exc-card__img-wrap">
+              <picture>
+                <img class="exc-card__img"
+                  src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800&q=80"
+                  alt="Organisation de mariage à l'île Maurice, cérémonie sur la plage"
+                  width="800" height="240" loading="lazy">
+              </picture>
+              <div class="exc-card__badges">
+                <span class="badge badge--coral">Prestation</span>
+                <span class="badge badge--gold">Sur-mesure</span>
+              </div>
+            </div>
+            <div class="exc-card__body">
+              <h3 class="exc-card__title">Wedding Planner Maurice</h3>
+              <p class="exc-card__desc">Organisation complète de votre mariage de rêve à Maurice. Choix du lieu, coordination prestataires, suivi personnalisé. Votre jour parfait, clé en main.</p>
+              <div class="exc-card__meta">
+                <span class="meta-item">💍 Jusqu'à 100 pers.</span>
+                <span class="meta-price">Sur devis</span>
+              </div>
+              <a href="/fr/excursions/wedding-planner-maurice/"
+                 class="btn-outline-light"
+                 aria-label="En savoir plus sur le service Wedding Planner Maurice">
+                En savoir plus →
+              </a>
+            </div>
+          </article>
+
+        </div>
+        <div class="excursions__see-all">
+          <a href="/fr/excursions/" class="btn-outline-white anim">
+            Voir toutes mes excursions
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TÉMOIGNAGES -->
+    <section class="testimonials" aria-labelledby="testi-heading">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-eyebrow anim">Ils l'ont vécu</p>
+          <h2 class="section-h2 anim anim-delay-1" id="testi-heading">Ils ont découvert Maurice avec moi</h2>
+          <p class="section-subtitle anim anim-delay-2">Et ils racontent mieux que moi pourquoi Pretty Tours, c'est différent</p>
+        </header>
+
+        <div class="testimonials__track" id="testimonialsTrack" role="list">
+
+          <article class="testimonial-card" role="listitem">
+            <div class="tc-header">
+              <div class="tc-avatar-placeholder" aria-hidden="true">S</div>
+              <div>
+                <p class="tc-name">Sophie M.</p>
+                <p class="tc-origin">Paris, France</p>
+                <div class="tc-stars" aria-label="5 étoiles sur 5">⭐⭐⭐⭐⭐</div>
+              </div>
+            </div>
+            <blockquote class="tc-quote">
+              J'ai voyagé dans 47 pays. Maurice avec Pretty, c'est le voyage qui m'a le plus marquée. Pas pour les plages — magnifiques, certes — mais pour l'ÉMOTION. Pretty ne m'a pas montré des lieux. Elle m'a partagé son âme. J'ai pleuré trois fois pendant l'excursion à Mahebourg. De bonheur. De connexion. De gratitude. Merci Pretty.
+            </blockquote>
+            <p class="tc-excursion">✓ Excursion : Mahébourg + Domaine Saint-Aubin</p>
+          </article>
+
+          <article class="testimonial-card" role="listitem">
+            <div class="tc-header">
+              <div class="tc-avatar-placeholder" style="background:linear-gradient(135deg,#1A2B3C,#00CED1)" aria-hidden="true">J</div>
+              <div>
+                <p class="tc-name">James R.</p>
+                <p class="tc-origin">London, United Kingdom</p>
+                <div class="tc-stars" aria-label="5 étoiles sur 5">⭐⭐⭐⭐⭐</div>
+              </div>
+            </div>
+            <blockquote class="tc-quote">
+              We booked the romantic dinner for my wife's birthday. I expected a nice meal on the beach. What we got was MAGIC. Pretty orchestrated every detail like a symphony. The sunset, the table decoration, the champagne timing... My wife cried. I proposed again — yes, again! Pretty, you're not a guide. You're a dream-maker.
+            </blockquote>
+            <p class="tc-excursion">✓ Prestation : Dîner Romantique Flic-en-Flac</p>
+          </article>
+
+          <article class="testimonial-card" role="listitem">
+            <div class="tc-header">
+              <div class="tc-avatar-placeholder" style="background:linear-gradient(135deg,#FF6B6B,#FFD700)" aria-hidden="true">M</div>
+              <div>
+                <p class="tc-name">Marie L.</p>
+                <p class="tc-origin">Lyon, France</p>
+                <div class="tc-stars" aria-label="5 étoiles sur 5">⭐⭐⭐⭐⭐</div>
+              </div>
+            </div>
+            <blockquote class="tc-quote">
+              J'avais réservé un package all-inclusive dans un hôtel 5 étoiles. Puis j'ai découvert Pretty. J'ai TOUT annulé. Meilleure décision de ma vie. L'hôtel 5 étoiles ? C'était pour les touristes. Avec Pretty, j'ai mangé chez des locaux, nagé dans des criques secrètes, dansé le séga. Pretty Tours ? C'est pour les VOYAGEURS.
+            </blockquote>
+            <p class="tc-excursion">✓ Programme personnalisé 5 jours</p>
+          </article>
+
+          <article class="testimonial-card testimonial-card--wa" role="listitem">
+            <div class="tc-header">
+              <div class="wa-icon-wrap" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="tc-name">Message WhatsApp</p>
+                <p class="tc-origin">Reçu hier, 23:47</p>
+              </div>
+            </div>
+            <div class="wa-bubble">
+              "Pretty, on vient de rentrer en France. Mon fils de 8 ans n'arrête pas de parler de toi. Il dit qu'il veut devenir guide comme toi quand il sera grand. Il a dessiné ta maison à l'école. Il raconte à tout le monde l'histoire du pirate que tu nous as racontée. Tu as marqué nos vies. MERCI. ❤️"
+              <div class="wa-time">23:47 ✓✓</div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="testimonials__nav">
+          <button class="carousel-btn" id="carouselPrev" aria-label="Témoignage précédent">←</button>
+          <button class="carousel-btn" id="carouselNext" aria-label="Témoignage suivant">→</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-final" aria-labelledby="cta-heading">
+      <div class="container">
+        <h2 class="cta-final__h2 anim" id="cta-heading">Prêt·e à vivre Maurice autrement ?</h2>
+        <p class="cta-final__sub anim anim-delay-1">
+          Discutons de votre voyage. Racontez-moi vos envies, vos rêves, vos questions.<br>
+          Je vous réponds personnellement, avec passion.
+        </p>
+        <a href="https://wa.me/23059042969?text=Bonjour%20Pretty,%20je%20souhaite%20d%C3%A9couvrir%20vos%20excursions"
+           class="btn-whatsapp-large anim anim-delay-2"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Contacter Pretty sur WhatsApp">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+          Contactez-moi sur WhatsApp
+        </a>
+        <p class="cta-final__reassurance anim anim-delay-3">📱 Réponse sous 2h &nbsp;•&nbsp; Gratuit et sans engagement &nbsp;•&nbsp; Devis personnalisé</p>
+        <div class="cta-final__stats anim anim-delay-3">
+          <div class="stat-item">
+            <span class="stat-item__number">150+</span>
+            <span class="stat-item__label">Voyageurs conquis</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-item__number">5/5</span>
+            <span class="stat-item__label">Note moyenne</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-item__number">90%</span>
+            <span class="stat-item__label">Recommandations</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <site-footer lang="fr"></site-footer>
+
+  <!-- WHATSAPP FLOATING -->
+  <a href="https://wa.me/23059042969?text=Bonjour%20Pretty,%20je%20souhaite%20d%C3%A9couvrir%20vos%20excursions"
+     class="whatsapp-float"
+     target="_blank"
+     rel="noopener noreferrer"
+     aria-label="Contacter Pretty sur WhatsApp">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+    <span class="whatsapp-float__tooltip">Contactez-moi</span>
+  </a>
+
+  <script>
+    // ============================================
+    // ANIMATION D'ENTRÉE
+    // ============================================
+    (function() {
+      const anim = document.getElementById('welcomeAnimation');
+      const skipBtn = document.getElementById('skipIntro');
+      const ocean = document.getElementById('waOcean');
+      const logo = document.getElementById('waLogo');
+      const tagline = document.getElementById('waTagline');
+      const heroContent = document.getElementById('heroContent');
+
+      function showHero() {
+        anim.style.opacity = '0';
+        anim.style.transition = 'opacity 0.8s ease';
+        setTimeout(() => {
+          anim.classList.add('hidden');
+          heroContent.classList.add('visible');
+        }, 800);
+      }
+
+      if (sessionStorage.getItem('prettyToursIntroSeen')) {
+        anim.classList.add('hidden');
+        heroContent.classList.add('visible');
+        return;
+      }
+
+      sessionStorage.setItem('prettyToursIntroSeen', 'true');
+
+      // Séquence animation
+      setTimeout(() => { ocean.style.transition = 'opacity 0.8s ease'; ocean.style.opacity = '1'; }, 400);
+      setTimeout(() => {
+        document.querySelector('.wa-waves').style.transition = 'opacity 0.6s ease';
+        document.querySelector('.wa-waves').style.opacity = '1';
+      }, 900);
+      setTimeout(() => {
+        logo.style.transition = 'opacity 0.7s ease, transform 0.7s cubic-bezier(0.34,1.56,0.64,1)';
+        logo.style.opacity = '1';
+        logo.style.transform = 'scale(1)';
+      }, 1400);
+      setTimeout(() => {
+        tagline.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        tagline.style.opacity = '1';
+        tagline.style.transform = 'translateY(0)';
+      }, 2000);
+      setTimeout(showHero, 3200);
+
+      skipBtn.addEventListener('click', showHero);
+    })();
+
+    // ============================================
+    // SCROLL ANIMATIONS (Intersection Observer)
+    // ============================================
+    const animEls = document.querySelectorAll('.anim');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+
+    animEls.forEach(el => observer.observe(el));
+
+    // ============================================
+    // CAROUSEL TÉMOIGNAGES
+    // ============================================
+    const track = document.getElementById('testimonialsTrack');
+    const prevBtn = document.getElementById('carouselPrev');
+    const nextBtn = document.getElementById('carouselNext');
+
+    nextBtn.addEventListener('click', () => {
+      track.scrollBy({ left: 424, behavior: 'smooth' });
+    });
+
+    prevBtn.addEventListener('click', () => {
+      track.scrollBy({ left: -424, behavior: 'smooth' });
+    });
+
+    // ============================================
+    // HERO SCROLL INDICATOR
+    // ============================================
+    const heroScroll = document.getElementById('heroScroll');
+    if (heroScroll) {
+      heroScroll.addEventListener('click', () => {
+        document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+      });
+      heroScroll.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+
+    // ============================================
+    // HERO PARALLAX SUBTIL
+    // ============================================
+    const heroBg = document.getElementById('heroBg');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY < window.innerHeight) {
+        heroBg.style.transform = `translateY(${window.scrollY * 0.3}px) scale(1.05)`;
+      }
+    }, { passive: true });
+  </script>
+
+  <link rel="stylesheet" href="/assets/css/cookie-banner.css">
+  <script src="/assets/js/components/cookie-consent.js"></script>
+  <script src="/assets/js/components/site-header.js"></script>
+  <script src="/assets/js/components/site-footer.js"></script>
+
+</body>
+</html>

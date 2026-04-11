@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/iamreiden/Downloads/**)",
+      "Read(//mnt/user-data/outputs/**)",
+      "Bash(python3 -m http.server 8000)",
+      "Bash(npx:*)",
+      "Bash(claude mcp:*)",
+      "Bash(sips -s format webp /Users/iamreiden/prettytours/assets/guide.jpg --out /Users/iamreiden/prettytours/assets/guide.webp)",
+      "Bash(ffmpeg -i /Users/iamreiden/prettytours/assets/guide.jpg -vf \"scale=800:-1\" -quality 85 /Users/iamreiden/prettytours/assets/guide.webp -y)",
+      "Bash(convert /Users/iamreiden/prettytours/assets/guide.jpg -resize 800x -quality 85 /Users/iamreiden/prettytours/assets/guide.webp)",
+      "Bash(brew install:*)",
+      "Bash(ffmpeg -i /Users/iamreiden/prettytours/assets/guide.jpg -vf \"scale=800:-1\" -c:v libwebp -quality 85 /Users/iamreiden/prettytours/assets/guide.webp -y)",
+      "Bash(ffmpeg -encoders)",
+      "Bash(cwebp -q 85 -resize 800 0 /Users/iamreiden/prettytours/assets/guide.jpg -o /Users/iamreiden/prettytours/assets/guide.webp)",
+      "Bash(python3 -m http.server 3000)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/)",
+      "Bash(curl -s -o /dev/null -w '%{http_code}' http://localhost:3000/__TRACKED_VAR__)",
+      "Bash(ls /Users/iamreiden/prettytours/assets/images/*.svg)",
+      "Bash(ls /Users/iamreiden/prettytours/assets/images/badge*)",
+      "Bash(python3:*)",
+      "Bash(grep \"\\\\.html$\")",
+      "mcp__filesystem__directory_tree",
+      "mcp__filesystem__read_text_file"
+    ]
+  }
+}

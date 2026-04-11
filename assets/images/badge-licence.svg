@@ -1,0 +1,8 @@
+<svg width="120" height="48" viewBox="0 0 120 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Licensed Tour Operator">
+  <rect width="120" height="48" rx="6" fill="rgba(255,215,0,0.08)" stroke="#FFD700" stroke-width="1.5" stroke-opacity="0.5"/>
+  <text x="14" y="20" font-family="Inter, sans-serif" font-size="6.5" fill="#FFD700" font-weight="700" letter-spacing="0.05em">CERTIFIED</text>
+  <text x="14" y="30" font-family="Inter, sans-serif" font-size="6" fill="rgba(255,255,255,0.7)">Tour Operator</text>
+  <text x="14" y="41" font-family="Inter, sans-serif" font-size="5.5" fill="rgba(255,255,255,0.5)">Since 2019 · Mauritius</text>
+  <path d="M98 14 L103 24 L98 34 L93 24 Z" fill="none" stroke="#FFD700" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="98" cy="24" r="3" fill="#FFD700" opacity="0.7"/>
+</svg>

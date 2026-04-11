@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mon Histoire — Pretty, Guide Mauricienne Passionnée | Pretty Tours</title>
+  <meta name="description" content="Découvrez pourquoi Pretty a tout quitté pour créer Pretty Tours. L'histoire vraie d'une Mauricienne qui ne vend pas des excursions — elle partage ce qui la fait vibrer.">
+  <meta name="keywords" content="pretty tours histoire, guide mauricienne authentique, pretty guide locale, excursions personnalisées mauritius, tourisme emotionnel">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pretty-tours.com/fr/mon-histoire/">
+  <meta property="og:title" content="Mon Histoire — Pretty, Guide Mauricienne | Pretty Tours">
+  <meta property="og:description" content="Je ne vends pas des excursions. Je partage ce qui me fait vibrer. L'histoire vraie de Pretty.">
+  <meta property="og:image" content="https://pretty-tours.com/assets/guide.jpg">
+  <meta property="og:locale" content="fr_FR">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mon Histoire — Pretty | Pretty Tours">
+  <meta name="twitter:description" content="Je ne vends pas des excursions. Je partage ce qui me fait vibrer.">
+  <meta name="twitter:image" content="https://pretty-tours.com/assets/guide.jpg">
+
+  <link rel="canonical" href="https://pretty-tours.com/fr/mon-histoire/">
+  <link rel="alternate" hreflang="fr" href="https://pretty-tours.com/fr/mon-histoire/">
+  <link rel="alternate" hreflang="en" href="https://pretty-tours.com/en/my-story/">
+  <link rel="alternate" hreflang="mau" href="https://pretty-tours.com/mau/mo-listwar/">
+  <link rel="alternate" hreflang="x-default" href="https://pretty-tours.com/fr/mon-histoire/">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600;700&family=Kalam:wght@300;400;700&family=Allura&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/footer.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Pretty Tours",
+    "description": "Guide touristique locale mauricienne — Excursions personnalisées à Maurice",
+    "telephone": "+230-5904-2969",
+    "email": "prettytours@outlook.com",
+    "address": { "@type": "PostalAddress", "addressCountry": "MU", "addressLocality": "Île Maurice" },
+    "geo": { "@type": "GeoCoordinates", "latitude": "-20.1609", "longitude": "57.5012" },
+    "url": "https://pretty-tours.com",
+    "sameAs": ["https://wa.me/23059042969"],
+    "priceRange": "€€"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://pretty-tours.com/fr/" },
+      { "@type": "ListItem", "position": 2, "name": "Mon Histoire", "item": "https://pretty-tours.com/fr/mon-histoire/" }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --color-turquoise: #00CED1;
+      --color-coral: #FF6B6B;
+      --color-sand: #FAFAFA;
+      --color-ocean: #1A2B3C;
+      --color-gold: #FFD700;
+      --color-whatsapp: #25D366;
+      --font-heading: 'Playfair Display', serif;
+      --font-body: 'Inter', sans-serif;
+      --ease: cubic-bezier(0.4, 0, 0.2, 1);
+      --container-max: 1280px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--color-ocean); background: var(--color-sand); overflow-x: hidden; line-height: 1.6; }
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    .container { max-width: var(--container-max); margin: 0 auto; padding: 0 24px; }
+    .container-narrow { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+
+    /* SCROLL ANIMATIONS */
+    .anim { opacity: 0; transform: translateY(28px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }
+    .anim.visible { opacity: 1; transform: translateY(0); }
+    .anim-delay-1 { transition-delay: 0.1s; }
+    .anim-delay-2 { transition-delay: 0.2s; }
+    .anim-delay-3 { transition-delay: 0.3s; }
+
+    /* BREADCRUMBS */
+    .breadcrumbs ol { list-style: none; display: flex; align-items: center; gap: 8px; font-size: 0.875rem; color: rgba(255,255,255,0.65); }
+    .breadcrumbs li + li::before { content: '›'; margin-right: 8px; }
+    .breadcrumbs a { color: rgba(255,255,255,0.65); transition: color 0.3s; }
+    .breadcrumbs a:hover { color: #fff; }
+    .breadcrumbs [aria-current] { color: #fff; font-weight: 600; }
+
+    /* STORY HERO */
+    .story-hero { position: relative; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; background: var(--color-ocean); overflow: hidden; }
+    .story-hero__bg { position: absolute; inset: 0; background-image: url('../../assets/cap-malheureux.jpg'); background-size: cover; background-position: center center; transform: scale(1.05); will-change: transform; }
+    .story-hero__overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(26,43,60,0.52) 0%, rgba(26,43,60,0.68) 55%, rgba(26,43,60,0.88) 100%); }
+    .story-hero__breadcrumb { position: absolute; top: 0; left: 0; right: 0; padding: 86px 24px 0; z-index: 2; }
+    .story-hero__breadcrumb .container { max-width: var(--container-max); margin: 0 auto; }
+    .story-hero__content { position: relative; z-index: 2; padding: 60px 24px 120px; max-width: 920px; margin: 0 auto; text-align: center; color: #fff; }
+    .story-hero__eyebrow { font-size: 0.8125rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.25em; color: var(--color-turquoise); margin-bottom: 20px; }
+    .story-hero__title { font-family: var(--font-heading); font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 700; line-height: 1.15; margin-bottom: 28px; }
+    .story-hero__title-highlight { display: block; color: var(--color-turquoise); font-style: italic; font-size: 0.85em; }
+    .story-hero__intro { font-size: clamp(1.0625rem, 2vw, 1.25rem); line-height: 1.85; color: rgba(255,255,255,0.88); max-width: 700px; margin: 0 auto; }
+    .story-hero__intro strong { color: #fff; }
+    .story-hero__scroll { position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 8px; color: rgba(255,255,255,0.55); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; cursor: pointer; animation: bounce-down 2.2s ease-in-out infinite; }
+    @keyframes bounce-down { 0%, 100% { transform: translateX(-50%) translateY(0); } 55% { transform: translateX(-50%) translateY(9px); } }
+
+    /* SECTIONS */
+    .story-section { padding: 96px 0; }
+    .story-section--alt { background: #fff; }
+    .story-section--dark { background: var(--color-ocean); color: #fff; }
+    .story-section--tint { background: linear-gradient(135deg, #EEF8FF 0%, #F2FFFE 100%); }
+    .story-section__header { text-align: center; margin-bottom: 60px; }
+    .story-section__eyebrow { font-size: 0.8125rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: var(--color-turquoise); margin-bottom: 12px; }
+    .story-section--dark .story-section__eyebrow { color: var(--color-turquoise); }
+    .story-section__title { font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--color-ocean); line-height: 1.25; }
+    .story-section--dark .story-section__title { color: #fff; }
+    .story-section__subtitle { font-size: 1.0625rem; color: #6a7a8a; max-width: 580px; margin: 16px auto 0; line-height: 1.7; }
+    .story-section--dark .story-section__subtitle { color: rgba(255,255,255,0.65); }
+
+    /* STORY TEXT */
+    .story-text { }
+    .story-text p { font-family: 'Kalam', cursive; font-size: clamp(1.0625rem, 2vw, 1.15rem); line-height: 2; margin-bottom: 1.5rem; color: var(--color-ocean); font-weight: 400; }
+    .story-text p em { font-style: italic; }
+    .story-section--dark .story-text p { color: rgba(255,255,255,0.87); }
+    .story-section--dark .story-text p strong { color: #fff; }
+    .story-text__emphasis {
+      font-family: var(--font-heading);
+      font-size: clamp(1.375rem, 3vw, 1.875rem);
+      font-style: italic;
+      font-weight: 700;
+      color: var(--color-coral);
+      text-align: center;
+      margin: 2.5rem 0 !important;
+      line-height: 1.4;
+    }
+    .story-section--dark .story-text__emphasis { color: var(--color-turquoise); }
+    .story-text__pull { font-family: 'Kalam', cursive; border-left: 4px solid var(--color-turquoise); padding-left: 24px; margin: 2rem 0 1.5rem; font-size: clamp(1.125rem, 2.5vw, 1.375rem); font-style: italic; color: #3a4a5a; line-height: 1.8; }
+
+    /* SIGNATURE PRETTY */
+    .pretty-signature { text-align: center; margin: 40px 0 0; }
+    .pretty-signature__img { display: inline-block; width: 220px; height: auto; opacity: 0.9; filter: drop-shadow(0 2px 8px rgba(0,206,209,0.2)); }
+
+    /* WHATSAPP CAROUSEL */
+    .wa-outer { position: relative; max-width: 1200px; margin: 0 auto; padding: 0 80px; }
+    .wa-conversations { position: relative; padding: 0 0 56px; overflow: hidden; }
+    .wa-conversation { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.09); max-width: 580px; margin: 0 auto; width: 100%; }
+    .wa-conversations .swiper-pagination { bottom: 12px; }
+    .wa-conversations .swiper-pagination-bullet { background: var(--color-whatsapp); opacity: 0.4; width: 10px; height: 10px; transition: all 0.3s; }
+    .wa-conversations .swiper-pagination-bullet-active { opacity: 1; width: 28px; border-radius: 5px; }
+    /* Nav buttons — outside the swiper frame */
+    .wa-btn-prev, .wa-btn-next { position: absolute; top: calc(50% - 28px); transform: translateY(-50%); z-index: 10; width: 56px; height: 56px; border-radius: 50%; background: #fff; border: none; cursor: pointer; color: var(--color-whatsapp); box-shadow: 0 4px 20px rgba(0,0,0,0.12); display: flex; align-items: center; justify-content: center; transition: background 0.3s, color 0.3s, transform 0.3s; }
+    .wa-btn-prev { left: 0; }
+    .wa-btn-next { right: 0; }
+    .wa-btn-prev:hover, .wa-btn-next:hover { background: var(--color-whatsapp); color: #fff; transform: translateY(-50%) scale(1.1); }
+    .wa-btn-prev.swiper-button-disabled, .wa-btn-next.swiper-button-disabled { opacity: 0.3; cursor: default; pointer-events: none; }
+    @media (max-width: 1100px) { .wa-outer { padding: 0 56px; } }
+    @media (max-width: 768px) { .wa-outer { padding: 0; } .wa-btn-prev, .wa-btn-next { display: none; } }
+    .wa-conversation__header { background: #075E54; color: #fff; padding: 14px 20px; display: flex; align-items: center; gap: 12px; }
+    .wa-conversation__avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--color-turquoise); display: flex; align-items: center; justify-content: center; font-family: var(--font-heading); font-weight: 700; font-size: 1rem; color: #fff; flex-shrink: 0; }
+    .wa-conversation__name { font-weight: 700; font-size: 0.9375rem; }
+    .wa-conversation__status { font-size: 0.75rem; opacity: 0.75; }
+    .wa-conversation__body {
+      background: #E5DDD5;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d4ccbf' fill-opacity='0.35'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
+      padding: 16px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .wa-msg { max-width: 82%; padding: 10px 14px; box-shadow: 0 1px 2px rgba(0,0,0,0.1); position: relative; }
+    .wa-msg--received { align-self: flex-start; background: #fff; border-radius: 0 10px 10px 10px; }
+    .wa-msg--sent { align-self: flex-end; background: #DCF8C6; border-radius: 10px 0 10px 10px; }
+    .wa-msg__sender { font-size: 0.8rem; font-weight: 700; color: var(--color-turquoise); margin-bottom: 4px; }
+    .wa-msg__text { font-size: 0.9375rem; line-height: 1.6; color: #1a1a1a; }
+    .wa-msg__footer { display: flex; justify-content: flex-end; align-items: center; gap: 4px; margin-top: 5px; }
+    .wa-msg__time { font-size: 0.7rem; color: #8a9aaa; }
+    .wa-msg--sent .wa-msg__checks { color: #53bdeb; font-size: 0.8rem; }
+    .wa-msg--received .wa-msg__checks { display: none; }
+    /* Voice message */
+    .wa-voice { display: flex; align-items: center; gap: 10px; }
+    .wa-voice__play { width: 36px; height: 36px; border-radius: 50%; background: var(--color-turquoise); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .wa-voice__waveform { display: flex; align-items: center; gap: 2px; height: 28px; flex: 1; }
+    .wa-voice__waveform span { width: 3px; background: #8a9aaa; border-radius: 2px; animation: waveform 1.2s ease-in-out infinite; }
+    .wa-voice__waveform span:nth-child(1)  { height: 10px; animation-delay: 0.0s; }
+    .wa-voice__waveform span:nth-child(2)  { height: 18px; animation-delay: 0.1s; }
+    .wa-voice__waveform span:nth-child(3)  { height: 22px; animation-delay: 0.2s; }
+    .wa-voice__waveform span:nth-child(4)  { height: 14px; animation-delay: 0.3s; }
+    .wa-voice__waveform span:nth-child(5)  { height: 26px; animation-delay: 0.4s; }
+    .wa-voice__waveform span:nth-child(6)  { height: 20px; animation-delay: 0.5s; }
+    .wa-voice__waveform span:nth-child(7)  { height: 16px; animation-delay: 0.6s; }
+    .wa-voice__waveform span:nth-child(8)  { height: 24px; animation-delay: 0.7s; }
+    .wa-voice__waveform span:nth-child(9)  { height: 12px; animation-delay: 0.8s; }
+    .wa-voice__waveform span:nth-child(10) { height: 20px; animation-delay: 0.9s; }
+    .wa-voice__waveform span:nth-child(11) { height: 28px; animation-delay: 1.0s; }
+    .wa-voice__waveform span:nth-child(12) { height: 16px; animation-delay: 1.1s; }
+    .wa-voice__duration { font-size: 0.75rem; color: #8a9aaa; white-space: nowrap; }
+    @keyframes waveform { 0%, 100% { opacity: 0.35; transform: scaleY(0.7); } 50% { opacity: 1; transform: scaleY(1); } }
+    /* Transcription */
+    .wa-msg__transcription { margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(0,0,0,0.08); font-size: 0.875rem; color: #5a6a7a; font-style: italic; line-height: 1.65; }
+
+    /* LETTER CARDS */
+    .letters-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; }
+    @media (max-width: 720px) { .letters-grid { grid-template-columns: 1fr; } }
+    .letter-card { background: #FFFEF7; border-radius: 12px; padding: 30px; border-left: 4px solid var(--color-coral); box-shadow: 0 4px 20px rgba(0,0,0,0.06); line-height: 1.8; transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease); }
+    .letter-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
+    .letter-card__header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid rgba(0,0,0,0.06); }
+    .letter-card__avatar { width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, var(--color-turquoise), var(--color-coral)); display: flex; align-items: center; justify-content: center; font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; color: #fff; flex-shrink: 0; }
+    .letter-card__name { font-weight: 700; color: var(--color-ocean); font-size: 1rem; }
+    .letter-card__meta { font-size: 0.8125rem; color: #8a9aaa; }
+    .letter-card p { font-size: 0.975rem; color: #3a4a5a; margin-bottom: 12px; }
+    .letter-card p:last-child { margin-bottom: 0; }
+    .letter-card__opening { font-style: italic; color: #8a9aaa; }
+    .letter-card__signature { margin-top: 20px !important; font-style: italic; text-align: right; color: var(--color-ocean); font-weight: 600; }
+
+    /* PROMISE LIST */
+    .promise-list { list-style: none; display: flex; flex-direction: column; gap: 16px; margin: 2.5rem 0; }
+    .promise-list__item { display: flex; gap: 16px; align-items: flex-start; padding: 20px 24px; background: #fff; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.06); transition: transform 0.3s var(--ease); }
+    .promise-list__item:hover { transform: translateX(6px); }
+    .promise-list__icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 2px; }
+    .promise-list__text { font-size: 1rem; line-height: 1.75; color: #3a4a5a; }
+    .promise-list__text strong { color: var(--color-ocean); }
+
+    /* CTA FINAL */
+    .story-cta-section { padding: 96px 0; background: linear-gradient(135deg, var(--color-ocean) 0%, #0d1d2c 100%); position: relative; overflow: hidden; }
+    .story-cta-section::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 40%, rgba(0,206,209,0.13) 0%, transparent 60%); }
+    .story-cta-box { position: relative; z-index: 1; text-align: center; color: #fff; max-width: 720px; margin: 0 auto; padding: 0 24px; }
+    .story-cta-box__title { font-family: var(--font-heading); font-size: clamp(2.25rem, 5vw, 3.5rem); font-weight: 700; margin-bottom: 24px; line-height: 1.2; }
+    .story-cta-box__text { font-size: clamp(1rem, 2vw, 1.1875rem); line-height: 1.85; color: rgba(255,255,255,0.84); margin-bottom: 16px; }
+    .story-cta-box__text strong { color: #fff; }
+    .btn-wa-xl { display: inline-flex; align-items: center; gap: 14px; background: var(--color-whatsapp); color: #fff; font-family: var(--font-body); font-size: 1.1875rem; font-weight: 700; padding: 22px 52px; border-radius: 50px; margin-top: 36px; transition: all 0.3s var(--ease); box-shadow: 0 8px 30px rgba(37,211,102,0.4); }
+    .btn-wa-xl:hover { transform: scale(1.06) translateY(-3px); box-shadow: 0 18px 54px rgba(37,211,102,0.55); }
+    .story-cta-box__ps { margin-top: 24px; font-size: 0.9375rem; font-style: italic; color: rgba(255,255,255,0.55); }
+
+    /* FOOTER */
+    footer { background: var(--color-ocean); color: rgba(255,255,255,0.75); padding: 64px 0 32px; }
+    .footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+    @media (max-width: 768px) { .footer__grid { grid-template-columns: 1fr; gap: 32px; } }
+    .footer__logo { font-family: var(--font-heading); font-size: 1.75rem; font-weight: 700; color: #fff; margin-bottom: 12px; }
+    .footer__tagline { font-size: 0.9375rem; line-height: 1.7; margin-bottom: 24px; }
+    .footer__contact a { display: flex; align-items: center; gap: 8px; font-size: 0.9375rem; color: rgba(255,255,255,0.75); margin-bottom: 10px; transition: color 0.3s; }
+    .footer__contact a:hover { color: var(--color-turquoise); }
+    .footer__heading { font-size: 0.8125rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-turquoise); margin-bottom: 16px; }
+    .footer__links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer__links a { font-size: 0.9375rem; color: rgba(255,255,255,0.65); transition: color 0.3s; }
+    .footer__links a:hover { color: #fff; }
+    .footer__bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 28px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 0.875rem; }
+    .footer__langs { display: flex; gap: 16px; }
+    .footer__langs a { color: rgba(255,255,255,0.5); transition: color 0.3s; }
+    .footer__langs a:hover { color: var(--color-turquoise); }
+
+    /* WHATSAPP FLOAT */
+    @keyframes pulse-wa { 0%, 100% { box-shadow: 0 6px 24px rgba(37,211,102,0.4); } 50% { box-shadow: 0 8px 36px rgba(37,211,102,0.65); } }
+    .whatsapp-float { position: fixed; bottom: 28px; right: 28px; width: 62px; height: 62px; background: var(--color-whatsapp); border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 9000; animation: pulse-wa 2.5s ease-in-out infinite; transition: transform 0.3s; }
+    .whatsapp-float:hover { animation: none; transform: scale(1.15); box-shadow: 0 10px 35px rgba(37,211,102,0.55); }
+    .whatsapp-float__tooltip { position: absolute; right: 72px; background: var(--color-ocean); color: #fff; font-size: 0.8125rem; font-weight: 600; white-space: nowrap; padding: 8px 14px; border-radius: 8px; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+    .whatsapp-float__tooltip::after { content: ''; position: absolute; top: 50%; right: -8px; transform: translateY(-50%); border: 4px solid transparent; border-left-color: var(--color-ocean); }
+    .whatsapp-float:hover .whatsapp-float__tooltip { opacity: 1; }
+
+    @media (max-width: 480px) {
+      .story-section { padding: 64px 0; }
+      .story-cta-section { padding: 64px 0; }
+      .btn-wa-xl { padding: 18px 32px; font-size: 1rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <site-header lang="fr"></site-header>
+  <cookie-consent lang="fr"></cookie-consent>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════════ -->
+    <section class="story-hero" aria-label="Mon Histoire — Pretty Tours">
+      <div class="story-hero__bg" id="heroBg"></div>
+      <div class="story-hero__overlay"></div>
+
+      <div class="story-hero__content" id="heroContent">
+        <p class="story-hero__eyebrow anim">Mon Histoire</p>
+        <h1 class="story-hero__title anim anim-delay-1">
+          Je ne vends pas des excursions.
+          <span class="story-hero__title-highlight">Je partage ce qui me fait vibrer.</span>
+        </h1>
+        <p class="story-hero__intro anim anim-delay-2">
+          Il y a des matins où je me réveille avant l'aube, juste pour voir le soleil se lever sur Mahébourg.
+          Pas parce que j'ai une excursion. Juste parce que ce spectacle me rappelle pourquoi je suis vivante.
+          Et quand je vois les yeux de mes voyageurs s'illuminer devant la même lumière...
+          <br><br>
+          <strong>Je sais que je suis exactement là où je dois être.</strong>
+        </p>
+      </div>
+
+      <div class="story-hero__scroll" role="button" tabindex="0" aria-label="Lire mon histoire">
+        <span>Laissez-moi vous raconter</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         LE DÉCLIC
+    ═══════════════════════════════════════════ -->
+    <section class="story-section story-section--alt" aria-labelledby="awakening-title">
+      <div class="container-narrow">
+        <div class="story-section__header">
+          <p class="story-section__eyebrow anim">2018 — Le tournant</p>
+          <h2 class="story-section__title anim anim-delay-1" id="awakening-title">Le jour où j'ai tout quitté</h2>
+        </div>
+        <div class="story-text">
+          <p class="anim">
+            J'avais 38 ans. Responsable concierge dans un hôtel 5 étoiles à Grand Baie.
+            Costume impeccable. Sourire de catalogue. "Bonjour Madame, puis-je vous aider ?"
+            J'avais le titre. Le salaire. La sécurité.
+          </p>
+          <p class="anim anim-delay-1">
+            Un soir, un couple de Français arrive. Fatigués. Déçus. Avec ces yeux qu'on a quand
+            on a payé cher pour quelque chose qui ne valait pas la dépense.
+            "On a fait toutes les excursions officielles. On était 50 dans un bus.
+            Le guide nous donnait 10 minutes à chaque arrêt. C'était beau sur les photos.
+            <em>Vide dans nos cœurs.</em>"
+          </p>
+          <p class="anim anim-delay-1">
+            Je leur ai souri. Professionnel. Je leur ai donné des bons de réduction pour le spa.
+          </p>
+          <p class="story-text__emphasis anim anim-delay-2">
+            Cette nuit-là, je n'ai pas dormi.
+          </p>
+          <p class="anim anim-delay-2">
+            Parce que <strong>MOI, je savais.</strong> Je savais où trouver la cascade cachée
+            où l'eau est si claire qu'on voit les poissons à cinq mètres de profondeur.
+            Je connaissais le pêcheur de Grand Baie qui sort en mer à 5h du matin et qui chante
+            du séga en tirant ses filets. Je savais où manger le meilleur dholl puri de l'île,
+            dans une cahute sans nom où les locaux font la queue depuis l'aube.
+          </p>
+          <p class="anim anim-delay-2">
+            Mais je vendais des brochures. <strong>J'étais complice d'un mensonge.</strong>
+          </p>
+          <div class="story-text__pull anim anim-delay-3">
+            Ces touristes venaient chercher l'âme de Maurice.
+            Et le tourisme industriel leur vendait une coquille vide.
+          </div>
+          <p class="anim anim-delay-3">
+            Le lendemain, j'ai posé ma lettre de démission. Sans plan B.
+            Sans économies suffisantes. Juste une certitude dans le ventre,
+            aussi solide que le basalte de Le Morne :
+            <strong>si je ne fais pas ça, qui le fera ?</strong>
+          </p>
+          <p class="anim anim-delay-3">
+            En 2019, Pretty Tours était née. Pas une agence. Pas un business plan.
+            <em>Une promesse.</em>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         LA VRAIE RAISON
+    ═══════════════════════════════════════════ -->
+    <section class="story-section story-section--dark" aria-labelledby="truth-title">
+      <div class="container-narrow">
+        <div class="story-section__header">
+          <p class="story-section__eyebrow anim">La confession</p>
+          <h2 class="story-section__title anim anim-delay-1" id="truth-title">Pourquoi je fais ça vraiment</h2>
+        </div>
+        <div class="story-text">
+          <p class="anim">
+            Les gens pensent que je fais ce métier pour "partager ma culture".
+            C'est ce que je dis dans les interviews. C'est propre. C'est vendeur.
+          </p>
+          <p class="story-text__emphasis anim anim-delay-1">
+            La vérité est beaucoup plus égoïste que ça.
+          </p>
+          <p class="anim anim-delay-1">
+            <strong>Je fais ça parce que ça me sauve.</strong>
+          </p>
+          <p class="anim anim-delay-2">
+            Il y a des jours où je me sens invisible dans mon propre pays.
+            Comme si Maurice était devenue un décor pour touristes et moi, juste une figurante.
+            Comme si cette île que j'aime à en crever avait oublié ceux qui la portent dans leur sang.
+          </p>
+          <p class="anim anim-delay-2">
+            Et puis je reçois un message WhatsApp. Sophie, de Lyon. Elle veut "voir Maurice autrement".
+            On se retrouve à 6h du matin à Mahébourg. Je la regarde découvrir le marché aux poissons.
+            Les pêcheurs qui déchargent les thons encore frémissants.
+            L'odeur de la mer mélangée au parfum des épices. Le créole qui claque comme une langue de jazz.
+          </p>
+          <p class="anim anim-delay-2">
+            Elle pleure. Pas de tristesse. <em>D'émerveillement.</em>
+          </p>
+          <p class="story-text__emphasis anim anim-delay-3">
+            Et là, je me souviens pourquoi je suis vivante.
+          </p>
+          <p class="anim anim-delay-3">
+            À travers ses yeux, <strong>je redécouvre mon île comme si c'était la première fois.</strong>
+            Chaque excursion, c'est moi qui voyage.
+            C'est moi qui tombe amoureuse à nouveau de cette roche perdue dans l'océan Indien.
+          </p>
+          <p class="anim anim-delay-3">
+            Mes voyageurs ne sont pas mes clients.
+            <strong>Ce sont mes miroirs.</strong>
+            Ils me rappellent la beauté que j'avais fini par ne plus voir.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         LA VULNÉRABILITÉ
+    ═══════════════════════════════════════════ -->
+    <section class="story-section" aria-labelledby="confession-title">
+      <div class="container-narrow">
+        <div class="story-section__header">
+          <p class="story-section__eyebrow anim">Sans filtre</p>
+          <h2 class="story-section__title anim anim-delay-1" id="confession-title">Ce que je ne dis jamais</h2>
+        </div>
+        <div class="story-text">
+          <p class="anim">
+            Les réseaux sociaux montrent Pretty souriante, énergique, passionnée.
+            C'est vrai. Mais c'est pas toute la vérité.
+          </p>
+          <p class="anim anim-delay-1">
+            Il y a des jours où j'ai peur. Peur que mes voyageurs ne sentent pas ce que je sens.
+            Peur de ne pas être à la hauteur de ce qu'ils espèrent.
+            Peur que Maurice ne les touche pas comme elle m'a touchée, moi.
+          </p>
+          <p class="anim anim-delay-1">
+            Il y a des nuits où je relis les messages de mes anciens voyageurs pour me rappeler
+            que ce que je fais a du sens. Que je ne suis pas folle de tout miser sur cette idée bizarre
+            qu'on peut changer des vies en montrant un lever de soleil.
+          </p>
+          <p class="story-text__emphasis anim anim-delay-2">
+            Et puis je me souviens.
+          </p>
+          <p class="anim anim-delay-2">
+            Je me souviens du couple qui s'est remarié sur la plage après une excursion avec moi.
+            <br>
+            Je me souviens de l'ado dépressive qui m'a écrit : <em>"Pretty, tu m'as donné envie de vivre."</em>
+            <br>
+            Je me souviens de l'homme d'affaires qui a pleuré devant la terre des sept couleurs —
+            parce que c'était la première fois en vingt ans qu'il ressentait quelque chose.
+          </p>
+          <p class="anim anim-delay-3">
+            <strong>Je ne sauve pas des vies. Mais je les réveille.</strong>
+          </p>
+          <p class="anim anim-delay-3">
+            Et peut-être que c'est suffisant.
+          </p>
+        </div>
+        <div class="pretty-signature anim anim-delay-3">
+          <img src="/assets/images/signature-pretty.svg" alt="Signature de Pretty" class="pretty-signature__img" width="220" height="88">
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         LETTRES
+    ═══════════════════════════════════════════ -->
+    <section class="story-section story-section--alt" aria-labelledby="letters-title">
+      <div class="container">
+        <div class="story-section__header">
+          <p class="story-section__eyebrow anim">Lettres reçues</p>
+          <h2 class="story-section__title anim anim-delay-1" id="letters-title">Ils m'ont écrit après</h2>
+          <p class="story-section__subtitle anim anim-delay-2">Certains messages me font pleurer. Tous me rappellent pourquoi je suis là.</p>
+        </div>
+        <div class="letters-grid">
+
+          <article class="letter-card anim">
+            <div class="letter-card__header">
+              <div class="letter-card__avatar" aria-hidden="true">S</div>
+              <div>
+                <p class="letter-card__name">Sophie M.</p>
+                <p class="letter-card__meta">Paris &nbsp;·&nbsp; 3 janvier 2024</p>
+              </div>
+            </div>
+            <p class="letter-card__opening">Chère Pretty,</p>
+            <p>Je t'écris depuis mon appartement parisien. Il pleut. Il fait gris. Et pourtant, je souris.</p>
+            <p>Parce que je ferme les yeux et je revois Mahébourg. Je sens l'odeur du poisson grillé. J'entends le créole qui chante. Je te vois raconter l'histoire du corsaire avec cette passion dans les yeux.</p>
+            <p><strong>Tu sais ce que tu m'as donné ? Pas des souvenirs. Tu m'as donné une nouvelle façon de VOIR.</strong></p>
+            <p>Avant Maurice, je visitais les endroits. Maintenant, je les ressens. Tu as déverrouillé quelque chose en moi.</p>
+            <p>Mon mari dit que je ne suis plus la même depuis que je suis rentrée. Il a raison. <em>Je suis plus vivante.</em></p>
+            <p class="letter-card__signature">Merci Pretty. Pour tout. Pour toi.<br>— Sophie</p>
+          </article>
+
+          <article class="letter-card anim anim-delay-1">
+            <div class="letter-card__header">
+              <div class="letter-card__avatar" style="background:linear-gradient(135deg,#1A2B3C,#00CED1)" aria-hidden="true">J</div>
+              <div>
+                <p class="letter-card__name">James &amp; Emma R.</p>
+                <p class="letter-card__meta">London &nbsp;·&nbsp; 14 février 2024</p>
+              </div>
+            </div>
+            <p class="letter-card__opening">Dear Pretty,</p>
+            <p>That night, I proposed to my wife. Again. We've been married for 15 years. But somewhere along the way, we forgot why.</p>
+            <p><strong>You didn't just organize a dinner. You orchestrated a rebirth.</strong></p>
+            <p>The sunset. The champagne. The way you disappeared at the perfect moment, leaving us alone with the ocean and each other. It wasn't a service. <em>It was art.</em></p>
+            <p>My wife cried. I cried. We remembered what "us" meant.</p>
+            <p>Pretty, you're not a tour guide. <strong>You're a dream-maker.</strong></p>
+            <p class="letter-card__signature">Forever grateful,<br>— James &amp; Emma</p>
+          </article>
+
+          <article class="letter-card anim anim-delay-2">
+            <div class="letter-card__header">
+              <div class="letter-card__avatar" style="background:linear-gradient(135deg,#FF6B6B,#FFD700)" aria-hidden="true">M</div>
+              <div>
+                <p class="letter-card__name">Marie L.</p>
+                <p class="letter-card__meta">Lyon &nbsp;·&nbsp; 28 mars 2024</p>
+              </div>
+            </div>
+            <p class="letter-card__opening">Pretty,</p>
+            <p>Quand je suis arrivée à Maurice, j'étais en burn-out sévère. Deux semaines de vacances forcées par mon médecin. J'étais vide. Morte à l'intérieur.</p>
+            <p><strong>Tu ne le savais pas. Je ne te l'ai jamais dit.</strong></p>
+            <p>Mais tu as senti quelque chose. Tu as adapté le rythme. Moins de lieux, plus de temps. Tu m'as laissé des silences. Tu m'as donné la permission de juste <em>être.</em></p>
+            <p>Sur la plage de Riambel, tu m'as dit : "Marie, l'océan ne se dépêche jamais. Les vagues arrivent quand elles arrivent."</p>
+            <p>Cette phrase m'a brisée. Dans le bon sens. J'ai pleuré pendant une heure.</p>
+            <p><strong>Je suis rentrée en France. J'ai démissionné. J'ai changé de vie.</strong></p>
+            <p class="letter-card__signature">Je te dois tellement,<br>— Marie</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         WHATSAPP CONVERSATIONS
+    ═══════════════════════════════════════════ -->
+    <section class="story-section story-section--tint" aria-labelledby="wa-title">
+      <div class="container">
+        <div class="story-section__header">
+          <p class="story-section__eyebrow anim">Conversations vraies</p>
+          <h2 class="story-section__title anim anim-delay-1" id="wa-title">Ce qu'ils m'écrivent sur WhatsApp</h2>
+          <p class="story-section__subtitle anim anim-delay-2">Je réponds à chaque message. Personnellement. Pas un bot. Pas une assistante. Moi.</p>
+        </div>
+        <div class="wa-outer anim anim-delay-1">
+          <div class="wa-conversations swiper" id="waSwiper">
+            <div class="swiper-wrapper">
+
+              <!-- SLIDE 1 : Sarah (français) -->
+              <div class="swiper-slide">
+                <div class="wa-conversation" role="region" aria-label="Conversation avec Sarah">
+                  <div class="wa-conversation__header">
+                    <div class="wa-conversation__avatar" style="background:linear-gradient(135deg,#2ECC71,#00CED1)" aria-hidden="true">S</div>
+                    <div>
+                      <p class="wa-conversation__name">Sarah</p>
+                      <p class="wa-conversation__status">En ligne il y a 6 jours</p>
+                    </div>
+                  </div>
+                  <div class="wa-conversation__body">
+                    <div class="wa-msg wa-msg--received">
+                      <div class="wa-voice" aria-label="Message vocal 1 minute 47 secondes">
+                        <div class="wa-voice__play" aria-hidden="true">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                        <div class="wa-voice__waveform" aria-hidden="true">
+                          <span></span><span></span><span></span><span></span><span></span><span></span>
+                          <span></span><span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                        <span class="wa-voice__duration">1:47</span>
+                      </div>
+                      <div class="wa-msg__transcription">
+                        <em>"Pretty... je sais pas si tu te souviens de moi, Sarah, celle qui avait perdu son mari... je voulais juste te dire que cette soirée séga avec toi... c'était la première fois que je riais depuis 6 mois... je viens de m'inscrire à des cours de danse en France... tu m'as rappelé que j'avais le droit d'être heureuse... merci Pretty... merci d'exister..."</em>
+                      </div>
+                      <div class="wa-msg__footer"><span class="wa-msg__time">Il y a 1 semaine</span></div>
+                    </div>
+                    <div class="wa-msg wa-msg--sent">
+                      <p class="wa-msg__sender">Pretty</p>
+                      <p class="wa-msg__text">Sarah. Je me souviens de toi. Je me souviendrai toujours de toi. Ce soir-là au séga, j'ai vu quelque chose se rallumer dans tes yeux. Comme une bougie qu'on croyait éteinte. 🕯️</p>
+                      <div class="wa-msg__footer"><span class="wa-msg__time">Il y a 1 semaine</span><span class="wa-msg__checks" aria-label="Lu">✓✓</span></div>
+                    </div>
+                    <div class="wa-msg wa-msg--sent">
+                      <p class="wa-msg__sender">Pretty</p>
+                      <p class="wa-msg__text">Des cours de danse... Ton mari te regarderait danser depuis là où il est, et je crois qu'il serait heureux de te voir vivre à nouveau. Tu as autant le droit d'être heureuse que tu as le droit de respirer. Je t'embrasse fort. ❤️</p>
+                      <div class="wa-msg__footer"><span class="wa-msg__time">Il y a 1 semaine</span><span class="wa-msg__checks" aria-label="Lu">✓✓</span></div>
+                    </div>
+                    <div class="wa-msg wa-msg--received">
+                      <p class="wa-msg__text">Je danse pour lui. Et un peu pour toi aussi. Merci d'avoir été là ce soir-là. ❤️</p>
+                      <div class="wa-msg__footer"><span class="wa-msg__time">6 jours</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SLIDE 2 : Antoine (français) -->
+              <div class="swiper-slide">
+                <div class="wa-conversation" role="region" aria-label="Conversation avec Antoine">
+                  <div class="wa-conversation__header">
+                    <div class="wa-conversation__avatar" style="background:var(--color-coral)" aria-hidden="true">A</div>
+                    <div>
+                      <p class="wa-conversation__name">Antoine</p>
+                      <p class="wa-conversation__status">En ligne aujourd'hui à 09:34</p>
+                    </div>
+                  </div>
+                  <div class="wa-conversation__body">
+                    <div class="wa-msg wa-msg--received">
+                      <p class="wa-msg__text">Update : j'ai démissionné. Je démarre mon bar à rhum à Marseille le mois prochain. Je l'appelle "Le Déclic". En hommage à notre conversation au Domaine Saint-Aubin.<br><br>Sans toi, je serais encore en train de mourir à petit feu dans mon bureau. Tu ne vends pas des excursions Pretty. Tu libères des gens. 🙏</p>
+                      <div class="wa-msg__footer"><span class="wa-msg__time">09:15</span></div>
+                    </div>
+                    <div class="wa-msg wa-msg--sent">
+                      <p class="wa-msg__sender">Pretty</p>
+                      <p class="wa-msg__text">Antoine... "Le Déclic". Je suis sans voix. Je pleure. 😭 Je me souviens de cette soirée. Toi, le troisième rhum, et cette phrase que tu as dite : "Je gagne 300 000 € par an et je suis vide." C'était courageux de dire ça. Encore plus courageux d'en faire quelque chose.</p>
+                      <div class="wa-msg__footer"><span class="wa-msg__time">09:28</span><span class="wa-msg__checks" aria-label="Lu">✓✓</span></div>
+                    </div>
+                    <div class="wa-msg wa-msg--received">
+                      <p class="wa-msg__text">C'est toi qui m'as dit : "Les cocotiers ne courent pas après le vent. Ils l'accueillent." Je n'ai jamais oublié ça.</p>
+                      <div class="wa-msg__footer"><span class="wa-msg__time">09:31</span></div>
+                    </div>
+                    <div class="wa-msg wa-msg--sent">
+                      <p class="wa-msg__sender">Pretty</p>
+                      <p class="wa-msg__text">Quand tu ouvres, tu m'invites ? Je viendrai goûter le rhum et raconter aux clients d'où vient le nom "Le Déclic". 🥃 Je suis tellement fière de toi.</p>
+                      <div class="wa-msg__footer"><span class="wa-msg__time">09:34</span><span class="wa-msg__checks" aria-label="Lu">✓✓</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SLIDE 3 : Claire (français) -->
+              <div class="swiper-slide">
+                <div class="wa-conversation" role="region" aria-label="Conversation avec Claire">
+                  <div class="wa-conversation__header">
+                    <div class="wa-conversation__avatar" aria-hidden="true">C</div>
+                    <div>
+                      <p class="wa-conversation__name">Claire</p>
+                      <p class="wa-conversation__status">En ligne hier à 00:06</p>
+                    </div>
+                  </div>
+                  <div class="wa-conversation__body">
+                    <div class="wa-msg wa-msg--received">
+                      <p class="wa-msg__text">Pretty, mon fils de 8 ans n'arrête pas de parler de toi depuis qu'on est rentrés. Il a dessiné ta maison à l'école. Il raconte l'histoire du pirate à tous ses copains. Il dit qu'il veut devenir guide comme toi quand il sera grand.<br><br>Tu as marqué sa vie. Et la mienne. ❤️</p>
+                      <div class="wa-msg__footer"><span class="wa-msg__time">23:47</span></div>
+                    </div>
+                    <div class="wa-msg wa-msg--sent">
+                      <p class="wa-msg__sender">Pretty</p>
+                      <p class="wa-msg__text">Claire... ce message. Je viens de le lire et j'ai les larmes aux yeux. Un enfant qui rêve de guider des gens... c'est la plus belle chose qu'on puisse m'offrir. Dis à ton fils de ma part : "Maurice t'attend, et les secrets de l'île aussi." 🌊</p>
+                      <div class="wa-msg__footer"><span class="wa-msg__time">23:52</span><span class="wa-msg__checks" aria-label="Lu">✓✓</span></div>
+                    </div>
+                    <div class="wa-msg wa-msg--received">
+                      <p class="wa-msg__text">Il vient de me demander si on peut revenir l'année prochaine "chez Pretty". 😭</p>
+                      <div class="wa-msg__footer"><span class="wa-msg__time">00:03</span></div>
+                    </div>
+                    <div class="wa-msg wa-msg--sent">
+                      <p class="wa-msg__sender">Pretty</p>
+                      <p class="wa-msg__text">Ce n'est plus "chez Pretty". C'est chez vous aussi maintenant. L'île vous appartient un peu. ❤️ On revient quand vous voulez.</p>
+                      <div class="wa-msg__footer"><span class="wa-msg__time">00:06</span><span class="wa-msg__checks" aria-label="Lu">✓✓</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SLIDE 4 : James (English — langue originale) -->
+              <div class="swiper-slide">
+                <div class="wa-conversation" role="region" aria-label="Conversation with James">
+                  <div class="wa-conversation__header">
+                    <div class="wa-conversation__avatar" style="background:var(--color-ocean)" aria-hidden="true">J</div>
+                    <div>
+                      <p class="wa-conversation__name">James</p>
+                      <p class="wa-conversation__status">Online 2 days ago</p>
+                    </div>
+                  </div>
+                  <div class="wa-conversation__body">
+                    <div class="wa-msg wa-msg--received">
+                      <p class="wa-msg__text">Pretty, I took that photo of Kumar and put it on my desk. Every time I start to stress about a deadline, I look at it. And I breathe. You didn't just show me Mauritius. You showed me how to be human again. 🙏</p>
+                      <div class="wa-msg__footer"><span class="wa-msg__time">14:22</span></div>
+                    </div>
+                    <div class="wa-msg wa-msg--sent">
+                      <p class="wa-msg__sender">Pretty</p>
+                      <p class="wa-msg__text">James... this message. Kumar doesn't know the effect he has on people. He just lives. Quietly. Honestly. Maybe that's the lesson we all need. 🎣</p>
+                      <div class="wa-msg__footer"><span class="wa-msg__time">14:38</span><span class="wa-msg__checks" aria-label="Read">✓✓</span></div>
+                    </div>
+                    <div class="wa-msg wa-msg--received">
+                      <p class="wa-msg__text">His silence taught me more than 10 years of management consulting. Tell him that when you see him.</p>
+                      <div class="wa-msg__footer"><span class="wa-msg__time">14:41</span></div>
+                    </div>
+                    <div class="wa-msg wa-msg--sent">
+                      <p class="wa-msg__sender">Pretty</p>
+                      <p class="wa-msg__text">I will. Word for word. He'll smile without saying anything — that's his way. But he'll know. 🌅</p>
+                      <div class="wa-msg__footer"><span class="wa-msg__time">14:45</span><span class="wa-msg__checks" aria-label="Read">✓✓</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+          <!-- Navigation hors cadre -->
+          <button class="wa-btn-prev" aria-label="Conversation précédente">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <button class="wa-btn-next" aria-label="Conversation suivante">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         LA PROMESSE
+    ═══════════════════════════════════════════ -->
+    <section class="story-section story-section--alt" aria-labelledby="promise-title">
+      <div class="container-narrow">
+        <div class="story-section__header">
+          <p class="story-section__eyebrow anim">Mon engagement</p>
+          <h2 class="story-section__title anim anim-delay-1" id="promise-title">Ce que je vous promets</h2>
+        </div>
+        <div class="story-text">
+          <p class="story-text__emphasis anim">
+            Je ne peux pas vous promettre que vous verrez Maurice.<br>
+            Mais je vous promets que vous allez la <em>sentir.</em>
+          </p>
+          <p class="anim anim-delay-1">
+            Je ne peux pas garantir qu'il fera beau.
+            Mais je vous garantis que même la pluie deviendra magique.
+          </p>
+          <p class="anim anim-delay-1">
+            Je ne vous vendrai jamais un package tout compris.
+            Parce que vous n'êtes pas "tout le monde". <strong>Vous êtes VOUS.</strong>
+          </p>
+        </div>
+        <ul class="promise-list" role="list">
+          <li class="promise-list__item anim">
+            <span class="promise-list__icon" aria-hidden="true">👁️</span>
+            <div class="promise-list__text"><strong>Mon attention totale.</strong> Quand vous êtes avec moi, vous n'êtes pas un client parmi d'autres. Vous êtes la seule personne qui compte à cet instant.</div>
+          </li>
+          <li class="promise-list__item anim anim-delay-1">
+            <span class="promise-list__icon" aria-hidden="true">💚</span>
+            <div class="promise-list__text"><strong>Ma vulnérabilité.</strong> Je ne joue pas un rôle. Je suis Pretty. Avec mes doutes, mes émotions, ma vérité. Ce que vous voyez est ce que vous obtenez.</div>
+          </li>
+          <li class="promise-list__item anim anim-delay-2">
+            <span class="promise-list__icon" aria-hidden="true">🏝️</span>
+            <div class="promise-list__text"><strong>Mon île, sans filtre.</strong> Pas la version carte postale. La vraie. Avec ses imperfections, ses contradictions, sa beauté brute et irremplaçable.</div>
+          </li>
+          <li class="promise-list__item anim">
+            <span class="promise-list__icon" aria-hidden="true">🤝</span>
+            <div class="promise-list__text"><strong>Des rencontres vraies.</strong> Pas des figurants payés pour sourire. Des Mauriciens qui vivent leur vie et qui acceptent de la partager avec vous.</div>
+          </li>
+          <li class="promise-list__item anim anim-delay-1">
+            <span class="promise-list__icon" aria-hidden="true">⏳</span>
+            <div class="promise-list__text"><strong>Le droit de ne rien faire.</strong> Si vous voulez juste vous asseoir et regarder l'océan pendant une heure, on le fera. Le programme, c'est vous qui le dictez.</div>
+          </li>
+          <li class="promise-list__item anim anim-delay-2">
+            <span class="promise-list__icon" aria-hidden="true">📱</span>
+            <div class="promise-list__text"><strong>Mon WhatsApp, à vie.</strong> Même après votre retour, vous pouvez m'écrire. Pour partager une photo, raconter comment Maurice vous a changé. Mes voyageurs deviennent mes amis. Pour toujours.</div>
+          </li>
+        </ul>
+        <div class="story-text" style="margin-top:48px">
+          <p class="story-text__emphasis anim">Vous repartirez différent.</p>
+          <p class="anim anim-delay-1">
+            Pas parce que vous aurez vu des lieux incroyables.
+            Mais parce que vous aurez rencontré une version de vous-même <strong>que vous aviez oubliée.</strong>
+          </p>
+          <p class="anim anim-delay-1">La version qui s'émerveille. Qui ressent. Qui vit.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CTA FINAL
+    ═══════════════════════════════════════════ -->
+    <section class="story-cta-section" aria-labelledby="cta-story-title">
+      <div class="story-cta-box">
+        <h2 class="story-cta-box__title anim" id="cta-story-title">Vous êtes encore là ?</h2>
+        <p class="story-cta-box__text anim anim-delay-1">
+          Si vous avez lu jusqu'ici, c'est que quelque chose a résonné.
+        </p>
+        <p class="story-cta-box__text anim anim-delay-1">
+          Peut-être que vous cherchez plus qu'un voyage.
+          Peut-être que vous cherchez un réveil.
+          <br><br>
+          <strong>Écrivez-moi. Pas pour "demander un devis".
+          Mais pour qu'on parle. De vous. De ce que vous cherchez.
+          De ce que vous fuyez. De ce que vous espérez.</strong>
+        </p>
+        <p class="story-cta-box__text anim anim-delay-2">
+          On construira votre voyage ensemble.
+          Pas un catalogue. Pas un package.
+          <strong>Votre voyage. Unique. Vivant.</strong>
+        </p>
+        <a href="https://wa.me/23059042969?text=Bonjour%20Pretty,%20j%27ai%20lu%20ton%20histoire.%20Je%20veux%20vivre%20Maurice%20avec%20toi."
+           class="btn-wa-xl anim anim-delay-2"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="Écrire à Pretty sur WhatsApp">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Parlons de votre voyage
+        </a>
+        <p class="story-cta-box__ps anim anim-delay-3">
+          PS : Je réponds personnellement à chaque message. Pas un bot. Pas une assistante. <strong>Moi. Pretty.</strong>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <site-footer lang="fr"></site-footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/23059042969?text=Bonjour%20Pretty,%20j%27ai%20lu%20ton%20histoire.%20Je%20veux%20vivre%20Maurice%20avec%20toi."
+     class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contacter Pretty sur WhatsApp">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    <span class="whatsapp-float__tooltip">Parlons de votre voyage</span>
+  </a>
+
+  <script>
+    // HERO PARALLAX
+    const heroBg = document.getElementById('heroBg');
+    if (heroBg) {
+      window.addEventListener('scroll', () => {
+        heroBg.style.transform = `translateY(${window.scrollY * 0.3}px) scale(1.05)`;
+      }, { passive: true });
+    }
+
+    // SCROLL ANIMATIONS
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.anim').forEach(el => observer.observe(el));
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const waSwiper = new Swiper('#waSwiper', {
+      slidesPerView: 1,
+      spaceBetween: 24,
+      loop: false,
+      navigation: {
+        nextEl: '.wa-btn-next',
+        prevEl: '.wa-btn-prev',
+      },
+      pagination: {
+        el: '#waSwiper .swiper-pagination',
+        clickable: true,
+        dynamicBullets: true,
+      },
+      breakpoints: {
+        969: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+        }
+      },
+      a11y: {
+        prevSlideMessage: 'Conversation précédente',
+        nextSlideMessage: 'Conversation suivante',
+      },
+    });
+  </script>
+
+  <link rel="stylesheet" href="/assets/css/cookie-banner.css">
+  <script src="/assets/js/components/cookie-consent.js"></script>
+  <script src="/assets/js/components/site-header.js"></script>
+  <script src="/assets/js/components/site-footer.js"></script>
+
+</body>
+</html>

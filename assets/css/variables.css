@@ -1,0 +1,56 @@
+/* ============================================
+   PRETTY TOURS — DESIGN TOKENS
+   Ne jamais hardcoder, toujours utiliser ces variables
+   ============================================ */
+
+:root {
+  /* Couleurs */
+  --color-turquoise: #00CED1;
+  --color-coral: #FF6B6B;
+  --color-sand: #FAFAFA;
+  --color-ocean: #1A2B3C;
+  --color-gold: #FFD700;
+  --color-green: #2ECC71;
+  --color-whatsapp: #25D366;
+  --color-white: #FFFFFF;
+
+  /* Typographie */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Tailles fluides */
+  --fs-hero: clamp(2.5rem, 5vw, 4rem);
+  --fs-h2: clamp(2rem, 4vw, 3rem);
+  --fs-h3: clamp(1.5rem, 3vw, 2rem);
+  --fs-body: clamp(1rem, 2vw, 1.125rem);
+
+  /* Espacement système 8pt */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+  --space-xxl: 64px;
+  --space-xxxl: 96px;
+
+  /* Layout */
+  --container-max: 1280px;
+  --section-padding: clamp(64px, 10vw, 96px);
+
+  /* Transitions */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 0.3s;
+  --duration-std: 0.6s;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-pill: 50px;
+
+  /* Shadows */
+  --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.15);
+  --shadow-turquoise: 0 12px 40px rgba(0, 206, 209, 0.2);
+  --shadow-whatsapp: 0 8px 30px rgba(37, 211, 102, 0.4);
+}

@@ -1,0 +1,19 @@
+<svg width="220" height="88" viewBox="0 0 220 88" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Signature de Pretty">
+  <!-- Trait de soulignement décoratif -->
+  <path d="M12,56 Q28,38 48,52 T88,50 Q108,38 126,54 T168,50 Q184,38 200,52"
+        stroke="#00CED1"
+        stroke-width="2.5"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        opacity="0.45"/>
+  <!-- Prénom en Allura -->
+  <text x="14" y="68"
+        font-family="Allura, cursive"
+        font-size="58"
+        fill="#00CED1"
+        font-weight="400"
+        letter-spacing="2">Pretty</text>
+  <!-- Point décoratif final -->
+  <circle cx="204" cy="64" r="3" fill="#FF6B6B" opacity="0.7"/>
+</svg>

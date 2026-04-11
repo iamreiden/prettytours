@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="mau">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zestion Cookies | Pretty Tours Moris</title>
+  <meta name="description" content="Politik cookies Pretty Tours. Aprann ki cookies nou itilize, porkwa, ek kouma zere preferans ou ninpor ki ler.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://pretty-tours.com/mau/zestion-cookies/" />
+  <link rel="alternate" hreflang="fr" href="https://pretty-tours.com/fr/politique-cookies/" />
+  <link rel="alternate" hreflang="en" href="https://pretty-tours.com/en/cookie-policy/" />
+  <link rel="alternate" hreflang="mau" href="https://pretty-tours.com/mau/zestion-cookies/" />
+  <link rel="alternate" hreflang="x-default" href="https://pretty-tours.com/fr/politique-cookies/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/variables.css">
+  <link rel="stylesheet" href="/assets/css/cookie-banner.css">
+  <script src="/assets/js/components/site-header.js" defer></script>
+  <script src="/assets/js/components/site-footer.js" defer></script>
+  <script src="/assets/js/components/cookie-consent.js" defer></script>
+  <style>
+    .legal-page {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: var(--space-xxxl) var(--space-lg) var(--space-xxl);
+    }
+    .legal-page h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      color: var(--color-ocean);
+      margin-bottom: var(--space-xs);
+    }
+    .legal-page .subtitle {
+      color: #64748B;
+      font-size: 0.95rem;
+      margin-bottom: var(--space-xl);
+    }
+    .legal-page h2 {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      color: var(--color-ocean);
+      margin-top: var(--space-xl);
+      margin-bottom: var(--space-sm);
+      padding-bottom: var(--space-xs);
+      border-bottom: 2px solid var(--color-turquoise);
+    }
+    .legal-page h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--color-ocean);
+      margin-top: var(--space-md);
+      margin-bottom: var(--space-xs);
+    }
+    .legal-page p {
+      line-height: 1.8;
+      color: #374151;
+      margin-bottom: var(--space-sm);
+    }
+    .legal-page ul, .legal-page ol {
+      padding-left: var(--space-lg);
+      margin-bottom: var(--space-sm);
+    }
+    .legal-page li {
+      line-height: 1.8;
+      color: #374151;
+      margin-bottom: 6px;
+    }
+    .highlight-box {
+      background: linear-gradient(135deg, rgba(0, 206, 209, 0.08), rgba(0, 206, 209, 0.03));
+      border-left: 4px solid var(--color-turquoise);
+      border-radius: 0 12px 12px 0;
+      padding: var(--space-md) var(--space-lg);
+      margin: var(--space-md) 0;
+    }
+    .highlight-box p {
+      margin-bottom: 0;
+    }
+    .contact-info {
+      background: var(--color-ocean);
+      color: white;
+      border-radius: 16px;
+      padding: var(--space-lg) var(--space-xl);
+      margin-top: var(--space-xl);
+    }
+    .contact-info h3 {
+      color: var(--color-turquoise);
+      margin-top: 0;
+    }
+    .contact-info p, .contact-info a {
+      color: rgba(255,255,255,0.85);
+    }
+    .contact-info a:hover {
+      color: var(--color-turquoise);
+    }
+    .table-wrapper {
+      overflow-x: auto;
+      margin: var(--space-md) 0;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+    thead {
+      background: var(--color-ocean);
+      color: white;
+    }
+    thead th {
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 600;
+    }
+    tbody tr:nth-child(even) {
+      background: rgba(0, 206, 209, 0.05);
+    }
+    tbody td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #E2E8F0;
+      color: #374151;
+      vertical-align: top;
+    }
+    code {
+      background: #F1F5F9;
+      color: var(--color-ocean);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.85rem;
+    }
+    .checkmark-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .checkmark-list li::before {
+      content: "✗ ";
+      color: #EF4444;
+      font-weight: 700;
+    }
+    .btn-prefs {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, var(--color-turquoise), #00A8AB);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      padding: 14px 32px;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-prefs:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 206, 209, 0.4);
+    }
+    .btn-center {
+      text-align: center;
+      margin: var(--space-lg) 0;
+    }
+    .breadcrumbs {
+      padding: var(--space-sm) 0 0;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .breadcrumbs ol {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 0.85rem;
+      color: #94A3B8;
+    }
+    .breadcrumbs li + li::before {
+      content: "›";
+      margin-right: 4px;
+    }
+    .breadcrumbs a {
+      color: var(--color-turquoise);
+      text-decoration: none;
+    }
+    .breadcrumbs a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type":"ListItem","position":1,"name":"Lakaz","item":"https://pretty-tours.com/mau/"},
+      {"@type":"ListItem","position":2,"name":"Zestion Cookies","item":"https://pretty-tours.com/mau/zestion-cookies/"}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <site-header lang="mau"></site-header>
+  <cookie-consent lang="mau"></cookie-consent>
+
+  <main>
+    <div style="padding: var(--space-sm) var(--space-lg) 0; max-width: 860px; margin: 0 auto; padding-top: 100px;">
+      <nav class="breadcrumbs" aria-label="Sime navigasyon">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="/mau/"><span itemprop="name">Lakaz</span></a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <span itemprop="name">Zestion Cookies</span>
+            <meta itemprop="position" content="2" />
+          </li>
+        </ol>
+      </nav>
+    </div>
+
+    <article class="legal-page">
+      <h1>Politik Zestion Cookies</h1>
+      <p class="subtitle">Dernye mizazour : 10 avril 2026</p>
+
+      <div class="highlight-box">
+        <p>Sa paz-la explik ou avek tou transparans ki cookies Pretty Tours itilize lor so sit web, porkwa nou itilize zot, ek kouma ou kapav zere ou preferans ninpor ki ler.</p>
+      </div>
+
+      <!-- Section 1 -->
+      <h2>1. Kisa enn cookie ete ?</h2>
+      <p>Enn cookie se enn tipti fichie texte ki depoze lor ou terminal (ordinater, tablette, smartphone) kan ou vizite enn sit web. Li garrde par ou navigater ek permet sit web-la souvenir informasyon lor ou pandan ou prosinn vizit.</p>
+      <p>Cookies kapav ete :</p>
+      <ul>
+        <li><strong>Cookies de session</strong> : temporer, supprime kan ou ferm ou navigater.</li>
+        <li><strong>Cookies persistant</strong> : gard lor ou terminal pou enn tan defini.</li>
+        <li><strong>Cookies first-party</strong> : depoze direkteman par Pretty Tours.</li>
+        <li><strong>Cookies third-party</strong> : depoze par servis exterieur (ex. : Google Analytics).</li>
+      </ul>
+      <p>Cookies pa kapav aksede ou fichier personel, transmit viris, ni identifie ou direkteman san ou konsantman.</p>
+
+      <!-- Section 2 -->
+      <h2>2. Cookies ki Pretty Tours itilize</h2>
+      <p>Pretty Tours itilize zis enn kantite limite cookies, strikman neseser pou fonksionman sit web-la ou pou ameliore ou experyans — avek ou konsantman kote sa neseser.</p>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Non cookie</th>
+              <th>Kalite</th>
+              <th>Biznes</th>
+              <th>Dire</th>
+              <th>Konsantman neseser</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>pretty_tours_consent</code></td>
+              <td>Fonksionnel</td>
+              <td>Souvenir ou swa pou cookies pou pa montre banner-la kan ou retourne</td>
+              <td>12 mwa</td>
+              <td>Non (strikman neseser)</td>
+            </tr>
+            <tr>
+              <td><code>PHPSESSID</code></td>
+              <td>Session</td>
+              <td>Identifian session serveur pou maintenir ou koneksion pandan ou vizit</td>
+              <td>Session (supprime kan ou ferm navigater)</td>
+              <td>Non (strikman neseser)</td>
+            </tr>
+            <tr>
+              <td><code>_ga</code></td>
+              <td>Analitik</td>
+              <td>Cookie Google Analytics — distenge itilizater innik avek enn identifian aleatwar</td>
+              <td>24 mwa</td>
+              <td>Wi (analitik)</td>
+            </tr>
+            <tr>
+              <td><code>_ga_*</code></td>
+              <td>Analitik</td>
+              <td>Cookie Google Analytics 4 — konseve eta session ek konptaz vizit par propriete GA4</td>
+              <td>24 mwa</td>
+              <td>Wi (analitik)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><strong>Okenn cookie piblisite, siblaz ou profilaz komersyal</strong> pa itilize lor sa sit web-la.</p>
+
+      <!-- Section 3 -->
+      <h2>3. Seki Pretty Tours pa fer</h2>
+      <ul class="checkmark-list">
+        <li>Nou pa vann ou done navigasyon zame a tier-parti</li>
+        <li>Nou pa itilize cookies tracking piblisite (Facebook Pixel, etc.)</li>
+        <li>Nou pa depoze cookies profilaz komersyal</li>
+        <li>Nou pa partaz ou done analitik pou rezon komersyal</li>
+        <li>Nou pa kombin ou done cookies avek lot sous pou identifie ou personalman</li>
+      </ul>
+
+      <!-- Section 4 -->
+      <h2>4. Zere ou preferans cookies</h2>
+      <p>Ou kapav sanze ou preferans cookies ninpor ki ler. An klikan lor bouton-la anba, ou preferans sove-la pou efase ek banner konsantman pou remont, pou permet ou fer enn nouvo swa.</p>
+
+      <div class="btn-center">
+        <button class="btn-prefs" id="cookieResetBtn" aria-label="Zere mo preferans cookies">
+          ⚙️ Zere mo preferans cookies
+        </button>
+      </div>
+
+      <p>Ou swa gard pou 12 mwa. Apre sa period-la, banner-la pou revini otomatikman.</p>
+
+      <!-- Section 5 -->
+      <h2>5. Efas cookies depi ou navigater</h2>
+      <p>Endependaman nou zoutils, ou kapav efas ou blok cookies direkteman depi parametre ou navigater :</p>
+
+      <h3>Google Chrome</h3>
+      <p>Parametre → Konfidansialite ek Sekirite → Cookies ek lot done sit → Get tou cookies ek done sit → Efas tou.</p>
+
+      <h3>Mozilla Firefox</h3>
+      <p>Parametre → Lavi Prive ek Sekirite → Cookies ek Done Sit → Efas Done.</p>
+
+      <h3>Apple Safari</h3>
+      <p>Preferans → Konfidansialite → Zere Done Sit Web → Efas Tou.</p>
+
+      <h3>Microsoft Edge</h3>
+      <p>Parametre → Konfidansialite, resas ek servis → Efas done navigasyon → Cookies ek lot done sit.</p>
+
+      <div class="highlight-box">
+        <p><strong>Atansyon :</strong> Blok tou cookies kapav afekte fonksionman serten sit web, inkli pa nou (parametre lang, preferans). Cookies strikman neseser pa kapav dezaktive san impak lor servis-la.</p>
+      </div>
+
+      <!-- Section 6 -->
+      <h2>6. Transfert internasional — Google Analytics</h2>
+      <p>Cookies analitik (<code>_ga</code>, <code>_ga_*</code>) zere par Google LLC, enn konpagni ameriken. Done kolekte via sa cookies-la kapav transfere ver Zetazini.</p>
+      <p>Sa transfert-la gere par :</p>
+      <ul>
+        <li>Les <strong>Clauses Contractuelles Types (CCT)</strong> de la Commission Europeenne, adopte par Google</li>
+        <li>Le <strong>Data Privacy Framework (DPF)</strong> UE–Zetazini, an vigoer depi ziyie 2023</li>
+        <li>Politik konfidansialite Google : <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></li>
+      </ul>
+      <p>Ou kapav dezaktive Google Analytics globalman via add-on ofisyel : <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">tools.google.com/dlpage/gaoptout</a>.</p>
+
+      <!-- Section 7 -->
+      <h2>7. Dire konsservasyon</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Cookie</th>
+              <th>Dire</th>
+              <th>Suppresyon otomatik</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>pretty_tours_consent</code></td>
+              <td>12 mwa</td>
+              <td>Wi, apre 12 mwa ou lor demand</td>
+            </tr>
+            <tr>
+              <td><code>PHPSESSID</code></td>
+              <td>Session</td>
+              <td>Wi, kan ou ferm navigater</td>
+            </tr>
+            <tr>
+              <td><code>_ga</code></td>
+              <td>24 mwa</td>
+              <td>Wi, apre 24 mwa</td>
+            </tr>
+            <tr>
+              <td><code>_ga_*</code></td>
+              <td>24 mwa</td>
+              <td>Wi, apre 24 mwa</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Section 8 -->
+      <h2>8. Baz legal</h2>
+      <p>Konforme avek <strong>Data Protection Act 2017 (DPA 2017)</strong> Moris ek rekomandasyon <strong>Information and Communication Technologies Authority (ICTA)</strong> :</p>
+      <ul>
+        <li><strong>Cookies strikman neseser</strong> (<code>pretty_tours_consent</code>, <code>PHPSESSID</code>) : exante konsantman — baz legal : intere legitim ek fonksionman servis.</li>
+        <li><strong>Cookies analitik</strong> (<code>_ga</code>, <code>_ga_*</code>) : bizin ou konsantman prealable, lib, eklere ek spesifik — baz legal : konsantman (Art. 50 DPA 2017).</li>
+      </ul>
+
+      <!-- Section 9 -->
+      <h2>9. Ou droit</h2>
+      <p>Anba DPA 2017, ou ena droit swivan lor done trete via cookies :</p>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Droit</th>
+              <th>Deskripsyon</th>
+              <th>Kouma exerse li</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Akse</td>
+              <td>Gagne konfirmasyon traitement ek kopi done</td>
+              <td>Demand ekri a prettytours@outlook.com</td>
+            </tr>
+            <tr>
+              <td>Koreksyon</td>
+              <td>Korize done inexact</td>
+              <td>Demand ekri a prettytours@outlook.com</td>
+            </tr>
+            <tr>
+              <td>Efasman</td>
+              <td>Suppresyon ou done (kote legalman posib)</td>
+              <td>Suppresyon par navigater + demand ekri</td>
+            </tr>
+            <tr>
+              <td>Opozisyon</td>
+              <td>Opoze a traitement analitik</td>
+              <td>Retire konsantman via bouton anba</td>
+            </tr>
+            <tr>
+              <td>Plent</td>
+              <td>Depoze plent kot otorite</td>
+              <td>Data Protection Office Moris : dataprotection.govmu.org</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Section 10 -->
+      <h2>10. Sanzman dan sa politik-la</h2>
+      <p>Pretty Tours rezev droit modifye sa politik cookies-la ninpor ki ler, espesialman si ena sanzman legal ou sanzman zoutils nou itilize. Ninport ki sanzman inportan pou kominikal par re-afisaz banner konsantman.</p>
+      <p>Dat dernye mizazour anba lao-la se referans ofisyel.</p>
+
+      <!-- Contact -->
+      <div class="contact-info">
+        <h3>Kontakt — Responsab Traitement</h3>
+        <p><strong>Pretty Tours</strong><br>
+        Gid touristik individyel — Zil Moris<br>
+        BRN : C20171385</p>
+        <p>📧 <a href="mailto:prettytours@outlook.com">prettytours@outlook.com</a><br>
+        📱 <a href="https://wa.me/23059042969">WhatsApp : +230 5904 2969</a></p>
+        <p>Pou ninport ki kestion lor sa politik-la ou pou exerse ou droit :<br>
+        <a href="mailto:prettytours@outlook.com">prettytours@outlook.com</a></p>
+      </div>
+    </article>
+  </main>
+
+  <site-footer lang="mau"></site-footer>
+
+  <script>
+    document.getElementById('cookieResetBtn')?.addEventListener('click', function() {
+      document.cookie = 'pretty_tours_consent=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+      window.location.reload();
+    });
+  </script>
+</body>
+</html>

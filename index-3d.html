@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pretty Tours — Voyage Immersif Île Maurice</title>
+  <meta name="description" content="Découvrez l'Île Maurice avec une guide locale certifiée. Excursions intimistes — une expérience immersive 3D.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+
+  <!-- Three.js + GSAP + Lenis : synchronous pour être dispos dès le parsing du body -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.29/dist/lenis.min.js"></script>
+  <!-- Alpine : defer pour init après parsing -->
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js" defer></script>
+
+  <style>
+    /* ── Reset ──────────────────────────────────────────────────────────── */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --turquoise: #40E0D0;
+      --sable:     #D4A574;
+      --blanc:     #FFFFFF;
+      --noir:      #05080F;
+      --glow:      rgba(64, 224, 208, 0.35);
+
+      --font-heading: 'Cormorant Garamond', serif;
+      --font-body:    'Lato', sans-serif;
+    }
+
+    html { scroll-behavior: auto; } /* Lenis prend le relais */
+
+    body {
+      font-family: var(--font-body);
+      background: var(--noir);
+      color: var(--blanc);
+      overflow-x: hidden;
+    }
+
+    /* ── Canvas Three.js (fond fixe) ────────────────────────────────────── */
+    #mainCanvas {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    /* ── Nav ─────────────────────────────────────────────────────────────── */
+    .nav-3d {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 200;
+      padding: 1.75rem 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 300;
+      letter-spacing: 0.18em;
+      color: var(--blanc);
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--turquoise); }
+
+    .nav-back {
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .nav-back:hover { color: var(--turquoise); }
+
+    /* ── Sections (overlay sur canvas) ─────────────────────────────────── */
+    section {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ─────────────────────────────────────────────────────────────────────
+       SECTION 1 — OCEAN HERO
+    ───────────────────────────────────────────────────────────────────── */
+    #ocean-hero { height: 100vh; }
+
+    .hero-content {
+      text-align: center;
+      padding: 0 5%;
+      max-width: 900px;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--font-body);
+      font-size: 0.68rem;
+      letter-spacing: 0.42em;
+      text-transform: uppercase;
+      color: var(--turquoise);
+      margin-bottom: 2rem;
+    }
+
+    .hero-title {
+      font-family: var(--font-heading);
+      font-size: clamp(3rem, 7vw, 6.5rem);
+      font-weight: 300;
+      line-height: 1.05;
+      letter-spacing: 0.04em;
+      margin-bottom: 1.75rem;
+      text-shadow: 0 0 50px rgba(64, 224, 208, 0.18);
+    }
+
+    .hero-subtitle {
+      font-size: clamp(0.85rem, 1.8vw, 1.05rem);
+      font-weight: 300;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 0.04em;
+      margin-bottom: 3rem;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--blanc);
+      text-decoration: none;
+      padding: 1rem 2.5rem;
+      border: 1px solid rgba(64, 224, 208, 0.35);
+      border-radius: 60px;
+      transition: background 0.35s, border-color 0.35s, box-shadow 0.35s;
+      min-height: 44px;
+    }
+    .hero-cta:hover {
+      background: rgba(64, 224, 208, 0.1);
+      border-color: var(--turquoise);
+      box-shadow: 0 0 30px rgba(64, 224, 208, 0.18);
+    }
+
+    .scroll-indicator-3d {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .scroll-text-3d {
+      font-size: 0.62rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.32);
+    }
+
+    .scroll-line-3d {
+      width: 1px;
+      height: 36px;
+      background: linear-gradient(to bottom, var(--turquoise), transparent);
+      animation: linePulse 2.2s ease-in-out infinite;
+    }
+
+    @keyframes linePulse {
+      0%, 100% { opacity: 0.35; transform: scaleY(1);   }
+      50%       { opacity: 1;    transform: scaleY(1.15); }
+    }
+
+    /* ─────────────────────────────────────────────────────────────────────
+       SECTION 2 — UNDERWATER DIVE
+    ───────────────────────────────────────────────────────────────────── */
+    #underwater { height: 100vh; overflow: hidden; }
+
+    .underwater-content { text-align: center; }
+
+    /* Depth counter — affiché en position fixe pendant le pin */
+    .depth-display {
+      position: fixed;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 50;
+      text-align: right;
+      pointer-events: none;
+      display: none; /* visible via JS quand la section est active */
+    }
+
+    .depth-display.visible { display: block; }
+
+    .depth-label {
+      font-family: var(--font-body);
+      font-size: 0.58rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: rgba(64, 224, 208, 0.55);
+      margin-bottom: 0.25rem;
+    }
+
+    .depth-number {
+      font-family: var(--font-heading);
+      font-size: 3.5rem;
+      font-weight: 300;
+      color: var(--turquoise);
+      text-shadow: 0 0 20px rgba(64, 224, 208, 0.5);
+      line-height: 1;
+    }
+
+    .depth-unit { font-size: 1rem; opacity: 0.55; }
+
+    .depth-track {
+      width: 2px;
+      height: 100px;
+      background: rgba(64, 224, 208, 0.1);
+      margin: 0.75rem 0 0 auto;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .depth-fill {
+      width: 100%;
+      background: linear-gradient(to bottom, var(--turquoise), rgba(64,224,208,0.15));
+      border-radius: 2px;
+      transition: height 0.08s;
+    }
+
+    /* ─────────────────────────────────────────────────────────────────────
+       SECTION 3 — TERRES 7 COULEURS
+    ───────────────────────────────────────────────────────────────────── */
+    #seven-colors { height: 100vh; }
+
+    .colors-content { text-align: center; }
+
+    .color-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.7rem 2rem;
+      background: rgba(0,0,0,0.45);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 60px;
+      border: 1px solid rgba(255,255,255,0.08);
+      margin-top: 1.75rem;
+      transition: border-color 0.5s;
+    }
+
+    .color-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      transition: background 0.5s;
+      box-shadow: 0 0 8px currentColor;
+    }
+
+    .color-name-text {
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.75);
+    }
+
+    .color-fraction {
+      font-family: var(--font-heading);
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.3);
+    }
+
+    .color-strip {
+      display: flex;
+      gap: 4px;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .color-swatch {
+      width: 24px;
+      height: 4px;
+      border-radius: 2px;
+      opacity: 0.35;
+      transition: opacity 0.4s, transform 0.4s;
+    }
+
+    .color-swatch.active {
+      opacity: 1;
+      transform: scaleY(2.5);
+    }
+
+    /* ─────────────────────────────────────────────────────────────────────
+       SECTION 4 — EXCURSIONS GRID
+    ───────────────────────────────────────────────────────────────────── */
+    #excursions-section {
+      min-height: 100vh;
+      padding: 8rem 5% 6rem;
+      display: block;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 4.5rem;
+    }
+
+    .section-label {
+      font-family: var(--font-body);
+      font-size: 0.65rem;
+      letter-spacing: 0.42em;
+      text-transform: uppercase;
+      color: var(--turquoise);
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2.5rem, 5.5vw, 5rem);
+      font-weight: 300;
+      letter-spacing: 0.04em;
+      text-shadow: 0 0 30px rgba(64, 224, 208, 0.15);
+    }
+
+    .section-sub {
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.3);
+      margin-top: 0.75rem;
+    }
+
+    .excursions-grid-3d {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .card-3d {
+      position: relative;
+      background: rgba(255,255,255,0.025);
+      border: 1px solid rgba(64, 224, 208, 0.1);
+      border-radius: 16px;
+      padding: 2rem;
+      cursor: pointer;
+      transition: border-color 0.35s, box-shadow 0.35s;
+      will-change: transform;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      overflow: hidden;
+    }
+
+    .card-3d::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% -10%, rgba(64,224,208,0.07), transparent 65%);
+      opacity: 0;
+      transition: opacity 0.4s;
+      pointer-events: none;
+    }
+
+    .card-3d:hover {
+      border-color: rgba(64, 224, 208, 0.32);
+      box-shadow: 0 8px 40px rgba(64, 224, 208, 0.1),
+                  inset 0 1px 0 rgba(255,255,255,0.05);
+    }
+
+    .card-3d:hover::before { opacity: 1; }
+
+    .card-num {
+      font-family: var(--font-heading);
+      font-size: 0.72rem;
+      letter-spacing: 0.32em;
+      color: var(--turquoise);
+      opacity: 0.5;
+      margin-bottom: 1rem;
+    }
+
+    .card-title {
+      font-family: var(--font-heading);
+      font-size: 1.65rem;
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+    }
+
+    .card-tagline {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.38);
+      line-height: 1.65;
+      margin-bottom: 1.75rem;
+    }
+
+    .card-meta {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .card-price {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      color: var(--turquoise);
+    }
+
+    .card-duration {
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.28);
+    }
+
+    .card-arrow {
+      position: absolute;
+      bottom: 1.75rem;
+      right: 1.75rem;
+      width: 30px;
+      height: 30px;
+      border: 1px solid rgba(64, 224, 208, 0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--turquoise);
+      opacity: 0;
+      transform: translateX(-6px);
+      transition: opacity 0.3s, transform 0.3s;
+    }
+
+    .card-3d:hover .card-arrow {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* ─────────────────────────────────────────────────────────────────────
+       SECTION 5 — TESTIMONIALS 3D
+    ───────────────────────────────────────────────────────────────────── */
+    #testimonials-3d { height: 100vh; }
+
+    .testimonials-inner {
+      text-align: center;
+      max-width: 760px;
+      padding: 0 2rem;
+    }
+
+    .testimonial-quote {
+      font-family: var(--font-heading);
+      font-size: clamp(1.3rem, 2.8vw, 1.9rem);
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.82);
+      margin-bottom: 2.5rem;
+      min-height: 6rem;
+      transition: opacity 0.3s;
+    }
+
+    .testimonial-author {
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+      margin-bottom: 0.4rem;
+    }
+
+    .testimonial-location {
+      font-size: 0.68rem;
+      letter-spacing: 0.15em;
+      color: var(--turquoise);
+    }
+
+    .testimonial-stars {
+      color: var(--sable);
+      font-size: 0.85rem;
+      letter-spacing: 0.22em;
+      margin-bottom: 2.5rem;
+    }
+
+    .t-dots {
+      display: flex;
+      gap: 6px;
+      justify-content: center;
+      margin-top: 2.5rem;
+    }
+
+    .t-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.18);
+      transition: background 0.35s, transform 0.35s;
+    }
+
+    .t-dot.active {
+      background: var(--turquoise);
+      transform: scale(1.5);
+    }
+
+    /* ─────────────────────────────────────────────────────────────────────
+       FOOTER CTA
+    ───────────────────────────────────────────────────────────────────── */
+    .footer-cta-3d {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 8rem 5% 6rem;
+    }
+
+    .footer-cta-3d h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 300;
+      letter-spacing: 0.04em;
+      margin-bottom: 3rem;
+      text-shadow: 0 0 40px rgba(64, 224, 208, 0.15);
+    }
+
+    .cta-btn-3d {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1.2rem 3rem;
+      background: var(--turquoise);
+      color: #050810;
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 60px;
+      transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
+      min-height: 52px;
+    }
+
+    .cta-btn-3d:hover {
+      background: #fff;
+      box-shadow: 0 0 40px rgba(64, 224, 208, 0.4);
+      transform: translateY(-3px);
+    }
+
+    .site-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 2rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.25);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .site-link:hover { color: rgba(255,255,255,0.6); }
+
+    /* ─────────────────────────────────────────────────────────────────────
+       Responsive
+    ───────────────────────────────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .depth-display  { right: 3%; }
+      .depth-number   { font-size: 2.5rem; }
+      .hero-title     { line-height: 1.1; }
+      .excursions-grid-3d { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body x-data>
+
+  <!-- Canvas Three.js global -->
+  <canvas id="mainCanvas"></canvas>
+
+  <!-- Navigation -->
+  <nav class="nav-3d">
+    <a href="/index.html" class="nav-logo">Pretty<span>Tours</span></a>
+    <div style="display:flex;gap:1.5rem;align-items:center">
+      <a href="/excursions.html" class="nav-back">Excursions</a>
+      <a href="/home-narrative.html" class="nav-back">Notre histoire</a>
+      <a href="/index.html" class="nav-back">← Site classique</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECTION 1 — OCEAN HERO
+  ═══════════════════════════════════════════════════════════════════════ -->
+  <section id="ocean-hero">
+    <div class="hero-content" id="hero-content">
+      <p class="hero-eyebrow">Île Maurice · Guide Locale Certifiée</p>
+      <h1 class="hero-title">Explorez<br>l'Île Maurice<br>Autrement</h1>
+      <p class="hero-subtitle">Un voyage sensoriel à travers les merveilles d'une île unique</p>
+      <a href="#underwater" class="hero-cta">
+        Commencer le Voyage
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 5v14M19 12l-7 7-7-7"/>
+        </svg>
+      </a>
+    </div>
+    <div class="scroll-indicator-3d">
+      <span class="scroll-text-3d">Scroll</span>
+      <div class="scroll-line-3d"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECTION 2 — UNDERWATER DIVE (pinned 150vh)
+  ═══════════════════════════════════════════════════════════════════════ -->
+  <section id="underwater">
+    <div class="underwater-content">
+      <p class="section-label">Plongée</p>
+      <h2 class="section-title">Dans le Bleu<br>Profond</h2>
+    </div>
+
+    <!-- Compteur de profondeur Alpine (réactif) -->
+    <div class="depth-display" id="depth-display" x-data>
+      <div class="depth-label">Profondeur</div>
+      <div class="depth-number">
+        <span x-text="$store.app?.depth ?? 0">0</span>
+        <span class="depth-unit">m</span>
+      </div>
+      <div class="depth-track">
+        <div class="depth-fill" :style="`height: ${Math.min(($store.app?.depth ?? 0) * 2, 100)}%`"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECTION 3 — TERRES 7 COULEURS (pinned 100vh)
+  ═══════════════════════════════════════════════════════════════════════ -->
+  <section id="seven-colors">
+    <div class="colors-content" x-data>
+      <p class="section-label">Terres des</p>
+      <h2 class="section-title">Sept Couleurs</h2>
+
+      <!-- Badge couleur active -->
+      <div class="color-badge" :style="`border-color: ${$store.app?.currentColorHex ?? '#40E0D0'}55`">
+        <div class="color-dot"
+             :style="`background: ${$store.app?.currentColorHex ?? '#40E0D0'}; box-shadow: 0 0 8px ${$store.app?.currentColorHex ?? '#40E0D0'}`">
+        </div>
+        <span class="color-name-text" x-text="$store.app?.currentColor ?? 'Rouge Terre'">Rouge Terre</span>
+        <span class="color-fraction"
+              x-text="`${Math.min(Math.floor(($store.app?.colorProgress ?? 0) * 7) + 1, 7)} / 7`">
+          1 / 7
+        </span>
+      </div>
+
+      <!-- Strip des 7 couleurs -->
+      <div class="color-strip">
+        <template x-for="(c, i) in [
+          {h:'#8B3A3A'},{h:'#5C3D2E'},{h:'#D4A574'},
+          {h:'#C4923A'},{h:'#7B5E7B'},{h:'#3A6B3A'},{h:'#40E0D0'}
+        ]" :key="i">
+          <div class="color-swatch"
+               :class="{ active: i === Math.min(Math.floor(($store.app?.colorProgress ?? 0) * 7), 6) }"
+               :style="`background: ${c.h}`">
+          </div>
+        </template>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECTION 4 — EXCURSIONS GRID 3D
+  ═══════════════════════════════════════════════════════════════════════ -->
+  <section id="excursions-section">
+    <div style="width:100%">
+      <div class="section-header">
+        <p class="section-label">Découvrez</p>
+        <h2 class="section-title">Nos Expériences</h2>
+        <p class="section-sub">Chaque excursion, une aventure unique · Groupes max 8 personnes</p>
+      </div>
+
+      <div class="excursions-grid-3d" x-data>
+        <template x-if="$store.app && $store.app.excursions.length">
+          <template x-for="(exc, i) in $store.app.excursions" :key="exc.slug">
+            <a class="card-3d" :href="`/excursions/${exc.slug}.html`">
+              <div class="card-num" x-text="`0${i + 1}`"></div>
+              <h3 class="card-title" x-text="exc.name"></h3>
+              <p class="card-tagline" x-text="exc.tagline"></p>
+              <div class="card-meta">
+                <span class="card-price"
+                      x-text="typeof formatPrice === 'function' ? formatPrice(exc.price) : exc.price + '€'">
+                </span>
+                <span class="card-duration" x-text="`${exc.duration}h`"></span>
+              </div>
+              <div class="card-arrow" aria-hidden="true">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </div>
+            </a>
+          </template>
+        </template>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECTION 5 — TESTIMONIALS 3D (pinned 80vh)
+  ═══════════════════════════════════════════════════════════════════════ -->
+  <section id="testimonials-3d">
+    <div class="testimonials-inner" x-data>
+      <p class="section-label">Témoignages</p>
+      <h2 class="section-title" style="margin-bottom:3rem">Ils Ont<br>Vécu l'Aventure</h2>
+
+      <template x-if="$store.app && $store.app.testimonials.length">
+        <div>
+          <div class="testimonial-stars">★★★★★</div>
+
+          <div class="testimonial-quote"
+               x-text="`« ${$store.app.testimonials[$store.app.activeTestimonial]?.text ?? ''} »`">
+          </div>
+
+          <div class="testimonial-author"
+               x-text="$store.app.testimonials[$store.app.activeTestimonial]?.author ?? ''">
+          </div>
+          <div class="testimonial-location"
+               x-text="$store.app.testimonials[$store.app.activeTestimonial]?.location ?? ''">
+          </div>
+
+          <div class="t-dots">
+            <template x-for="(t, i) in $store.app.testimonials" :key="i">
+              <div class="t-dot" :class="{ active: i === $store.app.activeTestimonial }"></div>
+            </template>
+          </div>
+        </div>
+      </template>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       FOOTER CTA
+  ═══════════════════════════════════════════════════════════════════════ -->
+  <div class="footer-cta-3d">
+    <h2>Prêt pour<br>l'Aventure ?</h2>
+    <a href="#" class="cta-btn-3d" id="whatsapp-cta-3d" aria-label="Réserver sur WhatsApp">
+      Réserver sur WhatsApp
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+      </svg>
+    </a>
+    <br>
+    <a href="/index.html" class="site-link">Retour au site classique →</a>
+  </div>
+
+  <!-- Scripts : config en premier (données), puis scènes, puis app -->
+  <script src="/config.js"></script>
+  <script src="/three-scenes.js"></script>
+  <script src="/app-3d.js"></script>
+
+  <!-- Affiche le compteur de profondeur quand la section underwater est active -->
+  <script>
+    (function () {
+      const depthEl = document.getElementById('depth-display');
+      if (!depthEl) return;
+
+      const uw = document.getElementById('underwater');
+      if (!uw) return;
+
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          depthEl.classList.toggle('visible', e.isIntersecting);
+        });
+      }, { threshold: 0.1 });
+
+      obs.observe(uw);
+    })();
+  </script>
+
+</body>
+</html>

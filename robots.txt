@@ -1,0 +1,11 @@
+# Pretty Tours — Robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://prettytours.mu/sitemap.xml
+
+# Bloquer assets inutiles pour crawl
+Disallow: /assets/*.mp4
+Disallow: /assets/*.webm

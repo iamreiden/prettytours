@@ -1,0 +1,132 @@
+/* ============================================
+   COOKIE CONSENT BANNER — Pretty Tours
+   Utilisé via <cookie-consent lang="XX">
+============================================ */
+
+.cookie-banner {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cookie-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+}
+
+.cookie-content {
+  position: relative;
+  background: #fff;
+  border-radius: 16px;
+  max-width: 600px;
+  width: 90%;
+  padding: 2.5rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: cookieSlideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes cookieSlideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.cookie-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1A2B3C;
+  margin: 0 0 1rem;
+  line-height: 1.3;
+}
+
+.cookie-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9375rem;
+  color: #4A5568;
+  line-height: 1.65;
+  margin: 0 0 2rem;
+}
+
+.cookie-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+
+.cookie-btn {
+  flex: 1;
+  min-width: 140px;
+  padding: 0.875rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  min-height: 48px;
+}
+
+.cookie-btn--accept {
+  background: linear-gradient(135deg, #00CED1, #00A8AA);
+  color: #fff;
+}
+
+.cookie-btn--accept:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 206, 209, 0.35);
+}
+
+.cookie-btn--reject {
+  background: #E2E8F0;
+  color: #1A2B3C;
+}
+
+.cookie-btn--reject:hover {
+  background: #CBD5E0;
+  transform: translateY(-2px);
+}
+
+.cookie-more {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  color: #00CED1;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.3s;
+}
+
+.cookie-more:hover {
+  color: #00A8AA;
+}
+
+/* ============================================
+   RESPONSIVE
+============================================ */
+
+@media (max-width: 640px) {
+  .cookie-content {
+    padding: 1.75rem 1.25rem;
+    border-radius: 12px;
+  }
+
+  .cookie-title {
+    font-size: 1.25rem;
+  }
+
+  .cookie-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .cookie-btn {
+    min-width: 100%;
+  }
+}

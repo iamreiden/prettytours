@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Politique de Confidentialité (RGPD) | Pretty Tours</title>
+  <meta name="description" content="Politique de confidentialité et protection des données personnelles (RGPD) de Pretty Tours Ltd — Conforme au Data Protection Act 2017 de Maurice.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://pretty-tours.com/fr/politique-confidentialite/">
+  <link rel="alternate" hreflang="fr" href="https://pretty-tours.com/fr/politique-confidentialite/">
+  <link rel="alternate" hreflang="en" href="https://pretty-tours.com/en/privacy-policy/">
+  <link rel="alternate" hreflang="mau" href="https://pretty-tours.com/mau/politik-konfidansialite/">
+  <link rel="alternate" hreflang="x-default" href="https://pretty-tours.com/fr/politique-confidentialite/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/footer.css">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --color-turquoise: #00CED1;
+      --color-coral: #FF6B6B;
+      --color-sand: #FAFAFA;
+      --color-ocean: #1A2B3C;
+      --color-gold: #FFD700;
+      --color-whatsapp: #25D366;
+      --font-heading: 'Playfair Display', serif;
+      --font-body: 'Inter', sans-serif;
+      --ease: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--color-ocean);
+      background: var(--color-sand);
+      line-height: 1.6;
+    }
+
+    a { color: var(--color-turquoise); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ============================================
+       PAGE LÉGALE
+    ============================================ */
+    .legal-page {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 100px 24px 96px;
+    }
+
+    .legal-page h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.75rem, 4vw, 2.75rem);
+      font-weight: 700;
+      color: var(--color-ocean);
+      margin-bottom: 8px;
+      line-height: 1.2;
+    }
+
+    .legal-page .last-update {
+      font-size: 0.875rem;
+      color: #8a9aaa;
+      margin-bottom: 40px;
+    }
+
+    .legal-page h2 {
+      font-family: var(--font-heading);
+      font-size: 1.375rem;
+      font-weight: 700;
+      color: var(--color-ocean);
+      margin: 48px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid rgba(0, 206, 209, 0.2);
+    }
+
+    .legal-page h3 {
+      font-family: var(--font-heading);
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--color-ocean);
+      margin: 28px 0 12px;
+    }
+
+    .legal-page h4 {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--color-ocean);
+      margin: 0 0 10px;
+    }
+
+    .legal-page p {
+      font-size: 0.9375rem;
+      line-height: 1.8;
+      color: #3a4a5a;
+      margin-bottom: 14px;
+    }
+
+    .legal-page ul {
+      padding-left: 24px;
+      margin-bottom: 16px;
+    }
+
+    .legal-page ul li {
+      font-size: 0.9375rem;
+      line-height: 1.8;
+      color: #3a4a5a;
+      margin-bottom: 6px;
+    }
+
+    .legal-page strong { color: var(--color-ocean); }
+
+    /* Boîte de mise en avant */
+    .highlight-box {
+      background: rgba(0, 206, 209, 0.06);
+      border: 1px solid rgba(0, 206, 209, 0.25);
+      border-left: 4px solid var(--color-turquoise);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+
+    .highlight-box p { margin-bottom: 10px; color: #3a4a5a; }
+    .highlight-box p:last-child { margin-bottom: 0; }
+    .highlight-box ul { margin-bottom: 0; }
+
+    /* Boîte contact */
+    .contact-info {
+      background: rgba(26, 43, 60, 0.04);
+      border: 1px solid rgba(26, 43, 60, 0.12);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin: 20px 0;
+    }
+
+    .contact-info p { margin-bottom: 10px; }
+    .contact-info p:last-child { margin-bottom: 0; }
+
+    /* Tableaux */
+    .table-wrapper {
+      overflow-x: auto;
+      margin: 16px 0 24px;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+
+    table thead {
+      background: var(--color-ocean);
+      color: #fff;
+    }
+
+    table thead th {
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    table tbody tr:nth-child(even) {
+      background: rgba(0, 206, 209, 0.04);
+    }
+
+    table tbody tr:hover {
+      background: rgba(0, 206, 209, 0.08);
+    }
+
+    table td, table th {
+      padding: 11px 16px;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      vertical-align: top;
+      color: #3a4a5a;
+    }
+
+    table tbody th {
+      font-weight: 600;
+      color: var(--color-ocean);
+      background: rgba(0,0,0,0.02);
+      width: 30%;
+    }
+
+    /* Breadcrumb */
+    .breadcrumb {
+      font-size: 0.8125rem;
+      color: #8a9aaa;
+      margin-bottom: 32px;
+    }
+
+    .breadcrumb a { color: var(--color-turquoise); }
+    .breadcrumb span { margin: 0 6px; }
+
+    @media (max-width: 768px) {
+      .legal-page { padding: 88px 16px 64px; }
+      table { font-size: 0.8125rem; }
+      table td, table th, table thead th { padding: 10px 12px; }
+      table tbody th { width: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <site-header lang="fr"></site-header>
+  <cookie-consent lang="fr"></cookie-consent>
+
+  <main class="legal-page">
+
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <a href="/fr/">Accueil</a>
+      <span aria-hidden="true">›</span>
+      <span>Politique de confidentialité</span>
+    </nav>
+
+    <h1>🔒 Politique de confidentialité (RGPD)</h1>
+    <p class="last-update">Dernière mise à jour : 10 avril 2026</p>
+
+    <div class="highlight-box">
+      <p><strong>Engagement Pretty Tours :</strong> Nous respectons votre vie privée et protégeons vos données personnelles conformément au <strong>Data Protection Act 2017</strong> de Maurice, au <strong>RGPD européen</strong> et aux standards internationaux. Nous ne vendons jamais vos données. Jamais.</p>
+    </div>
+
+    <!-- SECTION 1 -->
+    <h2>1. Identité du responsable de traitement</h2>
+
+    <div class="table-wrapper">
+      <table>
+        <tbody>
+          <tr><th>Raison sociale</th><td>Pretty Tours Ltd</td></tr>
+          <tr><th>BRN (Business Registration Number)</th><td>C20171385</td></tr>
+          <tr><th>Siège social</th><td>Appt 24 Le Tamier, Avenue Cacatoes<br>Flic En Flac 1905-04<br>République de Maurice</td></tr>
+          <tr><th>Email</th><td><a href="mailto:prettytours@outlook.com">prettytours@outlook.com</a></td></tr>
+          <tr><th>Téléphone / WhatsApp</th><td><a href="tel:+2305904969">+230 5904 2969</a></td></tr>
+          <tr><th>Enregistrement</th><td>Enregistrée auprès du Data Protection Office (République de Maurice)</td></tr>
+          <tr><th>Licence Tourism Authority</th><td>Tourist Enterprise Licence — émise le 10/09/2024</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- SECTION 2 -->
+    <h2>2. Cadre légal applicable</h2>
+
+    <p>Notre politique de confidentialité est conforme aux législations suivantes :</p>
+    <ul>
+      <li><strong>Data Protection Act 2017</strong> (République de Maurice) — Loi n° 20 de 2017, en vigueur depuis le 15 janvier 2018</li>
+      <li><strong>Tourism Authority Act 2006</strong> — obligations sectorielles tourisme</li>
+      <li><strong>Règlement Général sur la Protection des Données (RGPD)</strong> — Règlement UE 2016/679 (par alignement)</li>
+      <li><strong>Convention 108+</strong> du Conseil de l'Europe — standard international</li>
+    </ul>
+
+    <!-- SECTION 3 -->
+    <h2>3. Quelles données personnelles collectons-nous ?</h2>
+
+    <h3>3.1 Données collectées directement</h3>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Type de données</th>
+            <th>Exemples</th>
+            <th>Finalité</th>
+            <th>Base légale</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Identité</strong></td>
+            <td>Prénom, nom, civilité</td>
+            <td>Gestion réservation excursion</td>
+            <td>Exécution du contrat</td>
+          </tr>
+          <tr>
+            <td><strong>Contact</strong></td>
+            <td>Email, téléphone, WhatsApp</td>
+            <td>Communication réservation</td>
+            <td>Exécution du contrat</td>
+          </tr>
+          <tr>
+            <td><strong>Localisation</strong></td>
+            <td>Hôtel, adresse pick-up</td>
+            <td>Organisation logistique excursion</td>
+            <td>Exécution du contrat</td>
+          </tr>
+          <tr>
+            <td><strong>Préférences</strong></td>
+            <td>Langue, régime alimentaire, mobilité</td>
+            <td>Personnalisation du service</td>
+            <td>Intérêt légitime</td>
+          </tr>
+          <tr>
+            <td><strong>Paiement</strong></td>
+            <td>Montant, mode de paiement</td>
+            <td>Facturation (aucune CB stockée)</td>
+            <td>Obligation légale / Contrat</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>3.2 Données collectées automatiquement (site web)</h3>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Donnée</th>
+            <th>Finalité</th>
+            <th>Base légale</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Adresse IP (anonymisée)</td>
+            <td>Statistiques site (si consentement cookies)</td>
+            <td>Consentement</td>
+          </tr>
+          <tr>
+            <td>Type navigateur / appareil</td>
+            <td>Optimisation technique</td>
+            <td>Intérêt légitime</td>
+          </tr>
+          <tr>
+            <td>Pages visitées</td>
+            <td>Amélioration de l'expérience utilisateur (si consentement)</td>
+            <td>Consentement</td>
+          </tr>
+          <tr>
+            <td>Choix cookies (consentement)</td>
+            <td>Respect de vos préférences RGPD</td>
+            <td>Obligation légale</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>3.3 Données sensibles</h3>
+    <div class="highlight-box">
+      <p><strong>Principe :</strong> Pretty Tours ne collecte AUCUNE donnée sensible (santé, religion, origine ethnique, opinions politiques, orientation sexuelle, données biométriques).</p>
+      <p><strong>Exception limitée :</strong> Si vous nous communiquez volontairement des informations de santé (allergies, mobilité réduite) pour adapter une excursion à vos besoins, nous les traitons avec votre consentement explicite et les supprimons dès la fin de l'excursion.</p>
+    </div>
+
+    <!-- SECTION 4 -->
+    <h2>4. Pourquoi traitons-nous vos données ?</h2>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Finalité</th>
+            <th>Base légale (DPA 2017)</th>
+            <th>Durée de conservation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Gestion des réservations d'excursions</td>
+            <td>Exécution du contrat</td>
+            <td>3 ans après excursion</td>
+          </tr>
+          <tr>
+            <td>Communication pré/post-excursion (WhatsApp, email)</td>
+            <td>Exécution du contrat</td>
+            <td>3 ans</td>
+          </tr>
+          <tr>
+            <td>Facturation et comptabilité</td>
+            <td>Obligation légale (loi fiscale Maurice)</td>
+            <td>7 ans (obligation légale)</td>
+          </tr>
+          <tr>
+            <td>Conformité Tourism Authority Act</td>
+            <td>Obligation légale</td>
+            <td>Durée légale imposée</td>
+          </tr>
+          <tr>
+            <td>Envoi newsletter (si opt-in)</td>
+            <td>Consentement</td>
+            <td>Jusqu'à désinscription</td>
+          </tr>
+          <tr>
+            <td>Statistiques site web (Google Analytics)</td>
+            <td>Consentement (cookies)</td>
+            <td>13 mois</td>
+          </tr>
+          <tr>
+            <td>Amélioration de nos services</td>
+            <td>Intérêt légitime</td>
+            <td>2 ans</td>
+          </tr>
+          <tr>
+            <td>Défense juridique (en cas de litige)</td>
+            <td>Intérêt légitime</td>
+            <td>Durée de prescription légale</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- SECTION 5 -->
+    <h2>5. À qui transmettons-nous vos données ?</h2>
+
+    <h3>5.1 Partage avec des tiers</h3>
+    <p>Pretty Tours <strong>ne vend ni ne loue</strong> vos données personnelles. Nous les partageons uniquement avec :</p>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Destinataire</th>
+            <th>Finalité</th>
+            <th>Localisation</th>
+            <th>Garanties</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Sous-traitants logistique</strong></td>
+            <td>Prestataires excursions (restaurants, sites touristiques)</td>
+            <td>Maurice</td>
+            <td>Contrat de traitement de données</td>
+          </tr>
+          <tr>
+            <td><strong>WhatsApp (Meta)</strong></td>
+            <td>Communication client</td>
+            <td>USA (hors Maurice)</td>
+            <td>Clauses contractuelles types UE + chiffrement bout en bout</td>
+          </tr>
+          <tr>
+            <td><strong>Google Analytics</strong></td>
+            <td>Statistiques web (si consentement)</td>
+            <td>USA (hors Maurice)</td>
+            <td>Anonymisation IP + Clauses contractuelles UE</td>
+          </tr>
+          <tr>
+            <td><strong>Hébergeur site web</strong></td>
+            <td>Stockage technique du site</td>
+            <td>À préciser</td>
+            <td>Contrat traitement + mesures sécurité</td>
+          </tr>
+          <tr>
+            <td><strong>Tourism Authority (Maurice)</strong></td>
+            <td>Conformité réglementaire sectorielle</td>
+            <td>Maurice</td>
+            <td>Obligation légale</td>
+          </tr>
+          <tr>
+            <td><strong>Mauritius Revenue Authority (MRA)</strong></td>
+            <td>Obligation comptable et fiscale</td>
+            <td>Maurice</td>
+            <td>Obligation légale</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>5.2 Transferts internationaux de données</h3>
+    <div class="highlight-box">
+      <p><strong>Attention :</strong> Certains de nos prestataires (WhatsApp, Google Analytics) sont basés hors de Maurice (États-Unis). Le Data Protection Act 2017 encadre strictement ces transferts.</p>
+      <p><strong>Garanties mises en place :</strong></p>
+      <ul>
+        <li>Clauses contractuelles types approuvées par l'Union Européenne</li>
+        <li>Chiffrement de bout en bout sur WhatsApp (vos messages ne peuvent pas être lus par des tiers)</li>
+        <li>Anonymisation des IPs sur Google Analytics</li>
+        <li>Collecte Google Analytics uniquement avec votre consentement explicite</li>
+      </ul>
+    </div>
+
+    <!-- SECTION 6 -->
+    <h2>6. Vos droits sur vos données personnelles</h2>
+
+    <p>Conformément au <strong>Data Protection Act 2017</strong> de Maurice, vous disposez des droits suivants :</p>
+
+    <h3>6.1 Droit d'accès</h3>
+    <p>Vous pouvez demander une copie de toutes les données personnelles que nous détenons sur vous. Ce droit est <strong>gratuit</strong> et nous y répondons dans un délai d'1 mois.</p>
+
+    <h3>6.2 Droit de rectification</h3>
+    <p>Vous pouvez demander la correction de données inexactes ou incomplètes vous concernant.</p>
+
+    <h3>6.3 Droit d'effacement ("droit à l'oubli")</h3>
+    <p>Vous pouvez demander la suppression de vos données dans les cas suivants :</p>
+    <ul>
+      <li>Les données ne sont plus nécessaires aux finalités pour lesquelles elles ont été collectées</li>
+      <li>Vous retirez votre consentement (et il n'existe pas d'autre base légale)</li>
+      <li>Vous vous opposez au traitement et il n'existe pas de motif légitime impérieux</li>
+      <li>Les données ont été traitées de manière illicite</li>
+    </ul>
+    <p><strong>Limite :</strong> Nous ne pouvons pas effacer des données si une obligation légale impose leur conservation (ex : comptabilité conservée 7 ans).</p>
+
+    <h3>6.4 Droit d'opposition</h3>
+    <p>Vous pouvez vous opposer à tout moment au traitement de vos données à des fins de marketing direct (newsletter). L'opposition est immédiatement effective.</p>
+
+    <h3>6.5 Droit de limitation du traitement</h3>
+    <p>Vous pouvez demander le gel temporaire du traitement de vos données (par exemple, pendant la vérification de leur exactitude ou en cas de traitement illicite que vous préférez limiter plutôt que supprimer).</p>
+
+    <h3>6.6 Note sur la portabilité</h3>
+    <div class="highlight-box">
+      <p><strong>Spécificité mauricienne :</strong> Le Data Protection Act 2017 de Maurice ne prévoit pas explicitement le droit à la portabilité des données (contrairement au RGPD européen). Néanmoins, Pretty Tours s'engage à vous fournir vos données dans un format structuré et lisible si vous en faites la demande, dans la mesure du techniquement possible.</p>
+    </div>
+
+    <h3>6.7 Comment exercer vos droits</h3>
+    <div class="contact-info">
+      <h4>Pour exercer vos droits :</h4>
+      <p><strong>Par email :</strong> <a href="mailto:prettytours@outlook.com">prettytours@outlook.com</a><br>
+      Objet recommandé : <em>"RGPD — Exercice de mes droits"</em></p>
+      <p><strong>Par courrier :</strong><br>
+      Pretty Tours Ltd<br>
+      Appt 24 Le Tamier, Avenue Cacatoes<br>
+      Flic En Flac 1905-04, République de Maurice<br>
+      Mention : <em>"RGPD — Exercice de mes droits"</em></p>
+      <p><strong>Délai de réponse :</strong> 1 mois maximum (extensible à 3 mois en cas de complexité, avec information préalable)</p>
+      <p><strong>Justificatif d'identité :</strong> Une copie de pièce d'identité peut être demandée pour prévenir toute usurpation</p>
+    </div>
+
+    <!-- SECTION 7 -->
+    <h2>7. Sécurité et protection de vos données</h2>
+
+    <h3>7.1 Mesures techniques et organisationnelles</h3>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Type de mesure</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Chiffrement</strong></td>
+            <td>HTTPS (SSL/TLS) sur l'ensemble du site — WhatsApp : chiffrement de bout en bout — Emails : chiffrement en transit</td>
+          </tr>
+          <tr>
+            <td><strong>Accès restreint</strong></td>
+            <td>Seule Pretty (propriétaire) accède aux données clients — Authentification forte sur tous les outils de gestion</td>
+          </tr>
+          <tr>
+            <td><strong>Sauvegardes</strong></td>
+            <td>Backups réguliers — Stockage sécurisé des sauvegardes avec accès limité</td>
+          </tr>
+          <tr>
+            <td><strong>Minimisation</strong></td>
+            <td>Collecte limitée au strict nécessaire — Suppression après expiration des délais légaux</td>
+          </tr>
+          <tr>
+            <td><strong>Sensibilisation</strong></td>
+            <td>Pretty formée aux bonnes pratiques RGPD et DPA 2017 — Vigilance permanente sur la sécurité des données</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>7.2 Procédure en cas de violation de données</h3>
+    <p>En cas de violation de données personnelles (perte, accès non autorisé, divulgation accidentelle), Pretty Tours s'engage à :</p>
+    <ul>
+      <li><strong>Notifier le Data Protection Office de Maurice dans les 72 heures</strong> si la violation présente un risque pour vos droits et libertés</li>
+      <li><strong>Vous informer directement sans délai</strong> si la violation présente un risque élevé pour vos droits</li>
+      <li>Documenter chaque violation dans un registre interne (même les incidents mineurs)</li>
+      <li>Mettre en place des mesures correctives immédiates</li>
+    </ul>
+
+    <!-- SECTION 8 -->
+    <h2>8. Durées de conservation des données</h2>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Type de donnée</th>
+            <th>Durée de conservation</th>
+            <th>Justification</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Données de réservation</td>
+            <td>3 ans après l'excursion</td>
+            <td>Gestion SAV + prescription légale contractuelle</td>
+          </tr>
+          <tr>
+            <td>Conversations WhatsApp</td>
+            <td>3 ans après le dernier échange</td>
+            <td>Historique relation client</td>
+          </tr>
+          <tr>
+            <td>Données comptables (factures)</td>
+            <td>7 ans</td>
+            <td>Obligation fiscale (Mauritius Revenue Authority)</td>
+          </tr>
+          <tr>
+            <td>Cookies Google Analytics</td>
+            <td>13 mois maximum</td>
+            <td>Recommandation CNIL / RGPD</td>
+          </tr>
+          <tr>
+            <td>Cookie de consentement</td>
+            <td>13 mois</td>
+            <td>Durée maximale RGPD</td>
+          </tr>
+          <tr>
+            <td>Newsletter (opt-in)</td>
+            <td>Jusqu'à désinscription + 3 ans (preuve consentement)</td>
+            <td>Obligation de preuve du consentement</td>
+          </tr>
+          <tr>
+            <td>Données prospects (non-clients)</td>
+            <td>3 ans sans interaction</td>
+            <td>Intérêt légitime commercial</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Passé ces délais, vos données sont <strong>supprimées ou anonymisées de manière irréversible</strong>.</p>
+
+    <!-- SECTION 9 -->
+    <h2>9. Données des mineurs</h2>
+
+    <p>Pretty Tours ne collecte pas sciemment de données personnelles de mineurs de moins de 13 ans sans consentement parental explicite.</p>
+    <p><strong>Si vous réservez une excursion pour un enfant mineur :</strong></p>
+    <ul>
+      <li>Vous déclarez être le représentant légal (parent ou tuteur)</li>
+      <li>Vous donnez votre consentement au traitement des données de l'enfant</li>
+      <li>Nous ne collectons que les données strictement nécessaires (prénom, âge pour adaptation de l'excursion)</li>
+    </ul>
+
+    <!-- SECTION 10 -->
+    <h2>10. Réclamation auprès de l'autorité de contrôle</h2>
+
+    <p>Si vous estimez que Pretty Tours ne respecte pas vos droits ou le Data Protection Act 2017, vous pouvez introduire une réclamation auprès de l'autorité compétente :</p>
+
+    <div class="contact-info">
+      <h4>Data Protection Office (République de Maurice)</h4>
+      <p><strong>Adresse :</strong><br>
+      5th Floor, Barkly Wharf East<br>
+      Le Caudan Waterfront<br>
+      Port-Louis, République de Maurice</p>
+      <p>
+        <strong>Téléphone :</strong> +230 460 0251<br>
+        <strong>Email :</strong> <a href="mailto:dpo@govmu.org">dpo@govmu.org</a><br>
+        <strong>Site web :</strong> <a href="https://dataprotection.govmu.org" target="_blank" rel="noopener noreferrer">dataprotection.govmu.org</a>
+      </p>
+    </div>
+
+    <p><strong>Pour les résidents de l'Union Européenne :</strong> Vous pouvez également saisir l'autorité de protection des données de votre pays de résidence (CNIL en France, APD en Belgique, AEPD en Espagne, ICO au Royaume-Uni, etc.).</p>
+
+    <!-- SECTION 11 -->
+    <h2>11. Modifications de cette politique</h2>
+
+    <p>Pretty Tours se réserve le droit de modifier cette politique pour refléter l'évolution de nos services, les changements législatifs (DPA 2017, RGPD) ou les recommandations du Data Protection Office.</p>
+    <p><strong>En cas de modification substantielle :</strong></p>
+    <ul>
+      <li>La date de "Dernière mise à jour" sera actualisée en haut de cette page</li>
+      <li>Vous serez informé(e) par email ou WhatsApp si vous êtes client(e) actif(ve)</li>
+      <li>La version précédente sera archivée et disponible sur demande</li>
+    </ul>
+
+    <!-- SECTION 12 -->
+    <h2>12. Contact pour toute question RGPD</h2>
+
+    <div class="contact-info">
+      <h4>Responsable du traitement des données</h4>
+      <p><strong>Pretty Tours Ltd</strong><br>
+      BRN : C20171385<br>
+      Enregistrée auprès du Data Protection Office (République de Maurice)</p>
+      <p>
+        <strong>Email :</strong> <a href="mailto:prettytours@outlook.com">prettytours@outlook.com</a><br>
+        <em>Objet : "RGPD — Question"</em><br>
+        <strong>WhatsApp :</strong> <a href="https://wa.me/23059042969" target="_blank" rel="noopener noreferrer">+230 5904 2969</a>
+      </p>
+      <p>Délai de réponse maximum : <strong>30 jours</strong>.</p>
+    </div>
+
+    <!-- SECTION 13 — ANNEXES -->
+    <h2>13. Annexes</h2>
+
+    <h3>Annexe A : Définitions légales (DPA 2017)</h3>
+    <ul>
+      <li><strong>Donnée personnelle :</strong> Toute information se rapportant à une personne physique identifiée ou identifiable</li>
+      <li><strong>Traitement :</strong> Toute opération sur des données (collecte, enregistrement, conservation, modification, consultation, utilisation, communication, effacement ou destruction)</li>
+      <li><strong>Responsable de traitement :</strong> Entité qui détermine les finalités et les moyens du traitement (Pretty Tours Ltd)</li>
+      <li><strong>Sous-traitant :</strong> Entité qui traite des données pour le compte du responsable de traitement</li>
+      <li><strong>Consentement :</strong> Manifestation de volonté libre, spécifique, éclairée et univoque par laquelle la personne accepte le traitement de ses données</li>
+      <li><strong>Violation de données :</strong> Toute violation de la sécurité entraînant la destruction, la perte, l'altération ou la divulgation non autorisée de données</li>
+    </ul>
+
+    <h3>Annexe B : Cookies</h3>
+    <p>Pour la liste exhaustive des cookies utilisés et leurs durées de conservation, consultez notre <a href="/fr/politique-cookies/">Politique de gestion des cookies</a>.</p>
+
+    <h3>Annexe C : Bases légales du Data Protection Act 2017 (Maurice)</h3>
+    <ul>
+      <li>Consentement explicite de la personne concernée</li>
+      <li>Exécution d'un contrat auquel la personne est partie</li>
+      <li>Respect d'une obligation légale</li>
+      <li>Sauvegarde des intérêts vitaux de la personne</li>
+      <li>Mission d'intérêt public</li>
+      <li>Intérêts légitimes du responsable de traitement (sauf si les intérêts ou droits fondamentaux de la personne prévalent)</li>
+    </ul>
+
+  </main>
+
+  <site-footer lang="fr"></site-footer>
+
+  <link rel="stylesheet" href="/assets/css/cookie-banner.css">
+  <script src="/assets/js/components/cookie-consent.js"></script>
+  <script src="/assets/js/components/site-header.js"></script>
+  <script src="/assets/js/components/site-footer.js"></script>
+
+</body>
+</html>
