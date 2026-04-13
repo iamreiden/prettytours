@@ -34,7 +34,8 @@
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8000/assets/images/excursions/chamarel-terre-sept-couleurs.jpg)",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8000/assets/images/excursions/sports-nautiques-lagon.jpg)",
       "Bash(curl:*)",
-      "Bash(perl -i -0pe ':*)"
+      "Bash(perl -i -0pe ':*)",
+      "Bash(grep -E '<img[^>]*\\(alt=\"\"| [^a]|$\\)' /Users/iamreiden/prettytours/fr/index.html)"
     ]
   }
 }
