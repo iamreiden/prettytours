@@ -121,11 +121,13 @@ class SiteHeader extends HTMLElement {
       .navbar {
         position: fixed; top: 0; left: 0; right: 0;
         z-index: 1000; padding: 20px 0;
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        background: linear-gradient(to bottom, rgba(0,0,0,0.38) 0%, transparent 100%);
+        transition: background 0.2s ease, box-shadow 0.2s ease, padding 0.2s ease;
       }
       .navbar.scrolled {
-        background: rgba(255,255,255,0.96);
+        background: rgba(255,255,255,0.97);
         backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
         padding: 12px 0;
         box-shadow: 0 2px 20px rgba(0,0,0,0.08);
       }
@@ -319,9 +321,16 @@ class SiteHeader extends HTMLElement {
   _initScroll() {
     const navbar = this.querySelector('#navbar');
     if (!navbar) return;
+    let ticking = false;
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 60) navbar.classList.add('scrolled');
-      else navbar.classList.remove('scrolled');
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (window.scrollY > 60) navbar.classList.add('scrolled');
+          else navbar.classList.remove('scrolled');
+          ticking = false;
+        });
+        ticking = true;
+      }
     }, { passive: true });
   }
 
