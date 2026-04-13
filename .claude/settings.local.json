@@ -35,7 +35,13 @@
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8000/assets/images/excursions/sports-nautiques-lagon.jpg)",
       "Bash(curl:*)",
       "Bash(perl -i -0pe ':*)",
-      "Bash(grep -E '<img[^>]*\\(alt=\"\"| [^a]|$\\)' /Users/iamreiden/prettytours/fr/index.html)"
+      "Bash(grep -E '<img[^>]*\\(alt=\"\"| [^a]|$\\)' /Users/iamreiden/prettytours/fr/index.html)",
+      "Bash(cp /Users/iamreiden/Desktop/benitier.jpg /Users/iamreiden/prettytours/assets/images/excursions/ile-aux-benitiers-le-morne.jpg)",
+      "Bash(cp /Users/iamreiden/Desktop/ileaucerf.jpeg /Users/iamreiden/prettytours/assets/images/excursions/ile-aux-cerfs-plage-aerienne.jpg)",
+      "Bash(cp /Users/iamreiden/Desktop/capmalheureux.jpg /Users/iamreiden/prettytours/assets/images/excursions/cap-malheureux-eglise-rouge.jpg)",
+      "Bash(cp /Users/iamreiden/Desktop/7couleurs.jpg /Users/iamreiden/prettytours/assets/images/excursions/chamarel-terre-7-couleurs.jpg)",
+      "Bash(cp /Users/iamreiden/Desktop/7cascades.jpg /Users/iamreiden/prettytours/assets/images/excursions/tamarin-7-cascades.jpg)",
+      "Bash(node -e ':*)"
     ]
   }
 }
