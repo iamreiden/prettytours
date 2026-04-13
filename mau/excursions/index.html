@@ -4,9 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Excursions Moris — Pretty Tours | Gid Touristik Lokal</title>
-  <meta name="description" content="Dekouver bote Moris avek Pretty, zot gid lokal. Mahebourg, Chamarel, Ile aux Cerfs, dine romantik — experyans otantik pou tigit dimoun.">
-  <meta name="keywords" content="excursions moris, gid touristik ile moris, mahebourg, chamarel, ile aux cerfs, dine romantik flic en flac, wedding planner moris">
+  <title>Exkursion Moris - 6 Esperians Otantik | Pretty Tours</title>
+  <meta name="description" content="6 exkursion inik Moris avek Pretty, gid lokal. Kouler Sid, Lil Cerfs, 7 Kaskat, 5 Lil Ler, Lil Benitiers, Port-Louis. Snorkeling, randoné, kilti. Rezerv lor WhatsApp.">
+  <meta name="keywords" content="exkursion moris, gid moris, pretty tours, lil aux cerfs, kaskat tamarin, snorkeling moris, speed-boat moris, port louis vizit, chamarel kouler, lil benitiers, 5 lil ler">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Exkursion Moris - Pretty Tours">
+  <meta property="og:description" content="6 exkursion otantik avek Pretty, gid morisien pasyoné. Kouler Sid, Lil Cerfs, 7 Kaskat, 5 Lil Ler. Rezerv lor WhatsApp.">
+  <meta property="og:image" content="https://pretty-tours.com/assets/images/og-excursions.jpg">
+  <meta property="og:url" content="https://pretty-tours.com/mau/excursions/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Exkursion Moris | Pretty Tours">
+  <meta name="twitter:description" content="6 experyans inik dan Moris avek gid lokal. Rezerv lor WhatsApp.">
+  <meta name="twitter:image" content="https://pretty-tours.com/assets/images/og-excursions.jpg">
 
   <link rel="canonical" href="https://pretty-tours.com/mau/excursions/">
   <link rel="alternate" hreflang="fr" href="https://pretty-tours.com/fr/excursions/">
@@ -33,10 +43,25 @@
     },
     {
       "@context": "https://schema.org",
-      "@type": "ItemList",
-      "name": "Excursions Pretty Tours dan Moris",
-      "description": "Tou bann excursions ki Pretty Tours propoz dan lil Moris",
-      "numberOfItems": 8
+      "@type": "TouristAttraction",
+      "name": "Pretty Tours — Exkursion Moris",
+      "description": "6 exkursion otantik dan Moris avek gid lokal experyansé",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Pretty Tours",
+        "telephone": "+230-5904-2969",
+        "email": "prettytours@outlook.com"
+      },
+      "touristType": ["Families", "Couples", "Adventure Seekers"],
+      "availableLanguage": ["French", "English", "Mauritian Creole"],
+      "makesOffer": [
+        { "@type": "Offer", "itemOffered": { "@type": "Trip", "name": "Kouler Sid", "description": "Sid-Lwes Moris: Chamarel, Later 7 Kouler, kaskat, distileri rhum artizanal, Trou aux Cerfs", "duration": "PT8H" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Trip", "name": "Lil Benitiers Speed-Boat avek BBQ", "description": "Navigasion kot lwes, snorkeling lagon tirkwaz, observasion dofin, BBQ lor plaz", "duration": "PT7H" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Trip", "name": "Lil Cerfs Speed-Boat avek BBQ", "description": "Navigasion kot ler, Kaskat Grand River, snorkeling, BBQ plaz paradi, mizik Séga", "duration": "PT7H" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Trip", "name": "Randoné 7 Kaskat Tamarin", "description": "Valé sekré, foré tropikal, 5 kaskat, benyad basin natirel, pasaz rido dilo", "duration": "PT4H" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Trip", "name": "Port-Louis ek Nor", "description": "Kapital vibran, marsé kouléré, tanp tamoul, Zarden Pamplemousses, Grand Baie, Cap Malheureux", "duration": "PT8H" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Trip", "name": "Dekouvert 5 Lil Ler an Speed-Boat", "description": "Snorkeling karey ek re, 5 lil prezervé, BBQ plaz, listwar kolonyal, Kaskat Grand River", "duration": "PT7H" } }
+      ]
     }
   ]
   </script>
@@ -118,7 +143,8 @@
     .excursion-card { background: var(--color-white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card); transition: transform var(--transition-fast), box-shadow var(--transition-fast); display: flex; flex-direction: column; cursor: pointer; }
     .excursion-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-card-hover); }
     .excursion-card__image-wrap { position: relative; height: 220px; overflow: hidden; background: linear-gradient(135deg, var(--color-turquoise), var(--color-ocean)); }
-    .excursion-card__image { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s var(--ease); }
+    .excursion-card__image-wrap picture { display: block; width: 100%; height: 100%; }
+    .excursion-card__image { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s var(--ease); display: block; }
     .excursion-card:hover .excursion-card__image { transform: scale(1.05); }
     .excursion-card__image-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 4rem; }
     .excursion-card__badge { position: absolute; top: var(--space-sm); left: var(--space-sm); padding: 4px 12px; border-radius: 50px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-white); }
@@ -230,7 +256,7 @@
           <span class="excursions-hero__breadcrumb-sep" aria-hidden="true">›</span>
           <span aria-current="page">Excursions</span>
         </nav>
-        <p class="excursions-hero__eyebrow">8 experyans innik</p>
+        <p class="excursions-hero__eyebrow">6 esperians inik</p>
         <h1 id="excursions-hero-title" class="excursions-hero__title">
           Mo Zexkirsion<br>dan <em>Moris</em>
         </h1>
@@ -242,13 +268,19 @@
 
     <section class="filters-section" aria-label="Filtre par kategori">
       <div class="container">
-        <div class="filters-inner" role="group" aria-label="Filtr excursions">
-          <button class="filter-btn active" data-filter="all" aria-pressed="true">✨ Tou <span class="filter-count">8</span></button>
-          <button class="filter-btn" data-filter="maritime" aria-pressed="false">🌊 Maritime <span class="filter-count">1</span></button>
-          <button class="filter-btn" data-filter="terrestre" aria-pressed="false">🏞️ Terestr <span class="filter-count">3</span></button>
-          <button class="filter-btn" data-filter="faune" aria-pressed="false">🦜 Fon <span class="filter-count">1</span></button>
-          <button class="filter-btn" data-filter="aventure" aria-pressed="false">🚀 Avantir <span class="filter-count">1</span></button>
-          <button class="filter-btn" data-filter="insolite" aria-pressed="false">🎭 Insolit <span class="filter-count">2</span></button>
+        <div class="filters-inner" role="group" aria-label="Filtrer excursions">
+          <button class="filter-btn active" data-filter="all" aria-pressed="true">
+            ✨ Tou <span class="filter-count">6</span>
+          </button>
+          <button class="filter-btn" data-filter="maritime" aria-pressed="false">
+            🌊 Maritim <span class="filter-count">3</span>
+          </button>
+          <button class="filter-btn" data-filter="terrestre" aria-pressed="false">
+            🏞️ Terestrer <span class="filter-count">2</span>
+          </button>
+          <button class="filter-btn" data-filter="aventure" aria-pressed="false">
+            🚀 Avantir <span class="filter-count">1</span>
+          </button>
         </div>
       </div>
     </section>
@@ -258,163 +290,111 @@
         <h2 id="excursions-grid-title" class="sr-only">Lis excursions</h2>
         <div class="excursions-grid" id="excursionsGrid">
 
-          <article class="excursion-card anim" data-category="terrestre" data-id="mahebourg" aria-label="Excursion Mahebourg + Domaine Saint-Aubin">
+          <!-- 1 : Kouler Sid -->
+          <article class="excursion-card anim" data-category="terrestre" data-id="couleurs-sud" aria-label="Exkursion Kouler Sid">
             <div class="excursion-card__image-wrap">
-              <picture>
-                <source srcset="/assets/images/excursions/mahebourg-domaine-saint-aubin.webp" type="image/webp">
-                <img class="excursion-card__image" src="/assets/images/excursions/mahebourg-domaine-saint-aubin.jpg" alt="Vilaz Mahebourg ek mezon kolonyal Domaine Saint-Aubin dan Moris" loading="lazy" width="480" height="220">
-              </picture>
-              <span class="excursion-card__badge excursion-card__badge--terrestre">Terestr</span>
+              <img class="excursion-card__image" src="/assets/images/excursions/chamarel-terre-sept-couleurs.jpg" alt="Peyizaz sid-lwes Moris: Chamarel, kaskat ek foré tropikal luksiryan" width="480" height="220">
+              <span class="excursion-card__badge excursion-card__badge--terrestre">Terestrer</span>
             </div>
             <div class="excursion-card__body">
-              <h2 class="excursion-card__title">Mahebourg + Domaine Saint-Aubin</h2>
+              <h2 class="excursion-card__title">Kouler Sid</h2>
               <div class="excursion-card__meta">
-                <span class="excursion-card__meta-item"><span aria-hidden="true">⏱</span> 6 er</span>
-                <span class="excursion-card__meta-item"><span aria-hidden="true">👥</span> Max 8 dimoun</span>
+                <span class="excursion-card__meta-item"><span aria-hidden="true">⏱</span> 8 ler</span>
+                <span class="excursion-card__meta-item"><span aria-hidden="true">👥</span> Max 8 dimounn</span>
               </div>
-              <p class="excursion-card__price">55 € / group</p>
-              <p class="excursion-card__desc">6 er ki pou sanze fason ou get Moris. Depi bazar koulore Mahebourg ziska distilri rom artizanal, sak aret se enn revelasion.</p>
-              <button class="excursion-card__cta" aria-label="Get detay excursion Mahebourg">Dekouver sa excursion-la →</button>
+              <p class="excursion-card__price">Pou defini</p>
+              <p class="excursion-card__desc">Sid-Lwes Moris: Chamarel, Later 7 Kouler, kaskat spektakiler, distileri rhum artizanal, Trou aux Cerfs. Peyizaz tropikal, foré luksiryan, kilti ek tradision morisien.</p>
+              <button class="excursion-card__cta" aria-label="Get detay exkursion Kouler Sid">Dekouver exkursion-la →</button>
             </div>
           </article>
 
-          <article class="excursion-card anim anim-delay-1" data-category="terrestre" data-id="chamarel" aria-label="Excursion Chamarel Ter Set Kouleur">
+          <!-- 2 : Lil Benitiers -->
+          <article class="excursion-card anim anim-delay-1" data-category="maritime" data-id="ile-aux-benitiers" aria-label="Exkursion Lil Benitiers Speed-Boat">
             <div class="excursion-card__image-wrap">
-              <picture>
-                <source srcset="/assets/images/excursions/chamarel-terre-sept-couleurs.webp" type="image/webp">
-                <img class="excursion-card__image" src="/assets/images/excursions/chamarel-terre-sept-couleurs.jpg" alt="Din avek set kouleur Chamarel, marvel natirèl innik dan Moris" loading="lazy" width="480" height="220">
-              </picture>
-              <span class="excursion-card__badge excursion-card__badge--terrestre">Terestr</span>
+              <img class="excursion-card__image" src="/assets/images/excursions/sports-nautiques-lagon.jpg" alt="Navigasion speed-boat lor lagon tirkwaz kot lwes Moris ver Lil Benitiers" width="480" height="220">
+              <span class="excursion-card__badge excursion-card__badge--maritime">Maritim</span>
             </div>
             <div class="excursion-card__body">
-              <h2 class="excursion-card__title">Chamarel — Ter Set Kouleur</h2>
+              <h2 class="excursion-card__title">Lil Bénitiers Speed-Boat avek BBQ</h2>
               <div class="excursion-card__meta">
-                <span class="excursion-card__meta-item"><span aria-hidden="true">⏱</span> 4 er</span>
-                <span class="excursion-card__meta-item"><span aria-hidden="true">👥</span> Max 8 dimoun</span>
+                <span class="excursion-card__meta-item"><span aria-hidden="true">⏱</span> 7 ler</span>
+                <span class="excursion-card__meta-item"><span aria-hidden="true">👥</span> Max 8 dimounn</span>
               </div>
-              <p class="excursion-card__price">45 € / group</p>
-              <p class="excursion-card__desc">Enn lark-an-siel dan later. Bann din set kouleur Chamarel ek so kaskat 100 met — enn marvel zeolozik ki mo fer ou viv depi linterieur.</p>
-              <button class="excursion-card__cta" aria-label="Get detay excursion Chamarel">Dekouver sa excursion-la →</button>
+              <p class="excursion-card__price">Pou defini</p>
+              <p class="excursion-card__desc">Enn lazourné exepsyonel kot lwes! Speed-boat ver Lil Benitiers, snorkeling lagon tirkwaz, observasion dofin, Crystal Rock anblemtik, BBQ savouré lor plaz. Avantir inoulyab garanti.</p>
+              <button class="excursion-card__cta" aria-label="Get detay exkursion Lil Benitiers">Dekouver exkursion-la →</button>
             </div>
           </article>
 
-          <article class="excursion-card anim anim-delay-2" data-category="maritime" data-id="ile-aux-cerfs" aria-label="Excursion Ile aux Cerfs Katamaran">
+          <!-- 3 : Lil Cerfs Speed-Boat -->
+          <article class="excursion-card anim anim-delay-2" data-category="maritime" data-id="ile-aux-cerfs" aria-label="Exkursion Lil Cerfs Speed-Boat">
             <div class="excursion-card__image-wrap">
-              <picture>
-                <source srcset="/assets/images/excursions/ile-aux-cerfs-catamaran.webp" type="image/webp">
-                <img class="excursion-card__image" src="/assets/images/excursions/ile-aux-cerfs-catamaran.jpg" alt="Ile aux Cerfs depi enn katamaran lor lago tirkowaz Moris" loading="lazy" width="480" height="220">
-              </picture>
-              <span class="excursion-card__badge excursion-card__badge--maritime">Maritime</span>
+              <img class="excursion-card__image" src="/assets/images/excursions/ile-aux-cerfs-catamaran.jpg" alt="Lil Cerfs ek so plaz paradi lor lagon ler Moris" width="480" height="220">
+              <span class="excursion-card__badge excursion-card__badge--maritime">Maritim</span>
             </div>
             <div class="excursion-card__body">
-              <h2 class="excursion-card__title">Ile aux Cerfs en Katamaran</h2>
+              <h2 class="excursion-card__title">Lil Cerfs Speed-Boat avek BBQ</h2>
               <div class="excursion-card__meta">
-                <span class="excursion-card__meta-item"><span aria-hidden="true">⏱</span> Enn zourne antier</span>
-                <span class="excursion-card__meta-item"><span aria-hidden="true">👥</span> Max 8 dimoun</span>
+                <span class="excursion-card__meta-item"><span aria-hidden="true">⏱</span> 7 ler</span>
+                <span class="excursion-card__meta-item"><span aria-hidden="true">👥</span> Max 8 dimounn</span>
               </div>
-              <p class="excursion-card__price">80 € / dimoun</p>
-              <p class="excursion-card__desc">Lago Morisyen dan so leta pir. Van dan lavwal, delo krisital, snorkeling ant korail koulore — enn zourne ki pou reste dan zot memwar pou touletan.</p>
-              <button class="excursion-card__cta" aria-label="Get detay excursion Ile aux Cerfs">Dekouver sa excursion-la →</button>
+              <p class="excursion-card__price">Pou defini</p>
+              <p class="excursion-card__desc">Detant, plezir ek savér kot ler! Speed-boat ver Lil Cerfs (zoyé losean), Kaskat Grand River, snorkeling lagon kristalin, BBQ plaz paradi, mizik Séga. Enn lazourné inoulyab.</p>
+              <button class="excursion-card__cta" aria-label="Get detay exkursion Lil Cerfs">Dekouver exkursion-la →</button>
             </div>
           </article>
 
-          <article class="excursion-card anim anim-delay-3" data-category="insolite" data-id="diner-romantique" aria-label="Dine Romantik Flic-en-Flac">
+          <!-- 4 : Randoné 7 Kaskat -->
+          <article class="excursion-card anim anim-delay-3" data-category="aventure" data-id="rando-7-cascades" aria-label="Randoné 7 Kaskat Tamarin">
             <div class="excursion-card__image-wrap">
-              <picture>
-                <source srcset="/assets/images/excursions/diner-romantique-flic-en-flac.webp" type="image/webp">
-                <img class="excursion-card__image" src="/assets/images/excursions/diner-romantique-flic-en-flac.jpg" alt="Dine romantik lor laplaz Flic-en-Flac okouche soleil dan Moris" loading="lazy" width="480" height="220">
-              </picture>
-              <span class="excursion-card__badge excursion-card__badge--insolite">Insolit</span>
-            </div>
-            <div class="excursion-card__body">
-              <h2 class="excursion-card__title">Dine Romantik Flic-en-Flac</h2>
-              <div class="excursion-card__meta">
-                <span class="excursion-card__meta-item"><span aria-hidden="true">⏱</span> 3 er</span>
-                <span class="excursion-card__meta-item"><span aria-hidden="true">💑</span> 2 dimoun</span>
-              </div>
-              <p class="excursion-card__price">120 € / dimoun</p>
-              <p class="excursion-card__desc">Zot lipie dan disab, zot lizie dan lizie — enn tab zis pou zot dezo letwel Morisyen. Sanpanny, meni 4 pla ek enn fotografer inkli.</p>
-              <button class="excursion-card__cta" aria-label="Get detay Dine Romantik">Dekouver sa experyans-la →</button>
-            </div>
-          </article>
-
-          <article class="excursion-card anim anim-delay-4" data-category="insolite" data-id="wedding-planner" aria-label="Wedding Planner Moris">
-            <div class="excursion-card__image-wrap">
-              <picture>
-                <source srcset="/assets/images/excursions/wedding-planner-maurice.webp" type="image/webp">
-                <img class="excursion-card__image" src="/assets/images/excursions/wedding-planner-maurice.jpg" alt="Maryaz lor laplaz dan Moris organize par Pretty Tours" loading="lazy" width="480" height="220">
-              </picture>
-              <span class="excursion-card__badge excursion-card__badge--insolite">Insolit</span>
-            </div>
-            <div class="excursion-card__body">
-              <h2 class="excursion-card__title">Wedding Planner Moris</h2>
-              <div class="excursion-card__meta">
-                <span class="excursion-card__meta-item"><span aria-hidden="true">💍</span> Lor mezir</span>
-                <span class="excursion-card__meta-item"><span aria-hidden="true">👥</span> Ziska 100 dimoun</span>
-              </div>
-              <p class="excursion-card__price">Lor devi personalize</p>
-              <p class="excursion-card__desc">Zot pli bel zour merite pli bel lil. Mo koordin sak detay maryaz Morisyen ou, depi choix plas ziska dernier flep fler.</p>
-              <button class="excursion-card__cta" aria-label="Get detay Wedding Planner">Dekouver sa prestation-la →</button>
-            </div>
-          </article>
-
-          <article class="excursion-card anim anim-delay-5" data-category="faune" data-id="black-river" aria-label="Excursion Black River Gorges Fon Endemik">
-            <div class="excursion-card__image-wrap">
-              <picture>
-                <source srcset="/assets/images/excursions/black-river-gorges-faune.webp" type="image/webp">
-                <img class="excursion-card__image" src="/assets/images/excursions/black-river-gorges-faune.jpg" alt="Parc Nasyonal Black River Gorges dan Moris avek zoizo endemik ek foret tropikal" loading="lazy" width="480" height="220">
-              </picture>
-              <span class="excursion-card__badge excursion-card__badge--faune">Fon</span>
-            </div>
-            <div class="excursion-card__body">
-              <h2 class="excursion-card__title">Black River Gorges — Fon Endemik</h2>
-              <div class="excursion-card__meta">
-                <span class="excursion-card__meta-item"><span aria-hidden="true">⏱</span> 5 er</span>
-                <span class="excursion-card__meta-item"><span aria-hidden="true">👥</span> Max 8 dimoun</span>
-              </div>
-              <p class="excursion-card__price">50 € / group</p>
-              <p class="excursion-card__desc">Moris kasete, lwen laplaz. Dan foret primer Black River, mo pou prezant zot bann zoizo ki ou pa pou trouv ennot landrwa lor later.</p>
-              <button class="excursion-card__cta" aria-label="Get detay excursion Black River Gorges">Dekouver sa excursion-la →</button>
-            </div>
-          </article>
-
-          <article class="excursion-card anim anim-delay-6" data-category="aventure" data-id="sports-nautiques" aria-label="Adrenalin Notik Sports Extrem">
-            <div class="excursion-card__image-wrap">
-              <picture>
-                <source srcset="/assets/images/excursions/sports-nautiques-lagon.webp" type="image/webp">
-                <img class="excursion-card__image" src="/assets/images/excursions/sports-nautiques-lagon.jpg" alt="Paraseyling ek jet-ski lor lago tirkowaz Moris" loading="lazy" width="480" height="220">
-              </picture>
+              <img class="excursion-card__image" src="/assets/images/excursions/black-river-gorges-faune.jpg" alt="Foré tropikal ek kaskat Tamarin dan valé sekré Moris" width="480" height="220">
               <span class="excursion-card__badge excursion-card__badge--aventure">Avantir</span>
             </div>
             <div class="excursion-card__body">
-              <h2 class="excursion-card__title">Adrenalin Notik</h2>
+              <h2 class="excursion-card__title">Randoné 7 Kaskat Tamarin</h2>
               <div class="excursion-card__meta">
-                <span class="excursion-card__meta-item"><span aria-hidden="true">⏱</span> 4 er</span>
-                <span class="excursion-card__meta-item"><span aria-hidden="true">👥</span> Max 6 dimoun</span>
+                <span class="excursion-card__meta-item"><span aria-hidden="true">⏱</span> 4 ler</span>
+                <span class="excursion-card__meta-item"><span aria-hidden="true">👥</span> Max 12 dimounn</span>
               </div>
-              <p class="excursion-card__price">75 € / dimoun</p>
-              <p class="excursion-card__desc">Paraseyling 200 met otdesi lago, jet-ski a plin vites, bouye — lago Morisyen kouma enn zeu. Pou seki anvi resanti Moris enn lot fason.</p>
-              <button class="excursion-card__cta" aria-label="Get detay Adrenalin Notik">Dekouver sa avantir-la →</button>
+              <p class="excursion-card__price">Pou defini</p>
+              <p class="excursion-card__desc">Fui sovaz o milié Moris. Randoné imersiv valé sekré Tamarin, 5 kaskat spektakiler, benyad basin kristalin, pasaz derier rido dilo. Natur bri, avantir sansoryel otantik.</p>
+              <button class="excursion-card__cta" aria-label="Get detay randoné 7 kaskat">Dekouver lavantir-la →</button>
             </div>
           </article>
 
-          <article class="excursion-card anim anim-delay-7" data-category="terrestre" data-id="circuit-nord" aria-label="Sirki Nor Grand Baie ek Pamplemousses">
+          <!-- 5 : Port-Louis ek Nor -->
+          <article class="excursion-card anim anim-delay-4" data-category="terrestre" data-id="port-louis-nord" aria-label="Exkursion Port-Louis ek Nor">
             <div class="excursion-card__image-wrap">
-              <picture>
-                <source srcset="/assets/images/excursions/circuit-nord-grand-baie.webp" type="image/webp">
-                <img class="excursion-card__image" src="/assets/images/excursions/circuit-nord-grand-baie.jpg" alt="Zardin botanikal Pamplemousses ek Grand Baie dan nor Moris" loading="lazy" width="480" height="220">
-              </picture>
-              <span class="excursion-card__badge excursion-card__badge--terrestre">Terestr</span>
+              <img class="excursion-card__image" src="/assets/images/excursions/circuit-nord-grand-baie.jpg" alt="Port-Louis kapital Moris, Zarden Pamplemousses ek plaz Grand Baie" width="480" height="220">
+              <span class="excursion-card__badge excursion-card__badge--terrestre">Terestrer</span>
             </div>
             <div class="excursion-card__body">
-              <h2 class="excursion-card__title">Sirki Nor — Grand Baie & Pamplemousses</h2>
+              <h2 class="excursion-card__title">Port-Louis ek Nor</h2>
               <div class="excursion-card__meta">
-                <span class="excursion-card__meta-item"><span aria-hidden="true">⏱</span> 5 er</span>
-                <span class="excursion-card__meta-item"><span aria-hidden="true">👥</span> Max 8 dimoun</span>
+                <span class="excursion-card__meta-item"><span aria-hidden="true">⏱</span> 8 ler</span>
+                <span class="excursion-card__meta-item"><span aria-hidden="true">👥</span> Max 8 dimounn</span>
               </div>
-              <p class="excursion-card__price">50 € / group</p>
-              <p class="excursion-card__desc">Zardin botanikal pli vie dan emispec sid, nenifar zigan Victoria, bann aktivite Grand Baie — nor Moris rakonte par enn tifi pei.</p>
-              <button class="excursion-card__cta" aria-label="Get detay Sirki Nor">Dekouver sa excursion-la →</button>
+              <p class="excursion-card__price">60€ / dimounn</p>
+              <p class="excursion-card__desc">Dekouvert kiltirel ek balneyer Nor. Port-Louis vibran (marsé kouléré, tanp tamoul), Zarden Pamplemousses (37 ektar botanik), Grand Baie ek Pereybère (plaz), Cap Malheureux (vilaz pese, legliz twa rouz).</p>
+              <button class="excursion-card__cta" aria-label="Get detay exkursion Port-Louis ek Nor">Dekouver exkursion-la →</button>
+            </div>
+          </article>
+
+          <!-- 6 : 5 Lil Ler -->
+          <article class="excursion-card anim anim-delay-5" data-category="maritime" data-id="5-iles-est" aria-label="Exkursion 5 Lil Ler Speed-Boat">
+            <div class="excursion-card__image-wrap">
+              <img class="excursion-card__image" src="/assets/images/excursions/mahebourg-domaine-saint-aubin.jpg" alt="5 lil prezervé kot ler Moris — snorkeling, karey marin ek BBQ plaz" width="480" height="220">
+              <span class="excursion-card__badge excursion-card__badge--maritime">Maritim</span>
+            </div>
+            <div class="excursion-card__body">
+              <h2 class="excursion-card__title">Dekouvert 5 Lil Ler an Speed-Boat</h2>
+              <div class="excursion-card__meta">
+                <span class="excursion-card__meta-item"><span aria-hidden="true">⏱</span> 7 ler</span>
+                <span class="excursion-card__meta-item"><span aria-hidden="true">👥</span> Max 12 dimounn</span>
+              </div>
+              <p class="excursion-card__price">Pou defini</p>
+              <p class="excursion-card__desc">Explorasion mazik kot ler sovaz. Snorkeling lagon tirkwaz (karey, re, koray), 5 lil prezervé, BBQ plaz, listwar kolonyal, Kaskat Grand River. Enn moman fora tanzam.</p>
+              <button class="excursion-card__cta" aria-label="Get detay exkursion 5 Lil Ler">Dekouver exkursion-la →</button>
             </div>
           </article>
 
@@ -474,174 +454,278 @@
   <script>
   (function () {
     var DATA = {
-      'mahebourg': {
-        category: 'terrestre', badge: 'terrestre', categoryLabel: 'Terestr',
-        title: 'Mahebourg + Domaine Saint-Aubin',
-        image: '/assets/images/excursions/mahebourg-domaine-saint-aubin',
-        subtitle: 'Listwar, kilti, rom artizanal ek gou kreol — enn vwayaz dan ker Moris',
-        duration: '6 er', group: 'Max 8 dimoun', level: 'Fasil', price: '55 €',
-        priceLabel: 'par group',
-        highlights: ['Bazar koulore Mahebourg', 'Mezon kolonyal Domaine Saint-Aubin (19em siek)', 'Distilri rom artizanal — degistasion inkli', 'Vanilray ek zardin aromat tropikal', 'Dezeune kreol tradisioinel lor plas', 'Panorama lor lago Mahebourg'],
-        itinerary: [
-          { time: '09h00', text: 'Pran ou depi zot otel ou enn pwen randevou' },
-          { time: '10h00', text: 'Bazar Mahebourg — epis, artizana, atmosfer lokal otantik' },
-          { time: '11h00', text: 'Rout ver Domaine Saint-Aubin, peyaz kann a sik' },
-          { time: '11h30', text: 'Vizit mezon kolonyal 19em siek' },
-          { time: '12h30', text: 'Distilri rom — proese artizanal ek degistasion' },
-          { time: '13h00', text: 'Dezeune kreol tradisioinel dan veranda kolonyal' },
-          { time: '14h30', text: 'Vanilray ek zardin aromat — parfen lil' },
-          { time: '15h30', text: 'Retour — depo devan zot otel' }
-        ],
-        inclus: ['Transpor aller-retour', 'Gid personel Pretty', 'Antre Domaine Saint-Aubin', 'Degistasion rom', 'Dezeune kreol tradisioinel'],
-        nonInclus: ['Bwason siplemanter', 'Asa personel bazar', 'Pourbwar (a zot diskresion)'],
-        waMsg: 'Bonzour Pretty\u00a0! Mo anvi rezev excursion *Mahebourg + Domaine Saint-Aubin* 🌴 Eski ou kapav done moi bann disponibilite?'
-      },
-      'chamarel': {
-        category: 'terrestre', badge: 'terrestre', categoryLabel: 'Terestr',
-        title: 'Chamarel — Ter Set Kouleur',
+      'couleurs-sud': {
+        category: 'terrestre', badge: 'terrestre', categoryLabel: 'Terestrer',
+        title: 'Kouler Sid',
         image: '/assets/images/excursions/chamarel-terre-sept-couleurs',
-        subtitle: 'Din multikoloer, kaskat 100 met ek plantasion kafe — lam sovaz Moris',
-        duration: '4 er', group: 'Max 8 dimoun', level: 'Fasil', price: '45 €',
-        priceLabel: 'par group',
-        highlights: ['Din Set Kouleur — fenomen innik lor later', 'Kaskat Chamarel, 100 met', 'Plantasion kafe Chamarel — degistasion', 'Panorama lor lago sid-west Moris', 'Foret tropikal ek torti zigan', 'Istorwar zeolozik rakoonte par Pretty'],
-        itinerary: [
-          { time: '09h00', text: 'Depar — rout ver bann oto-plato lil' },
-          { time: '09h45', text: 'Kaskat Chamarel — foto imemorab, vid exepsionel' },
-          { time: '10h30', text: 'Ter Set Kouleur — eksplikasion zeolozik komplet par Pretty' },
-          { time: '11h30', text: 'Plantasion kafe Chamarel — vizit ek degistasion' },
-          { time: '12h30', text: 'Pwen de vi panoramik lor lago west' },
-          { time: '13h00', text: 'Retour — depo devan zot otel' }
+        subtitle: 'Sid-Lwes lil, peyizaz tropikal, foré luksiryan, kilti morisien',
+        duration: '8 ler', group: 'Max 8 dimounn', level: 'Fasil', price: 'Pou defini',
+        priceLabel: '',
+        highlights: [
+          'Trou aux Cerfs (crater 605m, panorama lil konplé)',
+          'Lak sakré Grand Bassin (sit hindou pli sakré Moris)',
+          'Park Nasional Gorges Rivière Noire (300+ varyeté floral, 9 zwizo endemik)',
+          'Kaskat Chamarel (83m, pli ot dan lil)',
+          'Distileri Chamarel (degistasion rhum artizanal)',
+          'Later 7 Kouler (fenomen zeolozik inik)',
+          'Plaines Champagne (vi panoramik spektakiler)',
+          'Foré tropikal luksiryan'
         ],
-        inclus: ['Transpor aller-retour', 'Gid personel Pretty', 'Antre Ter Set Kouleur', 'Degistasion kafe Chamarel', 'Ret pwen panoramik'],
-        nonInclus: ['Dezeune (pa inkli, resto lokal disponibl)', 'Asa boutik suvenirs', 'Pourbwar (a zot diskresion)'],
-        waMsg: 'Bonzour Pretty\u00a0! Mo anvi rezev excursion *Chamarel — Ter Set Kouleur* 🌈 Ki bann dat disponib?'
+        itinerary: [
+          'Mo vinn rod ou dan ou lakaz',
+          'Trou aux Cerfs — crater volkan 605m altitid, vi panoramik lor Curepipe',
+          'Grand Bassin - Ganga Talao — lak sakré, tanp hindou, staty divinité',
+          'Kaskat Alexandra — 700m altitid, park nasional Gorges Rivière Noire',
+          'Gorges Rivière Noire + Plaines Champagne — vi panoramik montagn/losean',
+          'Kaskat Chamarel — 83m oter, pli ot kaskat Moris',
+          'Distileri Chamarel — degistasion rhum agrikol, vizit gidé',
+          'Later 7 Kouler — fenomen zeolozik inik, formasion lav milener',
+          'Retour lakaz'
+        ],
+        inclus: [
+          'Transpor ale-retour depi ou lakaz',
+          'Gid kreol pasyoné',
+          'Vizit gidé tou sit',
+          'Degistasion distileri Chamarel',
+          'Antré Later 7 Kouler'
+        ],
+        nonInclus: [
+          'Dimanze (restoran lokal rekomanndé)',
+          'Purbwar (opsyonel)'
+        ],
+        waMsg: 'Bonzour Pretty, mo anvi rezerv exkursion Kouler Sid 🌈'
+      },
+      'ile-aux-benitiers': {
+        category: 'maritime', badge: 'maritime', categoryLabel: 'Maritim',
+        title: 'Lil Bénitiers Speed-Boat avek BBQ',
+        image: '/assets/images/excursions/sports-nautiques-lagon',
+        subtitle: 'Navigasion kot lwes, snorkeling lagon tirkwaz, observasion dofin, BBQ lor plaz',
+        duration: '7 ler', group: 'Max 8 dimounn', level: 'Aksesibl a tou', price: 'Pou defini',
+        priceLabel: '',
+        highlights: [
+          'Navigasion speed-boat kot lwes',
+          'Snorkeling lagon tirkwaz (koray + pwason multicolor)',
+          'Observasion dofin (si prezant)',
+          'Crystal Rock (ros anblemtik)',
+          'BBQ dimanze lor plaz Lil Benitiers',
+          'Detant plaz sab blan infini',
+          'Open bar tou lazourné'
+        ],
+        itinerary: [
+          'Mo vinn rod ou dan ou lakaz',
+          'Depar zeté Rivière Noire an speed-boat',
+          'Navigasion ver La Preneuse + bwason abor',
+          'Snorkeling lagon pe profon + observasion dofin (si prezant)',
+          'Navigasion ver Crystal Rock (ros anblemtik)',
+          'Snorkeling otour Crystal Rock',
+          'Arivé Lil Benitiers',
+          'BBQ dimanze lor plaz lil',
+          'Detant plaz blan — benyad — explorér lil',
+          'Retour Rivière Noire (snacks + bwason + mizik)',
+          'Retour lakaz'
+        ],
+        inclus: [
+          'Transpor ale-retour depi ou lakaz',
+          'Exkursion konplé an speed-boat',
+          'Ekipman snorkeling (mask, tuba, palm)',
+          'BBQ dimanze lor lil (pwason, poul, sosis, pen lay, salad, banan griyé)',
+          'Bwason alkolizé ek non-alkolizé ilimité',
+          'Snacks lezé retour',
+          'Mizik direk'
+        ],
+        nonInclus: [
+          'Purbwar (opsyonel)',
+          'Foto/video profesyonel (disponib an sipleman)'
+        ],
+        waMsg: 'Bonzour Pretty, mo anvi rezerv exkursion Lil Benitiers Speed-Boat 🏝️'
       },
       'ile-aux-cerfs': {
-        category: 'maritime', badge: 'maritime', categoryLabel: 'Maritime',
-        title: 'Ile aux Cerfs en Katamaran',
+        category: 'maritime', badge: 'maritime', categoryLabel: 'Maritim',
+        title: 'Lil Cerfs Speed-Boat avek BBQ',
         image: '/assets/images/excursions/ile-aux-cerfs-catamaran',
-        subtitle: 'Lago Morisyen dan so leta pir — delo krisital, korail koulore ek laplaz paradi',
-        duration: 'Enn zourne antier', group: 'Max 8 dimoun', level: 'Aksesibl pou tou', price: '80 €',
-        priceLabel: 'par dimoun',
-        highlights: ['Navisasion katamaran lor lago tirkowaz', 'Snorkeling lor resif korail', 'Laplaz Ile aux Cerfs — disab blan imakile', 'Barbik pwason ek frir-de-mer abor', 'Open bar (rom, bier, di fwi fre)', 'Mizik lokal ek atmosfer lafet Morisyen'],
-        itinerary: [
-          { time: '08h30', text: 'Embarkasman ponton Trou d\'Eau Douce' },
-          { time: '09h15', text: 'Navisasion ver Ile aux Cerfs — vid lor lago' },
-          { time: '09h45', text: 'Premier aret snorkeling — resif korail koulore' },
-          { time: '11h00', text: 'Debarkasman Ile aux Cerfs — tan lib lor laplaz' },
-          { time: '12h30', text: 'Barbik abor ou lor lil — spesyalite Morisyen' },
-          { time: '14h00', text: 'Deziem sesion snorkeling — lago krisital' },
-          { time: '15h30', text: 'Navisasion retour — koktey ek soleil kouse' },
-          { time: '16h30', text: 'Retour ponton — depo devan otel' }
+        subtitle: 'Navigasion kot ler, Kaskat Grand River, snorkeling, BBQ plaz paradi, mizik Séga',
+        duration: '7 ler', group: 'Max 8 dimounn', level: 'Aksesibl a tou', price: 'Pou defini',
+        priceLabel: '',
+        highlights: [
+          'Navigasion speed-boat kot ler (dilo kristalin)',
+          'Kaskat Grand River Sid Er (ant de kanyon)',
+          'Mizik Séga morisien + listwar lokal',
+          'Snorkeling lagon tirkwaz (koray + pwason multicolor)',
+          'Lil Cerfs — zoyé losean (plaz kart postal)',
+          'BBQ dimanze lor plaz paradi',
+          '87 ektar vezetasion luksiryan + plaz sab blan',
+          'Open bar tou lazourné'
         ],
-        inclus: ['Katamaran avek ekipaz', 'Ekipman snorkeling konplet', 'Repas barbik griye', 'Open bar tou lazourne', 'Transpor otel–ponton–otel'],
-        nonInclus: ['Aktivite notik payan lor lil', 'Asa boutik', 'Pourbwar pou ekipaz'],
-        waMsg: 'Bonzour Pretty\u00a0! Mo reve excursion *Ile aux Cerfs Katamaran* ⛵ Eski ou kapav done moi bann prozain dat?'
-      },
-      'diner-romantique': {
-        category: 'insolite', badge: 'insolite', categoryLabel: 'Insolit',
-        title: 'Dine Romantik Flic-en-Flac',
-        image: '/assets/images/excursions/diner-romantique-flic-en-flac',
-        subtitle: 'Enn tab prive lor laplaz, dezo letwel Morisyen — pou bann moman ki reste tou lavi',
-        duration: '3 er', group: '2 dimoun exklizivement', level: 'Eksperyans prive', price: '120 €',
-        priceLabel: 'par dimoun',
-        highlights: ['Tab prive dekore lor laplaz Flic-en-Flac', 'Meni 4 pla kreol ek frir-de-mer', 'Sanpanny a larive (enn boutey antier)', 'Dekorasion floral avek zorsi Moris', 'Fotografer profesionel 30 minit inkli', 'Soleil kouse lor lago west — pli bel lil'],
         itinerary: [
-          { time: '17h30', text: 'Preparasion kad pandan ou ariv' },
-          { time: '18h00', text: 'Larive lor laplaz — sanpanny ek serp surpriz' },
-          { time: '18h30', text: 'Soleil kouse lor lago — sesion foto 30 minit' },
-          { time: '19h00', text: 'Antree — karpacho tonn ek tartar gambas' },
-          { time: '19h30', text: 'Pla prinsipal — langous griye ou pwason lizour' },
-          { time: '20h15', text: 'Desert — gato piman ek fwi tropikal flambe' },
-          { time: '21h00', text: 'Fin swarez — retour an vwatir prive' }
+          'Mo vinn rod ou dan ou lakaz',
+          'Depar zeté Trou d\'Eau Douce an speed-boat',
+          'Navigasion kot ler + bwason abor',
+          'Kaskat Grand River Sid Er (30km, pli long larivyer Moris) — Foto',
+          'Navigasion interyer lagon + mizik Séga lokal + listwar morisien',
+          'Snorkeling milie lagon (koray + pwason tropikal)',
+          'Arivé Lil Cerfs',
+          'BBQ dimanze lor plaz lil',
+          'Detant plaz blan — benyad — explorér lil (87 ektar)',
+          'Retour Trou d\'Eau Douce (snacks + bwason + mizik)',
+          'Retour lakaz'
         ],
-        inclus: ['Tab dekore lor laplaz', 'Meni 4 pla + kafe', 'Boutey sanpanny', 'Dekorasion floral zorsi', 'Sesion foto 30 min + galri prive', 'Transpor retour inkli'],
-        nonInclus: ['Bwason siplemanter', 'Deziem boutey sanpanny', 'Sesion foto extennsyon'],
-        waMsg: 'Bonzour Pretty\u00a0! Mo anvi organize enn *Dine Romantik* 🌅 Flic-en-Flac pou de dimoun. Ki se prozen dat disponib?'
-      },
-      'wedding-planner': {
-        category: 'insolite', badge: 'insolite', categoryLabel: 'Insolit',
-        title: 'Wedding Planner Moris',
-        image: '/assets/images/excursions/wedding-planner-maurice',
-        subtitle: 'Depi demann en maryaz ziska banke — sak detay zot gran zour, orkestre avek passion',
-        duration: 'Prestation lor mezir', group: 'Ziska 100 dimoun', level: 'Prestation premium', price: 'Lor devi',
-        priceLabel: 'devi personalize gratui',
-        highlights: ['Seleksion plas ideal (laplaz, vila, domenn kolonyal)', 'Koordinasion konplet tou prestatair', 'Dekorasion floral tropikal lor mezir', 'Meni gastronomik kreol ek entrenasyonal', 'Mizisyen live, animasion swarez', 'Pretty prezant personelman zour J, depi maten ziska le swarez'],
-        itinerary: [
-          { time: 'J-6 mwa', text: 'Premie randevou — viziyon, bidze, dat, plas' },
-          { time: 'J-4 mwa', text: 'Seleksion ek rezarvasion plas + prestatair prensipal' },
-          { time: 'J-2 mwa', text: 'Meni final, dekorasion, envitasion, lozistik invite' },
-          { time: 'J-2 semenn', text: 'Repetision zeneral ek verifikasion final sak detay' },
-          { time: 'Zour J', text: 'Pretty lor plas depi maten — koordinasion total ziska mwanwi' }
+        inclus: [
+          'Transpor ale-retour depi ou lakaz',
+          'Exkursion konplé an speed-boat',
+          'Ekipman snorkeling (mask, tuba, palm)',
+          'BBQ pik-nik lor lil (pwason, poul, sosis, pen lay, salad, banan griyé)',
+          'Bwason alkolizé ek non-alkolizé ilimité',
+          'Snacks lezé retour',
+          'Animasion Séga + listwar lokal'
         ],
-        inclus: ['Konsiltasion san limit avek Pretty', 'Koordinasion prestatair', 'Prezans zour J konplet', 'Plan B pou sak inprevi', 'Karnet kontakt exkli Pretty Tours'],
-        nonInclus: ['Kout prestatair (treter, flerist, etc.)', 'Lokasion plas', 'Transpor invite'],
-        waMsg: 'Bonzour Pretty\u00a0! Mo anvi organize mo *maryaz dan Moris* 💍 Eski ou kapav kontakte moi pou enn premie diskisyon?'
-      },
-      'black-river': {
-        category: 'faune', badge: 'faune', categoryLabel: 'Fon',
-        title: 'Black River Gorges — Fon Endemik',
-        image: '/assets/images/excursions/black-river-gorges-faune',
-        subtitle: 'Zoizo ou pa pou trouv ennot kote lor later — dan foret primer Moris',
-        duration: '5 er', group: 'Max 8 dimoun', level: 'Modere', price: '50 €',
-        priceLabel: 'par group',
-        highlights: ['Parc Nasyonal Black River Gorges (6 574 ektar)', 'Katover Moris — espess ki ti pres eteint', 'Merlo Moris ek Pizon Roz', 'Torti zigan Aldabra dan zot abita natirèl', 'Foret tropikal primer intakt', 'Bann pwen de vi lor bann gors ek kot west'],
-        itinerary: [
-          { time: '08h00', text: 'Depar — rout ver bann oto-plato west' },
-          { time: '09h00', text: 'Antre park nasyonal — breifing fon par Pretty' },
-          { time: '09h30', text: 'Randonn dou — obsarvasion zoizo endemik' },
-          { time: '11h00', text: 'Rankontr avek torti zigan Aldabra' },
-          { time: '12h00', text: 'Pwen de vi panoramik lor bann gors' },
-          { time: '12h30', text: 'Piknik dan foret — tan repozan ek kontemplatif' },
-          { time: '13h00', text: 'Retour — depo devan zot otel' }
+        nonInclus: [
+          'Purbwar (opsyonel)',
+          'Foto/video profesyonel (disponib an sipleman)',
+          'Akse golf 18 trou lil (disponib lor plas)'
         ],
-        inclus: ['Transpor aller-retour', 'Gid-natiralist Pretty', 'Antre park nasyonal', 'Preter zimel', 'Piknik fwi tropikal'],
-        nonInclus: ['Soulye randonn (rekomanndé)', 'Repousan ensek', 'Pourbwar (a zot diskresion)'],
-        waMsg: 'Bonzour Pretty\u00a0! Mo renmen natiur — excursion *Black River Gorges* 🦜 interes moi boukou. Ki bann dat disponib?'
+        waMsg: 'Bonzour Pretty, mo anvi rezerv exkursion Lil Cerfs Speed-Boat 🌴'
       },
-      'sports-nautiques': {
+      'rando-7-cascades': {
         category: 'aventure', badge: 'aventure', categoryLabel: 'Avantir',
-        title: 'Adrenalin Notik',
-        image: '/assets/images/excursions/sports-nautiques-lagon',
-        subtitle: 'Lago Morisyen kouma enn zeu — pou seki anvi resanti Moris a plin vites',
-        duration: '4 er', group: 'Max 6 dimoun', level: 'Modere a entes', price: '75 €',
-        priceLabel: 'par dimoun',
-        highlights: ['Paraseyling 200 met — vid lor tou lago', 'Jet-ski — 30 minit a plin vites', 'Bouye trakté — garantid bann sensasion', 'Tube riding — a de ou a kat', 'Snorkeling final dan lago kalm', 'Foto aryenn inkli via kamera abor'],
-        itinerary: [
-          { time: '09h00', text: 'Breifing sekirite ek ekipman — tou dimoun formen' },
-          { time: '09h30', text: 'Paraseyling — monte progresif ziska 200 met' },
-          { time: '10h30', text: 'Jet-ski par per — 30 minit sak enn' },
-          { time: '11h30', text: 'Bouye trakté ek tube riding — ler pou riy ansam' },
-          { time: '12h30', text: 'Snorkeling kalm — rekiperasion ek emerveyisman' },
-          { time: '13h00', text: 'Retour marina — remiz foto ek video' }
+        title: 'Randoné 7 Kaskat Tamarin',
+        image: '/assets/images/excursions/black-river-gorges-faune',
+        subtitle: 'Valé sekré, foré tropikal, 5 kaskat aksesibl, benyad basin natirel, pasaz rido dilo',
+        duration: '4 ler', group: 'Max 12 dimounn (min. 2)', level: 'Bon form fizik rekize', price: 'Pou defini',
+        priceLabel: '',
+        highlights: [
+          '5 kaskat aksesibl lor 7 (sit pwisan, basin kristalin)',
+          'Pasaz derier rido dilo (imersion total)',
+          'Benyad sovaz kaskat 5 (basin natirel foré)',
+          'Pwason dokter satuy ou pye (kaskat 3)',
+          'Foré tropikal luksiryan (pye santner, fouzer zean)',
+          'Plant ek zwizo endemik',
+          'Degistasion kann fri',
+          'Pwin vi panoramik final (vi 7 kaskat)'
         ],
-        inclus: ['Tou ekipman sekirite', 'Paraseyling (1 zur/dimoun)', 'Jet-ski 30 min/dimoun', 'Bouye trakté + tube', 'Foto ek video HD', 'Dilo ek snacks abor'],
-        nonInclus: ['Transpor otel–marina (lor demand)', 'Bann zur siplemanter jet-ski', 'Konbinezon neoprenn (opsionel)'],
-        waMsg: 'Bonzour Pretty\u00a0! Mo anvi viv excursion *Adrenalin Notik* 🚀 lor lago Morisyen! Ki bann prozain dat?'
+        itinerary: [
+          'Mo vinn rod ou dan ou lakaz',
+          'Arivé pwin depar rezion Henrietta (Sid-Lwes)',
+          'Depar randoné — Imersion foré tropikal (pye santner, fouzer zean, plant endemik)',
+          'Kaskat 1 — Premye sit spektakiler + foto',
+          'Kaskat 2 — Dekouvert basin natirel + foto',
+          'Kaskat 3 — Tram pye dan dilo avek pwason dokter',
+          'Pasaz rido dilo — Moman inik derier kaskat',
+          'Kaskat 4 — Observasion panorama + vezetasion luksiryan',
+          'Kaskat 5 — Benyad sovaz dan basin natirel foré',
+          'Retour — Degistasion kann fri koupé',
+          'Pwin vi panoramik final — Vi dansanm lor 7 kaskat',
+          'Retour lakaz'
+        ],
+        inclus: [
+          'Transpor ale-retour depi ou lakaz',
+          'Gid kreol exper ek pasyoné',
+          'Ankaderman sekirizé tou randoné',
+          'Foto souvenir sak kaskat',
+          'Degistasion kann fri',
+          'Akse pwin vi panoramik'
+        ],
+        nonInclus: [
+          'Purbwar (opsyonel)'
+        ],
+        waMsg: 'Bonzour Pretty, mo anvi rezerv Randoné 7 Kaskat Tamarin 💧'
       },
-      'circuit-nord': {
-        category: 'terrestre', badge: 'terrestre', categoryLabel: 'Terestr',
-        title: 'Sirki Nor — Grand Baie & Pamplemousses',
+      'port-louis-nord': {
+        category: 'terrestre', badge: 'terrestre', categoryLabel: 'Terestrer',
+        title: 'Port-Louis ek Nor',
         image: '/assets/images/excursions/circuit-nord-grand-baie',
-        subtitle: 'Zardin botanikal pli vie emispec sid, nenifar zigan ek dinamism Grand Baie',
-        duration: '5 er', group: 'Max 8 dimoun', level: 'Fasil', price: '50 €',
-        priceLabel: 'par group',
-        highlights: ['Zardin Botanikal Sir Seewoosagur Ramgoolam — 1736', 'Nenifar zigan Victoria Amazonica', 'Palmye rar ek baouba santener', 'Torti zigan dan zot abita natirèl', 'Grand Baie — rastas artizanal ek bazar lokal', 'Cap Malheureux — legliz ruz ikonik Moris'],
-        itinerary: [
-          { time: '09h00', text: 'Depar ver nor — peyaz kann a sik' },
-          { time: '09h45', text: 'Zardin Botanikal Pamplemousses — vizit gide 1h30' },
-          { time: '11h15', text: 'Rout koter nor — vid lor lago' },
-          { time: '11h45', text: 'Cap Malheureux — legliz ruz ek panorama lor bann ilot nor' },
-          { time: '12h30', text: 'Grand Baie — tan lib bazar artizanal ek dezeune (pa inkli)' },
-          { time: '14h00', text: 'Retour — depo devan zot otel' }
+        subtitle: 'Kapital vibran, marsé kouléré, tanp tamoul, zarden tropikal, plaz Grand Baie, Cap Malheureux',
+        duration: '8 ler', group: 'Max 8 dimounn', level: 'Fasil', price: '60€',
+        priceLabel: 'pa dimounn',
+        highlights: [
+          'Port-Louis vibran (kapital morisien otantik)',
+          'Marsé santral kouléré (zepis, frui exotik, artizana)',
+          'Tanp tamoul (arsitekti hindou flanboyan)',
+          'Zarden Pamplemousses (37 ektar botanik, nenifar zean Victoria)',
+          'Grand Baie (stasion balneyer inkontourn, shopping, anbyans)',
+          'Pereybère (lagon tirkwaz, plaz paradi)',
+          'Cap Malheureux (vilaz pese otantik)',
+          'Legliz twa rouz anblemtik (kart postal fas lagon)'
         ],
-        inclus: ['Transpor aller-retour', 'Gid personel Pretty', 'Antre zardin botanikal', 'Komentar istorik detaye'],
-        nonInclus: ['Dezeune Grand Baie', 'Asa artizanal', 'Pourbwar (a zot diskresion)'],
-        waMsg: 'Bonzour Pretty\u00a0! Mo anvi rezev *Sirki Nor — Grand Baie & Pamplemousses* 🌺 Ki bann dat disponib?'
+        itinerary: [
+          'Mo vinn rod ou dan ou lakaz',
+          'Port-Louis Sant-Vil — Kapital vibran Moris',
+          'Marsé Santral Port-Louis — Kouler, zepis, artizana lokal, anbyans otantik',
+          'Tanp Tamoul — Arsitekti kouléré, spiritialité hindou morisien',
+          'Zarden Pamplemousses — 37 ektar zarden botanik tropikal (nenifar zean, palmie santner)',
+          'Dimanze — Restoran lokal (pa inkli) ou pik-nik',
+          'Grand Baie — Stasion balneyer anblemtik (boutik, plaz, anbyans)',
+          'Plaz Pereybère — Benyad lagon tirkwaz, detant sab blan',
+          'Cap Malheureux — Vilaz pese pitoresk',
+          'Legliz Notre-Dame-Auxiliatrice — Twa rouz anblemtik fas lagon + foto',
+          'Retour lakaz'
+        ],
+        inclus: [
+          'Transpor ale-retour depi ou lakaz',
+          'Gid kreol pasyoné',
+          'Vizit gidé Port-Louis + marsé + tanp',
+          'Vizit gidé Zarden Pamplemousses',
+          'Tan libr plaz Grand Baie ek Pereybère'
+        ],
+        nonInclus: [
+          'Biyé antré Zarden Pamplemousses (≃ 5€/dimounn)',
+          'Biyé antré sit (si aplikab)',
+          'Dimanze',
+          'Purbwar (opsyonel)'
+        ],
+        waMsg: 'Bonzour Pretty, mo anvi rezerv exkursion Port-Louis ek Nor 🏛️'
+      },
+      '5-iles-est': {
+        category: 'maritime', badge: 'maritime', categoryLabel: 'Maritim',
+        title: 'Dekouvert 5 Lil Ler an Speed-Boat',
+        image: '/assets/images/excursions/mahebourg-domaine-saint-aubin',
+        subtitle: 'Snorkeling (karey, re), 5 lil prezervé, BBQ plaz, listwar kolonyal, Kaskat Grand River',
+        duration: '7 ler', group: 'Max 12 dimounn (min. 2)', level: 'Aksesibl a tou', price: 'Pou defini',
+        priceLabel: '',
+        highlights: [
+          '5 lil prezervé Ler (saken avek enn anbyans inik)',
+          '2 sesion snorkeling (karey marin, re, koray, pwason tropikal kouléré)',
+          'Lil Flamants (bank sab izolé, dilo tirkwaz pe profon)',
+          'BBQ dimanze lor plaz Lil Passe',
+          'Listwar kolonyal (batay naval, ruin, vye kanon)',
+          'Lil Phare (tour gard, vi panoramik lagon spektakiler)',
+          'Kaskat Grand River Sid Er (kaskat dan losean, aksesibl zis an bato)',
+          'Dilo translisid (ble profon → tirkwaz kristalin)'
+        ],
+        itinerary: [
+          'Mo vinn rod ou dan ou lakaz',
+          'Anbarké — Depar an speed-boat kot ler',
+          'Lil Cerfs — Plaz idylik + snorkeling vibran (pwason-papiyon, re, karey marin)',
+          'Lil Flamants — Bank sab paradi (dilo pe profon, kalm absoli)',
+          'Lil Passe — BBQ dimanze + listwar kolonyal (ruin, vye kanon)',
+          'Lil Mangenies — Dezyem snorkeling (nouvo resif, karey, dilo kristalin)',
+          'Lil Phare — Sit istorik (tour gard, vi panoramik lagon)',
+          'Kaskat Grand River Sid Er — Aprosh an bato (kaskat dan losean, makak, zwizo)',
+          'Retour — Navigasion + detant',
+          'Retour lakaz'
+        ],
+        inclus: [
+          'Transpor ale-retour depi ou lakaz',
+          'Exkursion konplé an speed-boat',
+          'Gid kreol pasyoné (listwar lokal + patrimwan)',
+          'Ekipman snorkeling konplé (mask, tuba, palm)',
+          '2 sesion snorkeling ankadré',
+          'BBQ dimanze lor plaz (pwason griyé, poul, salad diri, deser lokal)',
+          'Bwason ilimité tou lazourné (dilo, soda, zi)',
+          'Akse 5 lil + kaskat'
+        ],
+        nonInclus: [
+          'Purbwar (opsyonel)',
+          'Foto/video profesyonel (disponib an sipleman)'
+        ],
+        waMsg: 'Bonzour Pretty, mo anvi rezerv exkursion 5 Lil Ler 🏝️'
       }
     };
 
-    var BADGE_COLORS = { terrestre: '#2ECC71', maritime: '#0096c7', faune: '#8B5CF6', aventure: '#F59E0B', insolite: '#FF6B6B' };
+    var BADGE_COLORS = {
+      terrestre: '#2ECC71',
+      maritime: '#0096c7',
+      aventure: '#F59E0B'
+    };
     var WA_SVG = '<svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>';
 
     var modal = document.getElementById('excursionModal');
@@ -665,7 +749,9 @@
       d.highlights.forEach(function(h) { hl += '<div class="modal__highlight-item"><span class="modal__highlight-check" aria-hidden="true">✓</span>' + h + '</div>'; });
       hl += '</div></div>'; document.getElementById('modalHighlights').innerHTML = hl;
       var it = '<div class="modal__section"><h3 class="modal__section-title">🗺️ Itinerer</h3><div class="modal__timeline">';
-      d.itinerary.forEach(function(s) { it += '<div class="modal__timeline-item"><span class="modal__timeline-time">' + s.time + '</span><p class="modal__timeline-text">' + s.text + '</p></div>'; });
+      d.itinerary.forEach(function(step) {
+        it += '<div class="modal__timeline-item"><span class="modal__highlight-check" aria-hidden="true">✓</span><p class="modal__timeline-text">' + step + '</p></div>';
+      });
       it += '</div></div>'; document.getElementById('modalItinerary').innerHTML = it;
       var inc = '<div class="modal__section"><h3 class="modal__section-title">📋 Inkli / Pa inkli</h3><div class="modal__inclus-grid">';
       inc += '<div><p class="modal__inclus-col-title modal__inclus-col-title--yes">✅ Inkli</p><ul class="modal__inclus-list modal__inclus-list--yes">';
@@ -673,7 +759,10 @@
       inc += '</ul></div><div><p class="modal__inclus-col-title modal__inclus-col-title--no">⊖ Pa inkli</p><ul class="modal__inclus-list modal__inclus-list--no">';
       d.nonInclus.forEach(function(i) { inc += '<li>' + i + '</li>'; });
       inc += '</ul></div></div></div>'; document.getElementById('modalInclus').innerHTML = inc;
-      var ph = d.price === 'Lor devi' ? '<span class="modal__price" style="font-size:1.3rem">Devi gratui</span>' : '<span class="modal__price">' + d.price + '</span><span class="modal__price-label">' + d.priceLabel + '</span>';
+      var priceHtml = (d.price === 'Sur devis' || d.price === 'Pou defini')
+        ? '<span class="modal__price" style="font-size:1.2rem">' + d.price + '</span><span class="modal__price-label">Kontakte mwa</span>'
+        : '<span class="modal__price">' + d.price + '</span><span class="modal__price-label">' + d.priceLabel + '</span>';
+      var ph = priceHtml;
       document.getElementById('modalFooter').innerHTML = '<div>' + ph + '</div><a href="https://wa.me/23059042969?text=' + encodeURIComponent(d.waMsg) + '" class="modal__wa-btn" target="_blank" rel="noopener noreferrer">' + WA_SVG + ' Rezev lor WhatsApp</a>';
       modal.classList.add('active'); document.body.style.overflow = 'hidden'; modalClose.focus();
     }
