@@ -21,7 +21,20 @@
       "Bash(python3:*)",
       "Bash(grep \"\\\\.html$\")",
       "mcp__filesystem__directory_tree",
-      "mcp__filesystem__read_text_file"
+      "mcp__filesystem__read_text_file",
+      "Bash(ls /Users/iamreiden/Desktop/maurice*)",
+      "Bash(ls /Users/iamreiden/Desktop/*.jpg /Users/iamreiden/Desktop/*.jpeg /Users/iamreiden/Desktop/*.png /Users/iamreiden/Desktop/*.webp)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(xargs sed:*)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8000/fr/excursions/)",
+      "Bash(pkill -f \"npx serve\")",
+      "Bash(pkill -f \"node.*serve\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8000/assets/images/excursions/chamarel-terre-sept-couleurs.jpg)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8000/assets/images/excursions/sports-nautiques-lagon.jpg)",
+      "Bash(curl:*)",
+      "Bash(perl -i -0pe ':*)"
     ]
   }
 }
