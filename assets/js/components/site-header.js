@@ -321,6 +321,11 @@ class SiteHeader extends HTMLElement {
   _initScroll() {
     const navbar = this.querySelector('#navbar');
     if (!navbar) return;
+    // Pages sans hero sombre : forcer l'état scrolled immédiatement
+    if (this.hasAttribute('solid')) {
+      navbar.classList.add('scrolled');
+      return;
+    }
     let ticking = false;
     window.addEventListener('scroll', () => {
       if (!ticking) {
